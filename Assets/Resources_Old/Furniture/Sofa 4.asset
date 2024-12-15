@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d6b45935456e94ea2e057d9c05c074, type: 3}
+  m_Name: Sofa 4
+  m_EditorClassIdentifier: 
+  mainCatID: 0
+  subCatID: 1
+  itemID: 4
+  itemName: Drakelle Accent Sofa
+  subCatName: 
+  itemQuality: 1
+  unlockLevel: 0
+  itemPrice: 420
+  itemSellingPrice: 0
+  unitItemPurPrice: 0
+  itemquantity: 1
+  oneTimePurchaseItem: 0
+  isSpawnOnSelection: 0
+  itemSprite: {fileID: 298326900, guid: 70d3a27190e4de04da0b0ef1e5adaa21, type: 3}
+  itemBoxPrefab: {fileID: 4401455875343284584, guid: 70fca1658e6ee0542a15f4ed61c683e5, type: 3}
+  itemPrefab: {fileID: 6532393097033048685, guid: d4cce2385ff47314ca26a64363dd1e44, type: 3}
+  singleItemPrefab: {fileID: 0}
+  uiItemObject: {fileID: 0}
+  PaintMaterial: {fileID: 0}

@@ -1,0 +1,825 @@
+fileFormatVersion: 2
+guid: 0e3caa3207f32594d8192a2882e5cdca
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Motel SS 21_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1623
+        width: 375
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c21b1f4568fef45ae9dfd51671ded4
+      internalID: -1675940207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_22
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 1623
+        width: 375
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70bf843ec5e29e46ac2cb7a35b89674
+      internalID: -430315398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_31
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 1624
+        width: 373
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff9813b55384434b984169629608740
+      internalID: -155454749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_32
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 1624
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314d00bf93215fe4a88a7c14e4ec129a
+      internalID: 1461073154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_33
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 1624
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f041aa1efc8c1841af7afa0240ff8fe
+      internalID: -680964241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_73
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1207
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b39740ee73f17745ba6d4f97b1c3740
+      internalID: 603580547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_74
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 1200
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325c199bc3285ef49a05eb97596673f0
+      internalID: -2144586869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_75
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 1200
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 575b3273c8f93cc4a831f660e6180300
+      internalID: 79195225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_76
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 1200
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfd06bb3cc296047b7729609fcea73e
+      internalID: -26193989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_77
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 1200
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c5708b650fa20498c360043f16fe0a
+      internalID: -2055076466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_78
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 791
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85ac9c847428954281d4efebffcc55b
+      internalID: -173947977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_79
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 790
+        width: 375
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8342a484997143741853b9db587abb07
+      internalID: -1946011047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_81
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 791
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2865184cc2880c0429c2723afb975629
+      internalID: -474227197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_82
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 791
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d626de04c03b5f34eb08da98ed06f19a
+      internalID: -455356627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_83
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 791
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f1f01b297249b244a2640bae295453d
+      internalID: -783590889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_93
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 787
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990f485e28b002144b39a1c422ab7bb5
+      internalID: -671993919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_96
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 410
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb11725cc8236f4ab6d5bcdb7d42719
+      internalID: -972145093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_98
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 401
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e41628807aa1714a9b9c09e70e653ca
+      internalID: 1667141439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_99
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 401
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4963b21d77a36444f888cd0ab9db6001
+      internalID: -227605277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_100
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 401
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 237ed61617c6b41459d2cb308a105d77
+      internalID: 741714442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_101
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 401
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3199e128b82200647b68ef443dc024be
+      internalID: -2094599572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_102
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 8
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c3c1b2c07603f41b11018683491d8e
+      internalID: 99784322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_103
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 8
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58887007992893949b68fc7e4d9a4e1f
+      internalID: -1129324263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_104
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 7
+        width: 374
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e08e6b516bb1e743a3711d8eb584658
+      internalID: 163263720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_106
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 8
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26608579f2061564d95d5364d1c32261
+      internalID: 2027372097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 21_107
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 8
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4b11bb0f858984f952a1cd247e224d
+      internalID: -432806409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9d4456b26932bd245a81cb743e18473f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Motel SS 21_0: -1675940207
+      Motel SS 21_1: -307959466
+      Motel SS 21_10: -1903062281
+      Motel SS 21_100: 741714442
+      Motel SS 21_101: -2094599572
+      Motel SS 21_102: 99784322
+      Motel SS 21_103: -1129324263
+      Motel SS 21_104: 163263720
+      Motel SS 21_105: 2084136910
+      Motel SS 21_106: 2027372097
+      Motel SS 21_107: -432806409
+      Motel SS 21_108: 762487261
+      Motel SS 21_109: 245614997
+      Motel SS 21_11: -804772427
+      Motel SS 21_110: 1971148554
+      Motel SS 21_111: 485686813
+      Motel SS 21_112: 319208086
+      Motel SS 21_113: -657909238
+      Motel SS 21_114: 1374544615
+      Motel SS 21_115: -2124496347
+      Motel SS 21_116: 1936142948
+      Motel SS 21_117: 872912617
+      Motel SS 21_118: 1394941773
+      Motel SS 21_119: -656824690
+      Motel SS 21_12: 1088699056
+      Motel SS 21_120: -999314444
+      Motel SS 21_121: 229715918
+      Motel SS 21_122: -629977678
+      Motel SS 21_13: 1169542274
+      Motel SS 21_14: -875762101
+      Motel SS 21_15: 921543707
+      Motel SS 21_16: -592752548
+      Motel SS 21_17: -2075454518
+      Motel SS 21_18: -1105961504
+      Motel SS 21_19: -1904109836
+      Motel SS 21_2: -1343807499
+      Motel SS 21_20: -1322941173
+      Motel SS 21_21: -2032571999
+      Motel SS 21_22: -430315398
+      Motel SS 21_23: -73502359
+      Motel SS 21_24: 2120410100
+      Motel SS 21_25: -1244030468
+      Motel SS 21_26: -2077750046
+      Motel SS 21_27: 931240114
+      Motel SS 21_28: -733493592
+      Motel SS 21_29: 2061443719
+      Motel SS 21_3: 1498981772
+      Motel SS 21_30: 1232407342
+      Motel SS 21_31: -155454749
+      Motel SS 21_32: 1461073154
+      Motel SS 21_33: -680964241
+      Motel SS 21_34: 1945844442
+      Motel SS 21_35: -1051825490
+      Motel SS 21_36: 435684691
+      Motel SS 21_37: -727300040
+      Motel SS 21_38: 990488438
+      Motel SS 21_39: 991637332
+      Motel SS 21_4: 1254780690
+      Motel SS 21_40: -656181478
+      Motel SS 21_41: 967063825
+      Motel SS 21_42: -1361696485
+      Motel SS 21_43: -757423826
+      Motel SS 21_44: -1087696087
+      Motel SS 21_45: 1010419046
+      Motel SS 21_46: -2215871
+      Motel SS 21_47: -1250810875
+      Motel SS 21_48: 1033029776
+      Motel SS 21_49: -1524887494
+      Motel SS 21_5: 1095243013
+      Motel SS 21_50: 729300129
+      Motel SS 21_51: -106120640
+      Motel SS 21_52: -1827840830
+      Motel SS 21_53: -730983813
+      Motel SS 21_54: 1453521412
+      Motel SS 21_55: -784413210
+      Motel SS 21_56: -710343998
+      Motel SS 21_57: -1375914793
+      Motel SS 21_58: -827920285
+      Motel SS 21_59: -1768872631
+      Motel SS 21_6: -1904071661
+      Motel SS 21_60: -1315780475
+      Motel SS 21_61: -259901337
+      Motel SS 21_62: -1912784948
+      Motel SS 21_63: -944417598
+      Motel SS 21_64: 1404986214
+      Motel SS 21_65: -2048486948
+      Motel SS 21_66: 918022377
+      Motel SS 21_67: -2144632056
+      Motel SS 21_68: -1867719087
+      Motel SS 21_69: 697986752
+      Motel SS 21_7: 1377866173
+      Motel SS 21_70: -262630652
+      Motel SS 21_71: 1132893662
+      Motel SS 21_72: 709225124
+      Motel SS 21_73: 603580547
+      Motel SS 21_74: -2144586869
+      Motel SS 21_75: 79195225
+      Motel SS 21_76: -26193989
+      Motel SS 21_77: -2055076466
+      Motel SS 21_78: -173947977
+      Motel SS 21_79: -1946011047
+      Motel SS 21_8: -1562138674
+      Motel SS 21_80: -1064579167
+      Motel SS 21_81: -474227197
+      Motel SS 21_82: -455356627
+      Motel SS 21_83: -783590889
+      Motel SS 21_84: -7443538
+      Motel SS 21_85: -1260039833
+      Motel SS 21_86: -139943891
+      Motel SS 21_87: 167903579
+      Motel SS 21_88: -1548574944
+      Motel SS 21_89: -1547792238
+      Motel SS 21_9: -18992409
+      Motel SS 21_90: 1427592341
+      Motel SS 21_91: 130487810
+      Motel SS 21_92: 1555258769
+      Motel SS 21_93: -671993919
+      Motel SS 21_94: 1629499028
+      Motel SS 21_95: -1743322691
+      Motel SS 21_96: -972145093
+      Motel SS 21_97: 1506722434
+      Motel SS 21_98: 1667141439
+      Motel SS 21_99: -227605277
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

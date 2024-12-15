@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d6b45935456e94ea2e057d9c05c074, type: 3}
+  m_Name: Orange
+  m_EditorClassIdentifier: 
+  mainCatID: 0
+  subCatID: 0
+  itemID: 3
+  itemName: Orange
+  subCatName: Fruits
+  itemQuality: 0
+  unlockLevel: 0
+  itemPrice: 18
+  itemSellingPrice: 3
+  unitItemPurPrice: 2
+  itemquantity: 12
+  oneTimePurchaseItem: 0
+  isSpawnOnSelection: 0
+  itemSprite: {fileID: -1703174725, guid: 3383cc4b22cfb654e9f39ebc26ea59c6, type: 3}
+  itemBoxPrefab: {fileID: 4401455875343284584, guid: 70fca1658e6ee0542a15f4ed61c683e5, type: 3}
+  itemPrefab: {fileID: 3391557395533600017, guid: b4d136cfee5f39e4dbf636428fb2cb1c, type: 3}
+  singleItemPrefab: {fileID: 417152170535098628, guid: 6ed1dfbd694707247b4d3320ffedcc29, type: 3}
+  uiItemObject: {fileID: 0}
+  PaintMaterial: {fileID: 0}

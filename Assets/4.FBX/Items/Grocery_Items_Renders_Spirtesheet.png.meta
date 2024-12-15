@@ -1,0 +1,458 @@
+fileFormatVersion: 2
+guid: 0d6596f755948c04a963ebd89b209fa8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Grocery_Items_Renders_Spirtesheet_9
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 816
+        width: 98
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f767a29709c89f45930372d19dad583
+      internalID: -1623434838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grocery_Items_Renders_Spirtesheet_14
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 817
+        width: 114
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e479622ab7af5ef4d9f298df8e0a20d6
+      internalID: -1475076020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grocery_Items_Renders_Spirtesheet_17
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 792
+        width: 150
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10186535a0b16348bd3c141b5086309
+      internalID: -935683435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grocery_Items_Renders_Spirtesheet_21
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 829
+        width: 84
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb7e41137bf2544f84cc09fe8e5ccf5
+      internalID: 499536962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grocery_Items_Renders_Spirtesheet_33
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 546
+        width: 104
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc3e8270637c3a4a82f49ac0170ae75
+      internalID: -278025823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grocery_Items_Renders_Spirtesheet_37
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 588
+        width: 111
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d5847cf421fbc489a7db65c40a51da
+      internalID: -1365768252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grocery_Items_Renders_Spirtesheet_38
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 565
+        width: 119
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abbbd19646af27e4aab202a4b79092c1
+      internalID: 185488991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grocery_Items_Renders_Spirtesheet_40
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 558
+        width: 110
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1c1400ec7093e46b8ddd35708df8b0
+      internalID: 799025517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grocery_Items_Renders_Spirtesheet_45
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 300
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0389927a54864714495fe4fcb1734df5
+      internalID: -1630471174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grocery_Items_Renders_Spirtesheet_46
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 300
+        width: 108
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38561dfc0ef21a04f8cd76cfcaad4b42
+      internalID: 1268998312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grocery_Items_Renders_Spirtesheet_47
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 300
+        width: 114
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e38579fa1952fe4cbf17bd1f552b94f
+      internalID: 1973687527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grocery_Items_Renders_Spirtesheet_48
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 330
+        width: 99
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39665afa6141c254e914815dab784d6a
+      internalID: -2036540947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Grocery_Items_Renders_Spirtesheet_0: 40014380
+      Grocery_Items_Renders_Spirtesheet_1: 1799269019
+      Grocery_Items_Renders_Spirtesheet_10: -48200091
+      Grocery_Items_Renders_Spirtesheet_11: 1702950772
+      Grocery_Items_Renders_Spirtesheet_12: -1469351608
+      Grocery_Items_Renders_Spirtesheet_13: 837678911
+      Grocery_Items_Renders_Spirtesheet_14: -1475076020
+      Grocery_Items_Renders_Spirtesheet_15: -570621365
+      Grocery_Items_Renders_Spirtesheet_16: 1710542400
+      Grocery_Items_Renders_Spirtesheet_17: -935683435
+      Grocery_Items_Renders_Spirtesheet_18: 1199816386
+      Grocery_Items_Renders_Spirtesheet_19: -646997107
+      Grocery_Items_Renders_Spirtesheet_2: 1570428424
+      Grocery_Items_Renders_Spirtesheet_20: -352560316
+      Grocery_Items_Renders_Spirtesheet_21: 499536962
+      Grocery_Items_Renders_Spirtesheet_22: -2054146565
+      Grocery_Items_Renders_Spirtesheet_23: 1346507156
+      Grocery_Items_Renders_Spirtesheet_24: -790837613
+      Grocery_Items_Renders_Spirtesheet_25: 1553350624
+      Grocery_Items_Renders_Spirtesheet_26: -1214163969
+      Grocery_Items_Renders_Spirtesheet_27: -20229661
+      Grocery_Items_Renders_Spirtesheet_28: 594512488
+      Grocery_Items_Renders_Spirtesheet_29: -1213256202
+      Grocery_Items_Renders_Spirtesheet_3: 297197962
+      Grocery_Items_Renders_Spirtesheet_30: -653230003
+      Grocery_Items_Renders_Spirtesheet_31: -349691377
+      Grocery_Items_Renders_Spirtesheet_32: -1409211048
+      Grocery_Items_Renders_Spirtesheet_33: -278025823
+      Grocery_Items_Renders_Spirtesheet_34: 1010724454
+      Grocery_Items_Renders_Spirtesheet_35: -867972385
+      Grocery_Items_Renders_Spirtesheet_36: -1026905863
+      Grocery_Items_Renders_Spirtesheet_37: -1365768252
+      Grocery_Items_Renders_Spirtesheet_38: 185488991
+      Grocery_Items_Renders_Spirtesheet_39: -1979058104
+      Grocery_Items_Renders_Spirtesheet_4: 2066468576
+      Grocery_Items_Renders_Spirtesheet_40: 799025517
+      Grocery_Items_Renders_Spirtesheet_41: -1104170026
+      Grocery_Items_Renders_Spirtesheet_42: 1579848146
+      Grocery_Items_Renders_Spirtesheet_43: 1805713078
+      Grocery_Items_Renders_Spirtesheet_44: -2131296648
+      Grocery_Items_Renders_Spirtesheet_45: -1630471174
+      Grocery_Items_Renders_Spirtesheet_46: 1268998312
+      Grocery_Items_Renders_Spirtesheet_47: 1973687527
+      Grocery_Items_Renders_Spirtesheet_48: -2036540947
+      Grocery_Items_Renders_Spirtesheet_49: 767259085
+      Grocery_Items_Renders_Spirtesheet_5: -731435390
+      Grocery_Items_Renders_Spirtesheet_50: 285099779
+      Grocery_Items_Renders_Spirtesheet_51: 219790195
+      Grocery_Items_Renders_Spirtesheet_52: 821926155
+      Grocery_Items_Renders_Spirtesheet_6: -1152167957
+      Grocery_Items_Renders_Spirtesheet_7: -156328059
+      Grocery_Items_Renders_Spirtesheet_8: 1989243344
+      Grocery_Items_Renders_Spirtesheet_9: -1623434838
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

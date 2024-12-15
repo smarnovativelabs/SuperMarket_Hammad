@@ -1,0 +1,987 @@
+fileFormatVersion: 2
+guid: b4314695c91e84960b3ad6602db848fe
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Motel SS 8_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1966
+        width: 1658
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba72eb42446340be805a0dcbc4bb304
+      internalID: -1425587585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_3
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1187
+        width: 498
+        height: 765
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddaabaf5624f54efa8c025f3d4195bd9
+      internalID: 453885320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_11
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1102
+        width: 170
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c683596147ed4c7e8e548219883c3cb
+      internalID: 742056366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_13
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1102
+        width: 170
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cd203f6124ee48c1ae3042c5fa7e452
+      internalID: 1776718633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_14
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 1102
+        width: 170
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb3eb258445f348fba413f4909289834
+      internalID: -820938028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_16
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 657
+        width: 616
+        height: 647
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de556e7635cbc4f4ab122b7f88380849
+      internalID: 714552320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_17
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1015
+        width: 313
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda02aee08f574667abad2b0398e70d9
+      internalID: 1470084279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_18
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1019
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b485fff427c445d8d9d7e935df54fd
+      internalID: -1627683819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_19
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 1030
+        width: 59
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38562a02c0d6044279078011bf205ee5
+      internalID: -1978037469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_20
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 916
+        width: 317
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df63a2f527db548afa74c01fad1dfb20
+      internalID: -1520050214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_21
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 917
+        width: 318
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f698dc7536124cce844dddf1c7629d2
+      internalID: 729006872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_25
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 641
+        width: 66
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed03c43f8c694eaaa858abfb6dd2ce8
+      internalID: -329024133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_33
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 578
+        width: 117
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f1463a18f7041b0831ebd178c5830b
+      internalID: -105561990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_35
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 576
+        width: 117
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fac94da03bc8427da999a99ab20b8e0
+      internalID: -1233135580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_39
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 19
+        width: 755
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dff9fedd99e84d7b9ff6fe91159788d
+      internalID: -436726322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_42
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 585
+        width: 68
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f3acae917884bb5ac92a556d54eea5
+      internalID: 1559730408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_43
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 16
+        width: 677
+        height: 604
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb536d5b094cb4385a5b0249a8b9f3ca
+      internalID: -516630204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_59
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 329
+        width: 220
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441de2a18a3ba4f718c9ff06ef17a364
+      internalID: -1800458313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_60
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 342
+        width: 158
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28b6cc7e3f7a40c886a80d991a1c2c1
+      internalID: -226672935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_63
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 342
+        width: 156
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a3d9087a2b74ec6b777b7e882de1cf
+      internalID: -98169669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_66
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 204
+        width: 282
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb4c81b50f4964864b82bbf7b134f8f4
+      internalID: 1603674873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_67
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 141
+        width: 185
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84039ed6eb1be4980ad994a94af34ace
+      internalID: 1305786370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_68
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 20
+        width: 350
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44d6ca9e32b846e1a7ffb6dc65a9350
+      internalID: 330476462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_71
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 19
+        width: 117
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5278837c26e434006853aef87d071e33
+      internalID: -1902310662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_74
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 79
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3775ee741c7f945d4a6a6033aa04e5f0
+      internalID: -1982917288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_1
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1782
+        width: 689
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a48bc8714b884b0987582cd884fe135
+      internalID: 1780226844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_2
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 1584
+        width: 397
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69dddf477f55b4184a240a3331b7480e
+      internalID: 1161320494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_4
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 731
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab251798372142848f02deb0bd18864
+      internalID: -1808873606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_5
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 1012
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7988d6b5e1cc240a99d388014db563ae
+      internalID: 1766598299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_6
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 588
+        width: 69
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b82a93ee454cd4f3a916588717d4cec5
+      internalID: -2070419733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_7
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 591
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be051ca6b9d64b98a7e81a9c72b79fc
+      internalID: -1311312795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_8
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 1339
+        width: 81
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c0c6b3e4ace040bfae7e93b6196055d
+      internalID: 1872430751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_9
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 877
+        width: 63
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c71040660bcc49a7b06fbaafa0512b9
+      internalID: 1292169645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_10
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 851
+        width: 543
+        height: 408
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f161c1551144a868d4e915c2a6f00e
+      internalID: -1563974540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_12
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 1625
+        width: 518
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f916114dd31d49beb8394e0732202e4
+      internalID: -1138796540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 8_15
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 1825
+        width: 355
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91fb1f02b3854420cb2ecc654db4d48a
+      internalID: 644697913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Motel SS 8_0: -1425587585
+      Motel SS 8_1: 1780226844
+      Motel SS 8_10: -1563974540
+      Motel SS 8_11: 742056366
+      Motel SS 8_12: -1138796540
+      Motel SS 8_13: 1776718633
+      Motel SS 8_14: -820938028
+      Motel SS 8_15: 644697913
+      Motel SS 8_16: 714552320
+      Motel SS 8_17: 1470084279
+      Motel SS 8_18: -1627683819
+      Motel SS 8_19: -1978037469
+      Motel SS 8_2: 1161320494
+      Motel SS 8_20: -1520050214
+      Motel SS 8_21: 729006872
+      Motel SS 8_22: -827600243
+      Motel SS 8_23: 1836925670
+      Motel SS 8_24: -1161001776
+      Motel SS 8_25: -329024133
+      Motel SS 8_26: -870681571
+      Motel SS 8_27: -1734098745
+      Motel SS 8_28: -1556876121
+      Motel SS 8_29: -1593000011
+      Motel SS 8_3: 453885320
+      Motel SS 8_30: -2056054584
+      Motel SS 8_31: -1299727740
+      Motel SS 8_32: 875295604
+      Motel SS 8_33: -105561990
+      Motel SS 8_34: 715417005
+      Motel SS 8_35: -1233135580
+      Motel SS 8_36: -2070239691
+      Motel SS 8_37: -1036730922
+      Motel SS 8_38: -1935783960
+      Motel SS 8_39: -436726322
+      Motel SS 8_4: -1808873606
+      Motel SS 8_40: 1805179152
+      Motel SS 8_41: -2097063234
+      Motel SS 8_42: 1559730408
+      Motel SS 8_43: -516630204
+      Motel SS 8_44: 2139927744
+      Motel SS 8_45: 800944673
+      Motel SS 8_46: 1271932493
+      Motel SS 8_47: 1407890052
+      Motel SS 8_48: 215172958
+      Motel SS 8_49: -550901572
+      Motel SS 8_5: 1766598299
+      Motel SS 8_50: 1768017059
+      Motel SS 8_51: 275493175
+      Motel SS 8_52: -1097202738
+      Motel SS 8_53: -1400733568
+      Motel SS 8_54: 1420220625
+      Motel SS 8_55: 949637324
+      Motel SS 8_56: 1451647707
+      Motel SS 8_57: -1084514695
+      Motel SS 8_58: 177216382
+      Motel SS 8_59: -1800458313
+      Motel SS 8_6: -2070419733
+      Motel SS 8_60: -226672935
+      Motel SS 8_61: -1108226343
+      Motel SS 8_62: -1321316574
+      Motel SS 8_63: -98169669
+      Motel SS 8_64: 1691680674
+      Motel SS 8_65: 1061471082
+      Motel SS 8_66: 1603674873
+      Motel SS 8_67: 1305786370
+      Motel SS 8_68: 330476462
+      Motel SS 8_69: -569051082
+      Motel SS 8_7: -1311312795
+      Motel SS 8_70: -1751745489
+      Motel SS 8_71: -1902310662
+      Motel SS 8_72: 1838662264
+      Motel SS 8_73: 495580065
+      Motel SS 8_74: -1982917288
+      Motel SS 8_75: 1782715271
+      Motel SS 8_76: 728075132
+      Motel SS 8_77: 1137132076
+      Motel SS 8_8: 1872430751
+      Motel SS 8_9: 1292169645
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

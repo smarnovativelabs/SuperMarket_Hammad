@@ -1,0 +1,979 @@
+fileFormatVersion: 2
+guid: 0978c1506d4ac4f05990020985636546
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Motel SS 6_0
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 1980
+        width: 54
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b79cc2879c04c0993403f1a22c3f98
+      internalID: 694676415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_3
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1986
+        width: 416
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d798dae8fb2aa4af2b510cda3f3c0a6f
+      internalID: 446234399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_4
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1783
+        width: 340
+        height: 254
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7450a83a826a340a4b5c737c18896f60
+      internalID: -1159851706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_6
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1983
+        width: 53
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a54f25ab2e343eab21c771f46a5efc
+      internalID: -1198616200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_10
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 1858
+        width: 932
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b21d2df8052447ed8c6e93e8390c035
+      internalID: 1150894860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_15
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1695
+        width: 329
+        height: 269
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f3c3d91b38440f988f9213617219ac
+      internalID: -290409766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_20
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1872
+        width: 71
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f27e86be7604283b4f3cd9dd64cc4a
+      internalID: 1603088768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_23
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 1864
+        width: 68
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96cbeab15ccd648d997a552d5ed8a2b9
+      internalID: -1582989360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_28
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 1800
+        width: 896
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a47c65eb83ca4678baf1b7ebf52373d
+      internalID: 260129000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_30
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 1743
+        width: 896
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9750a3b768f7d4bb8a2d4f1b57ad68db
+      internalID: -1357811754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_32
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 905
+        width: 643
+        height: 830
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f53f6879b43d43a9a060438630aa03c
+      internalID: 1571489591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_35
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 1541
+        width: 524
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ef7c4325426480c9cbeccada41e148
+      internalID: 374557199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_40
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 1447
+        width: 383
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec09221a3fb1247c4bdffb1b94126926
+      internalID: 1189871544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_41
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 890
+        width: 31
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14829205c80e54fed871ec9640f275b6
+      internalID: -1801936572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_42
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 946
+        width: 1025
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d1fe193c79a648c4b9d0edc43664b73
+      internalID: -104759550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_44
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 919
+        width: 896
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc2935b16f8143cba56addd46c87a57
+      internalID: 121847669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_45
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 718
+        width: 1047
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1273dc2bdc91243499e8427acc574d8e
+      internalID: 1752584169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_47
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 799
+        width: 484
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533272acf733e49438e9432ed2d9541c
+      internalID: 1830155356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_48
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 731
+        width: 299
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041158f3a266347b9b7ce6afcf2fac72
+      internalID: 776296035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_49
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 699
+        width: 215
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850dd7224916848759f408b8710632c0
+      internalID: -943801406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_50
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 699
+        width: 241
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24832a53df0b34ab0aee0aeb85298e9f
+      internalID: 909113671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS 6_54
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 15
+        width: 1287
+        height: 675
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 161050b108f31408bba9c24bcccc2fb0
+      internalID: 1505089094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS6_0
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 1926
+        width: 106
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb24b616630440f1a2779b5f64bc4ed
+      internalID: -1908926238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS6_1
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 1800
+        width: 115
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb4c693dd51d4895884b8a49de42ec9
+      internalID: 968759159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS6_2
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1585
+        width: 106
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d278aef59cc42808f8afe13d795f2c
+      internalID: -1281333089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS6_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1469
+        width: 109
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a13d69a257c4c6997df08211b58db6
+      internalID: -1861692152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS6_4
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 1043
+        width: 490
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a540124e93449b0a750b1274c2c03b
+      internalID: 758397257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS6_5
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 27
+        width: 665
+        height: 403
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f6ed011026d79b43a0fdb8e56d0b58e
+      internalID: 2001191730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS6_6
+      rect:
+        serializedVersion: 2
+        x: 1723
+        y: 461
+        width: 304
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a6c34b7ce21fc4184edaf172b54aaa
+      internalID: -1868629252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS6_7
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 1243
+        width: 322
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341d1f88a96d9439daf40d5e59e84e25
+      internalID: 1206815089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS6_8
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 1760
+        width: 76
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faad48668baa148d088234d97b5b079f
+      internalID: -1612003420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS6_9
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1747
+        width: 92
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9bacace2f43a42bea6b5be11f7b7bb5
+      internalID: 984958457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS6_10
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1709
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d78a13fd451b046c7afba7887caca0fb
+      internalID: -857721743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS6_11
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1695
+        width: 43
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4f2463ea9a444ccadf55130700a226
+      internalID: 384608000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS6_12
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 1633
+        width: 247
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6c4a42f1b1846fc850a19fd383be5e
+      internalID: 1802541727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motel SS6_13
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1467
+        width: 81
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0dbf0af33bfef458dbdf3d372b95a6
+      internalID: 1085992271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Motel SS 6_0: 694676415
+      Motel SS 6_1: -570513301
+      Motel SS 6_10: 1150894860
+      Motel SS 6_11: -1164794446
+      Motel SS 6_12: -152854551
+      Motel SS 6_13: -1046853579
+      Motel SS 6_14: 26741008
+      Motel SS 6_15: -290409766
+      Motel SS 6_16: 2105715298
+      Motel SS 6_17: -1034975640
+      Motel SS 6_18: 943129080
+      Motel SS 6_19: 2053964065
+      Motel SS 6_2: -809743072
+      Motel SS 6_20: 1603088768
+      Motel SS 6_21: 849441323
+      Motel SS 6_22: 573045935
+      Motel SS 6_23: -1582989360
+      Motel SS 6_24: -1697562538
+      Motel SS 6_25: 1618315377
+      Motel SS 6_26: -1440231769
+      Motel SS 6_27: -69822672
+      Motel SS 6_28: 260129000
+      Motel SS 6_29: 326510256
+      Motel SS 6_3: 446234399
+      Motel SS 6_30: -1357811754
+      Motel SS 6_31: -94794661
+      Motel SS 6_32: 1571489591
+      Motel SS 6_33: 99857711
+      Motel SS 6_34: 386287541
+      Motel SS 6_35: 374557199
+      Motel SS 6_36: 2080920532
+      Motel SS 6_37: -474829032
+      Motel SS 6_38: -1041925993
+      Motel SS 6_39: 1155996335
+      Motel SS 6_4: -1159851706
+      Motel SS 6_40: 1189871544
+      Motel SS 6_41: -1801936572
+      Motel SS 6_42: -104759550
+      Motel SS 6_43: 157189554
+      Motel SS 6_44: 121847669
+      Motel SS 6_45: 1752584169
+      Motel SS 6_46: -2094117604
+      Motel SS 6_47: 1830155356
+      Motel SS 6_48: 776296035
+      Motel SS 6_49: -943801406
+      Motel SS 6_5: 2002381236
+      Motel SS 6_50: 909113671
+      Motel SS 6_51: 502789303
+      Motel SS 6_52: 1324142424
+      Motel SS 6_53: -148483724
+      Motel SS 6_54: 1505089094
+      Motel SS 6_55: 1892109207
+      Motel SS 6_6: -1198616200
+      Motel SS 6_7: -2059672256
+      Motel SS 6_8: 1226033254
+      Motel SS 6_9: 187159477
+      Motel SS6_0: -1908926238
+      Motel SS6_1: 968759159
+      Motel SS6_10: -857721743
+      Motel SS6_11: 384608000
+      Motel SS6_12: 1802541727
+      Motel SS6_13: 1085992271
+      Motel SS6_2: -1281333089
+      Motel SS6_3: -1861692152
+      Motel SS6_4: 758397257
+      Motel SS6_5: 2001191730
+      Motel SS6_6: -1868629252
+      Motel SS6_7: 1206815089
+      Motel SS6_8: -1612003420
+      Motel SS6_9: 984958457
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

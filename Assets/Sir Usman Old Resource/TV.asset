@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d6b45935456e94ea2e057d9c05c074, type: 3}
+  m_Name: TV
+  m_EditorClassIdentifier: 
+  mainCatID: 0
+  subCatID: 4
+  itemID: 0
+  itemName: TV One
+  subCatName: 
+  unlockLevel: 0
+  itemPrice: 10
+  oneTimePurchaseItem: 0
+  isSpawnOnSelection: 0
+  itemSprite: {fileID: -1562756580, guid: 03cd043a33ab7ca4fb471ef8c2c7d3cb, type: 3}
+  itemBoxPrefab: {fileID: 4401455875343284584, guid: 70fca1658e6ee0542a15f4ed61c683e5, type: 3}
+  itemPrefab: {fileID: 583925447468548762, guid: 388cf4ea700b6a943b8f675af267174b, type: 3}
+  uiItemObject: {fileID: 0}

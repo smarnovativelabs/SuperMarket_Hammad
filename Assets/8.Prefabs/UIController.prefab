@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &860523487550105887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7385426928315537539}
+  - component: {fileID: 7072111896877545478}
+  m_Layer: 0
+  m_Name: UIController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7385426928315537539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860523487550105887}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7072111896877545478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860523487550105887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13e989610d0857f49946358209188745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverItemNameText: {fileID: 0}
+  instructionsText: {fileID: 0}
+  CashText: {fileID: 0}
+  dayDisplay: {fileID: 0}
+  timeDisplay: {fileID: 0}
+  timeMultiplier: 0.0002777778
+  pickButton: {fileID: 0}
+  interactButtons:
+  - {fileID: -422753238, guid: c7fecf26d5715fd43b33ec2eb9accfe5, type: 3}
+  - {fileID: -422753238, guid: c7fecf26d5715fd43b33ec2eb9accfe5, type: 3}
+  motelToggleImage: {fileID: 0}
+  motelToggleSprite: []
+  tutorialPanelText: {fileID: 0}
+  paintCountButton: {fileID: 0}
+  pausePanel: {fileID: 0}
+  toolOpenPanel: {fileID: 0}
+  pcClickPanel: {fileID: 0}
+  boxClickPanel: {fileID: 0}
+  paintCountContainer: {fileID: 0}
+  trashProgressContainer: {fileID: 0}
+  paintProgressContainer: {fileID: 0}
+  counterCheckOutContainer: {fileID: 0}
+  customerRequestPanel: {fileID: 0}
+  restStorePanel: {fileID: 0}
+  restStoreCatContent: {fileID: 0}
+  restStoreCatBtnPrefab: {fileID: 269861386199561708, guid: 9fbf470728996484cb94eb44c6c15f50, type: 3}
+  restStoreSubItemsPrefab: {fileID: 4567785523729465300, guid: 850ebf0cf3cb1a045b62e0f3ce6b20eb, type: 3}
+  restStoreSubItemsParent: {fileID: 0}
+  restStoreSubCatBtnPrefab: {fileID: 4867309742614354530, guid: 0e846678c48fdc44f89c0849c93fa90b, type: 3}
+  restStoreSubCatScrollPrefab: {fileID: 1016953860917593451, guid: 51872e8e61912cd4da4715cf6628a0a3, type: 3}
+  restStoreItemPrefab: {fileID: 8664926615083016645, guid: a8b177b43f1d358418cf669b99e3f998, type: 3}
+  parentItemUnitPriceBar: {fileID: 0}
+  itemPriceUnitBar: {fileID: 4791544158228536794, guid: 623dc5ca8acd805438a65df6d3a38349, type: 3}
+  totalBillPriceText: {fileID: 0}
+  boxmanager: {fileID: 0}
+  uiButtonSound: {fileID: 8300000, guid: 2384feb9f93f68f4eb75782aa72013a6, type: 3}

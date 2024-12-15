@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d6b45935456e94ea2e057d9c05c074, type: 3}
+  m_Name: Saws
+  m_EditorClassIdentifier: 
+  mainCatID: 0
+  subCatID: 8
+  itemID: 4
+  itemName: Saws
+  subCatName: Tools
+  itemQuality: 0
+  unlockLevel: 15
+  itemPrice: 47
+  itemSellingPrice: 19
+  unitItemPurPrice: 9.5
+  itemquantity: 5
+  oneTimePurchaseItem: 0
+  isSpawnOnSelection: 0
+  itemSprite: {fileID: 2139660367, guid: 3383cc4b22cfb654e9f39ebc26ea59c6, type: 3}
+  itemBoxPrefab: {fileID: 4401455875343284584, guid: 70fca1658e6ee0542a15f4ed61c683e5, type: 3}
+  itemPrefab: {fileID: 5818342987594251726, guid: 41d7b205c9609154385deacd08983473, type: 3}
+  singleItemPrefab: {fileID: 7005011792980195789, guid: f9be3e7c8001d204ab2f9e9e0385b416, type: 3}
+  uiItemObject: {fileID: 0}
+  PaintMaterial: {fileID: 0}

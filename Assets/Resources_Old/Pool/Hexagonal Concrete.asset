@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d6b45935456e94ea2e057d9c05c074, type: 3}
+  m_Name: Hexagonal Concrete
+  m_EditorClassIdentifier: 
+  mainCatID: 5
+  subCatID: 1
+  itemID: 2
+  itemName: Hexagonal Concrete
+  subCatName: Outer Tiles
+  itemQuality: 0
+  unlockLevel: 0
+  itemPrice: 1400
+  itemSellingPrice: 0
+  unitItemPurPrice: 0
+  itemquantity: 41
+  oneTimePurchaseItem: 0
+  isSpawnOnSelection: 0
+  itemSprite: {fileID: 1893925580, guid: bb18c8837c2f6dc4da4ccf4dacf160d5, type: 3}
+  itemBoxPrefab: {fileID: 4401455875343284584, guid: 29aa986a65d9b504290370058fa63fb1, type: 3}
+  itemPrefab: {fileID: 5627078548271193486, guid: 1c5ba3e688aabf84086d588dfbce508e, type: 3}
+  singleItemPrefab: {fileID: 0}
+  uiItemObject: {fileID: 0}
+  PaintMaterial: {fileID: 2100000, guid: 512f5cec2408cc649a7a774c7635cd7a, type: 2}

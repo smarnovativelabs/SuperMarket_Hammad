@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d6b45935456e94ea2e057d9c05c074, type: 3}
+  m_Name: General Racks
+  m_EditorClassIdentifier: 
+  mainCatID: 1
+  subCatID: 0
+  itemID: 1
+  itemName: General Rack
+  subCatName: Shelves
+  itemQuality: 0
+  unlockLevel: 2
+  itemPrice: 200
+  itemSellingPrice: 0
+  unitItemPurPrice: 0
+  itemquantity: 1
+  oneTimePurchaseItem: 0
+  isSpawnOnSelection: 0
+  itemSprite: {fileID: -1657185187, guid: b54296b795d504d48ab208f1128bc878, type: 3}
+  itemBoxPrefab: {fileID: 4401455875343284584, guid: 70fca1658e6ee0542a15f4ed61c683e5, type: 3}
+  itemPrefab: {fileID: 4576866557016229131, guid: 6c2839fb55d954ebe80baf8bed3f56c5, type: 3}
+  singleItemPrefab: {fileID: 0}
+  uiItemObject: {fileID: 0}
+  PaintMaterial: {fileID: 0}
