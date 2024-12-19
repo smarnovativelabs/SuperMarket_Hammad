@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log(Application.persistentDataPath);
         versionText.text = "v " + Application.version.ToString();
         SettingPanel.SetActive(false);
         soundCounter = PlayerPrefs.GetInt("Sound", 1);

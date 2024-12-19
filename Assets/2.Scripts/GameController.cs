@@ -101,7 +101,7 @@ public class GameController : MonoBehaviour
    //     GameManager.instance.EnableLoadingScreen(true, "Loading Pool Data");
         //yield return PoolManager.instance.InitializePoolData();
    //     yield return null;
-        CleanerManager.instance.EnableAllCleanersUponRequiredLevelReached();
+       // CleanerManager.instance.EnableAllCleanersUponRequiredLevelReached();
         yield return null;
         GameManager.instance.EnableLoadingScreen(true, "Loading Employees Data");
         yield return EmployeeManager.Instance.InitializeEmployeeData();
@@ -119,7 +119,7 @@ public class GameController : MonoBehaviour
         UpdateGameQualitySettings(PlayerDataManager.instance.playerData.selectedQualitySettings);
         isDataInitialized = true;
         yield return new WaitForSeconds(0.1f);
-         CleanerManager.instance.EnableClanersRV();
+         //CleanerManager.instance.EnableClanersRV();
         if (gameData.motelOpenStatus)
         {
             OnOpenMotel(true);

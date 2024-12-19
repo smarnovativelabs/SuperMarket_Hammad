@@ -10,9 +10,9 @@ EditorBuildSettings:
     guid: c51acad14d79fcb4f8cc022b4e96ffc9
   - enabled: 1
     path: Assets/1.Scenes/1.Main Menu.unity
-    guid: 665d4b4972129d14298a558f42c1214b
+    guid: 21e340d34e4ff5c4a9d92a782e856f32
   - enabled: 0
-    path: Assets/1.Scenes/2.SuperMarket.unity
+    path: Assets/1.Scenes/SuperMarket.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
     path: Assets/1.Scenes/2.SuperMarket 1.unity
@@ -24,6 +24,7 @@ EditorBuildSettings:
     path: Assets/1.Scenes/Motel_Copy.unity
     guid: ec597a69cac7dff4ba71e4cb3aba579c
   - enabled: 1
-    path: Assets/1.Scenes/Gameplay.unity
-    guid: 3e53e71f2c99e8b44b80655dd35bf6cc
+    path: Assets/1.Scenes/SuperMarket.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

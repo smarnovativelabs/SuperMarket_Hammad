@@ -293,23 +293,23 @@ public class EmployeeManager : MonoBehaviour
                     canDisplay=true;
                 }
                 break;
+            //case 1:
+
+            //    if (!isPermotionalPanelReceptionistDisplayed && _EmployeeCount == 0)
+            //    {
+            //        isPermotionalPanelReceptionistDisplayed = true;
+            //        canDisplay= true;
+            //    }
+            //    break;
+            //case 2:
+
+            //    if (!isPermotionalPaneFuelAttendentDisplayed && _EmployeeCount == 0)
+            //    {
+            //        isPermotionalPaneFuelAttendentDisplayed = true;
+            //        canDisplay= true;
+            //    }
+            //    break;
             case 1:
-
-                if (!isPermotionalPanelReceptionistDisplayed && _EmployeeCount == 0)
-                {
-                    isPermotionalPanelReceptionistDisplayed = true;
-                    canDisplay= true;
-                }
-                break;
-            case 2:
-
-                if (!isPermotionalPaneFuelAttendentDisplayed && _EmployeeCount == 0)
-                {
-                    isPermotionalPaneFuelAttendentDisplayed = true;
-                    canDisplay= true;
-                }
-                break;
-            case 3:
 
                 if (!isPermotionalPanelCleanerDisplayed && _EmployeeCount == 0)
                 {
@@ -552,9 +552,9 @@ public enum CostType
 public enum EmployeeType
 {
     Cashier = 0,
-    Receptionist = 1,
-    FuelAttendants=2,
-    Cleaner=3
+    Cleaner= 1,
+   // Receptionist = 2,
+    //FuelAttendants=2,
 
 }
 [System.Serializable]

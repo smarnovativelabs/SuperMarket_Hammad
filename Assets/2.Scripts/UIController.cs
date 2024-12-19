@@ -375,6 +375,7 @@ public class UIController : MonoBehaviour
     }
     public void OnPressOpenSuperStore()
     {
+        TutorialManager.instance.OnCompleteTutorialTask(15);
         if (GameController.instance.gameData.superStoreOpenStatus)
         {
             superStoreToggle.sprite = toggleSprite[0];
@@ -482,6 +483,7 @@ public class UIController : MonoBehaviour
     }
     public void PlaceDynamicItem()
     {
+        TutorialManager.instance.OnCompleteTutorialTask(13);
         if (GameController.instance.currentPicketItem != null)
         {
             if (GameController.instance.currentPicketItem.GetComponent<ItemPickandPlace>())
@@ -655,6 +657,7 @@ public class UIController : MonoBehaviour
     }
     public void UpdateGameProgressText(bool _enable, string _progressText = "")
     {
+        Debug.Log("why3");
         gameProgressContainer.SetActive(_enable);
         gameProgressContainer.transform.GetChild(0).GetComponent<LocalizeText>().UpdateText(_progressText);
         //gameProgressContainer.transform.GetChild(0).GetComponent<Text>().text = _progressText;
@@ -1093,7 +1096,7 @@ public class UIController : MonoBehaviour
         //    }
         //}
         //AdsMediation.AdsMediationManager.instance.ShowInterstitial();
-        //TutorialManager.instance.OnCompleteTutorialTask(9);
+        TutorialManager.instance.OnCompleteTutorialTask(11);
         if (PlayerDataManager.instance.playerData.playerCash >= StoreItemsValuse.totalBill)
         {
             pcClickPanel.SetActive(false);
@@ -1375,7 +1378,10 @@ public class UIController : MonoBehaviour
         pcClickPanel.SetActive(true);
         //SetFuelPanelValues();//Fuel Panel Values Is Set Everytime PC Panel is opened
         //AdsMediation.AdsMediationManager.instance.RemoveBannerAd();
-        OnPcTabPressed(3);
+        
+        OnPcTabPressed(2);
+        IAPUiManager.Instance.OnSubPanelBtnPressed(2);
+
     }
     public void OnCloseNoCashPanel()
     {
@@ -1424,20 +1430,21 @@ public class UIController : MonoBehaviour
         pcTabs[_tabId].tabBtn.sprite = tabBtnsSprites[1];
         pcTabs[_tabId].tabIconImage.sprite = pcTabs[_tabId].tabIcons[1];
         pcTabs[_tabId].tabNameText.color = tabTextColors[1];
+        print("This is PC Tab ID ;;;;;;" + _tabId);
         if (_tabId == 1)
         {
             //StoreCategorySelected(CategoryName.Furniture);
             UpdateStoreCartPanelVisibility();
         }
-        if (_tabId == 3)
+        if (_tabId == 2)
         {
             IAPUiManager.Instance.OnSubPanelBtnPressed(0);
         }
-        if (_tabId == 4)
+        if (_tabId == 3)
         {
             ManagementTabUIManager.instance.OnPressManagementTab(0);
         }
-        if (_tabId == 5)
+        if (_tabId == 4)
         {
             UpgradesUIManager.instance.OnUpgradeCatBtnPressed(0);
         }

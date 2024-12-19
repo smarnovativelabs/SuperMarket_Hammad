@@ -14,7 +14,9 @@ public class StoreUnlockCollider : MonoBehaviour,InteractableObjects
     {
         if (SuperStoreManager.instance.OnPurchaseSuperStore())
         {
+            TutorialManager.instance.OnCompleteTutorialTask(6);
             SuperStoreManager.instance.OpenMarketDoors();
+
         }
     }
 

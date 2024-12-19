@@ -396,7 +396,7 @@ MonoBehaviour:
   placableTriggerColliders: []
   itemCondition: 3
   isDoorRack: 1
-  placableCategories: 03000000
+  placableCategories: 00000000
   placableSubCatIds: 0c000000
   placersContainer: {fileID: 24587051738781589}
   rackItemPlacers: []

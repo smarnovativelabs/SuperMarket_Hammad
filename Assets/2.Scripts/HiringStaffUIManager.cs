@@ -142,10 +142,21 @@ public class HiringStaffUIManager : ManagementTabUI
     }
     public override void SetMangementTabBtns()
     {
+        print("Departments+++++++++" + deptRefs.Count);
+        print("this is main dept ref" + deptRefs);
         for(int i = 0; i < deptRefs.Count; i++)
         {
+            print("this is dept ref  0 " + deptRefs[i]);
+            print("this is dept ref 1 " + deptRefs[1]);
+            print("Inside the Loop *********");
+            print("this is +++++ reqLevel " + deptRefs[i].reqLevel);
+            print("this is +++++++++ " + PlayerDataManager.instance.playerData.playerLevel);
+           
             bool _isUnlocked = deptRefs[i].reqLevel <= PlayerDataManager.instance.playerData.playerLevel;
+            
+            print("Inside the Loop *********  1");
             deptRefs[i].deptBtn.transform.GetChild(1).gameObject.SetActive(!_isUnlocked);
+            print("Inside the Loop *********  2");
         }
     }
     public override void OnSetPanelBtns()
@@ -185,23 +196,23 @@ public class HiringStaffUIManager : ManagementTabUI
                     return;
                 }
                 break;
-            case EmployeeType.Receptionist:
+            //case EmployeeType.Receptionist:
 
-                if (!GameController.instance.gameData.motelOpenStatus)
-                {
-                    UIController.instance.DisplayInstructions("Open motel To Hire Receptionist");
-                   // GameManager.instance.CallFireBase("HirTryBfMotelOpn");
-                    return;
-                }
-                break;
-            case EmployeeType.FuelAttendants:
-                if (!GameController.instance.gameData.stationOpenStatus)
-                {
-                    UIController.instance.DisplayInstructions("Open Gas Station To Hire Fuel Attendant");
-                    //GameManager.instance.CallFireBase("HirTryBfGsStatnOpn");
-                    return;
-                }
-                break;
+            //    if (!GameController.instance.gameData.motelOpenStatus)
+            //    {
+            //        UIController.instance.DisplayInstructions("Open motel To Hire Receptionist");
+            //       // GameManager.instance.CallFireBase("HirTryBfMotelOpn");
+            //        return;
+            //    }
+            //    break;
+            //case EmployeeType.FuelAttendants:
+            //    if (!GameController.instance.gameData.stationOpenStatus)
+            //    {
+            //        UIController.instance.DisplayInstructions("Open Gas Station To Hire Fuel Attendant");
+            //        //GameManager.instance.CallFireBase("HirTryBfGsStatnOpn");
+            //        return;
+            //    }
+            //    break;
         }
         if (PlayerDataManager.instance.playerData.playerCash < (hiringPrice * hiringPeriod))
         {

@@ -109,6 +109,7 @@ public class CashCounterManager : MonoBehaviour
     }
     void OnCompleteEnterToCounter()
     {
+        TutorialManager.instance.OnCompleteTutorialTask(16);
         UIController.instance.EnableCounterPanel(true);
         UIController.instance.EnableCashContainers(true);
         EnableCashBillingScreen(false);//Sets To Display Total Bill Screen Only

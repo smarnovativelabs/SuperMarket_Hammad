@@ -120,7 +120,9 @@ public class SuperStoreManager : MonoBehaviour
         //} else
         if (storeData.trashPickedCounter < removableTrashCount)
         {
+           
             UIController.instance.UpdateGameProgressText(true, "Dispose of Trash in Dustbin (" + storeData.trashPickedCounter.ToString() + "/" + removableTrashCount.ToString() + ")");
+            
         }
         else if (storeData.dustRemovedCounter < storeDustContainer.childCount)
         {
@@ -175,12 +177,22 @@ public class SuperStoreManager : MonoBehaviour
     public void OnRemoveStoreTrash()
     {
         storeData.trashPickedCounter++;
+        if (storeData.trashPickedCounter == removableTrashCount)
+        {
+            print("Hey Hello");
+            TutorialManager.instance.OnCompleteTutorialTask(9);
+        }
         UpdateGameProgressBar(true);
        // GameManager.instance.CallFireBase("StoreTrashRmv" + storeData.trashPickedCounter.ToString());
     }
     public void OnRemoveStoreDust()
     {
         storeData.dustRemovedCounter++;
+        if (storeData.dustRemovedCounter == storeDustContainer.childCount)
+        {
+            print("Hey Hello 2");
+            TutorialManager.instance.OnCompleteTutorialTask(10);
+        }
         UpdateGameProgressBar(true);
        // GameManager.instance.CallFireBase("StoreDustRmv" + storeData.dustRemovedCounter.ToString());
 
@@ -900,6 +912,8 @@ public class SuperStoreManager : MonoBehaviour
         for (int i = 0; i < posCounters.Count; i++)
         {
             posCounters[i].lockImage.SetActive(!posCounters[i].isActive);
+            print("hmmmmmmmmmmmmm__PlayerLvl__"+PlayerDataManager.instance.playerData.playerLevel);
+            print("heeeeeeeeeeeeeee__LevelToUnlock"+posCounters[i].requiredLevelToUnlock);
             bool _isLocked = posCounters[i].requiredLevelToUnlock > PlayerDataManager.instance.playerData.playerLevel;
             for (int j = 0; j < posCounters[i].lockBtnImgs.Length; j++)
             {
@@ -933,6 +947,10 @@ public class SuperStoreManager : MonoBehaviour
         {
             return false;
         }
+        
+        print("Super Store  Level Required $$$$$$$$$$$$$$$" + superStoreExpension[_expensionIndex].levelRequired);
+        print("Super Store men player Data $$$$$$$$$$$" + PlayerDataManager.instance.playerData.playerLevel);
+        print("Expamsion Index $$$$$$$$$$$$" + _expensionIndex);
 
         if (superStoreExpension[_expensionIndex].levelRequired > PlayerDataManager.instance.playerData.playerLevel)
         {

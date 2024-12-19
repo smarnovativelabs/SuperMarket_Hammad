@@ -89,7 +89,7 @@ public class BoxManager : MonoBehaviour
         {
             GameController.instance.currentPicketItem.GetComponent<Box>().RemoveItemFromSavingList();
             GameController.instance.currentPicketItem.GetComponent<Box>().SpawnFurnitureItems();
-            TutorialManager.instance.OnCompleteTutorialTask(9);
+            TutorialManager.instance.OnCompleteTutorialTask(12);
         }
     }
 }

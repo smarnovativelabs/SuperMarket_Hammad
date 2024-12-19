@@ -111,6 +111,7 @@ public class StoreRack : ItemPickandPlace, InteractableObjects,IRuntimeSpawn
         rackItemPlacers[_rackPlacerIndex].placedItemRef = _itemRef;
         rackItemPlacers[_rackPlacerIndex].isOccupied = true;
         rackItemPlacers[_rackPlacerIndex].placedItemProps = _newItem;
+        TutorialManager.instance.OnCompleteTutorialTask(14);
         SuperStoreManager.instance.OnAddItem(_newItem);
     }
     public void RemoveItemFromRack(int _itemPlacerIndex)

@@ -45,7 +45,7 @@ public class LevelManager : MonoBehaviour
         SuperStoreManager.instance.UpdateSuperMarketExpensionLockState();
         SuperStoreManager.instance.UpdateSuperStoreLocking();
        // PoolManager.instance.SetPoolLockStatus();
-        CleanerManager.instance.EnableAllCleanersUponRequiredLevelReached();
+        //CleanerManager.instance.EnableAllCleanersUponRequiredLevelReached();
       //  CleanerManager.instance.UnlockAllCleanersAtRequiredLevel();
         UIController.instance.OnUpdateLevel();
     }

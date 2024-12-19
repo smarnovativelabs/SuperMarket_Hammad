@@ -152,6 +152,7 @@ public class EmployeesUIManager : ManagementTabUI
             deptRefs[curDeptId].deptBtn.GetComponent<Image>().sprite = deptBtnsSprites[0];
             deptRefs[curDeptId].deptBtn.transform.GetChild(0).GetComponent<Text>().color = deptBtnTextColors[0];
         }
+        print("This is Index in employee " + _index);
         curDeptId = _index;
         deptRefs[curDeptId].deptContainerPanel.SetActive(true);
         deptRefs[curDeptId].deptBtn.GetComponent<Image>().sprite = deptBtnsSprites[1];

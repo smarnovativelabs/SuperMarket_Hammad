@@ -108,17 +108,19 @@ public class EnvironmentManager : MonoBehaviour
         LightmapSettings.lightmaps = _lights.lightMaps;
         RenderSettings.skybox = _lights.skyboxMaterial;
         //RenderSettings.fogColor = _lights.fogColor;
-
+        print(envObjectMaterials.Length);
         for(int i = 0; i < envObjectMaterials.Length; i++)
         {
+            print(_lights.objectsEmissionColor[i].emissionColor);
             envObjectMaterials[i].SetColor("_EmissionColor", _lights.objectsEmissionColor[i].emissionColor);
 
             /*if (_lights.objectsEmissionColor.Length <= i)
                 continue;
             envObjectMaterials[i].SetColor("_EmissionColor", _lights.objectsEmissionColor[i].emissionColor);*/
         }
-        for(int i = 0; i < textMeshes.Length; i++)
+        for (int i = 0; i < textMeshes.Length; i++)
         {
+            print(textMeshes[i]);
             textMeshes[i].GetComponent<MeshRenderer>().material = _lights.textMaterials[i].meshMaterial;
         }
     }

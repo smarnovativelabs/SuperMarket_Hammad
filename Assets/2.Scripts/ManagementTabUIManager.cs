@@ -33,6 +33,7 @@ public class ManagementTabUIManager : MonoBehaviour
             OnLeveUpgrade();
             return;
         }
+        print("This is currentSelectedTab" + currentSelectedTab);
         if (currentSelectedTab >= 0)
         {
             managementTabs[currentSelectedTab].ResetTab();
