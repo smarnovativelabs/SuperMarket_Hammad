@@ -128,7 +128,7 @@ public class ToolsManager : MonoBehaviour
             }
         }
     }
-    public void SetAutoUseButton(bool _enable=true)
+    public void SetAutoUseButton(bool _enable = true)
     {
         var currentTool = GameController.instance.currentPickedTool;
         if (currentTool != null && currentTool.CompareTag("Tool"))
@@ -139,7 +139,7 @@ public class ToolsManager : MonoBehaviour
                 isAutoUse = _enable;
                 toolAction.SetPaintBrushAnim();
                 UIController.instance.SetPickBtnColor(_enable ? Color.green : Color.white);
-            } 
+            }
         }
     }
     public bool IsPaintBrushActive()
@@ -149,7 +149,7 @@ public class ToolsManager : MonoBehaviour
         if (currentTool != null && currentTool.CompareTag("Tool"))
         {
             _isActive = currentTool.GetComponent<PaintBrushTool>() != null;
-          
+
         }
         return _isActive;
     }

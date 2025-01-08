@@ -62,7 +62,7 @@ public class Floor : ItemPickandPlace, InteractableObjects
                     gameObject.GetComponent<Outline>().enabled = true;
                 }
             }
-            
+
         }
     }
 
@@ -117,13 +117,13 @@ public class Floor : ItemPickandPlace, InteractableObjects
         {
             //RoomManager.instance.rooms[RoomManager.instance.currentRoomNumber].inactiveCountofFloor++;
         }
-       // RoomManager.instance.rooms[RoomManager.instance.currentRoomNumber].CheckRoomProgress();
+        // RoomManager.instance.rooms[RoomManager.instance.currentRoomNumber].CheckRoomProgress();
         UIController.instance.SetPaintCountContainer(paintBrushTool.paintCount);
         ChangePaintMaterial();
         gameObject.GetComponent<ItemPickandPlace>().itemId = paintBrushTool.ItemId;
-       // RoomManager.instance.SetFloorItemId(placedRoomIndex, indexInRoomList, paintBrushTool.ItemId);
+        // RoomManager.instance.SetFloorItemId(placedRoomIndex, indexInRoomList, paintBrushTool.ItemId);
         HapticFeedback.LightFeedback();
-       // RoomManager.instance.rooms[RoomManager.instance.currentRoomNumber].OnFloorPaint(RoomManager.instance.currentRoomNumber);
+        // RoomManager.instance.rooms[RoomManager.instance.currentRoomNumber].OnFloorPaint(RoomManager.instance.currentRoomNumber);
     }
     public override void OnSpawnItem(ItemData _data)
     {

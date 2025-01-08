@@ -539,7 +539,7 @@ public class UIController : MonoBehaviour
 
     public void OnClickToolsButton(string toolName)
     {
-        ToolsManager.instance.SetAutoUseButton(false);
+       // ToolsManager.instance.SetAutoUseButton(false);
         toolOpenPanel.SetActive(false);
         GameObject selectedTool = null;
 
@@ -612,7 +612,7 @@ public class UIController : MonoBehaviour
     }
     public void OnPressDeactivateAllToolsButton()
     {
-        ToolsManager.instance.SetAutoUseButton(false);
+        //ToolsManager.instance.SetAutoUseButton(false);
 
         ToolsManager.instance.DeactivateAllTools();
         //    paintCountButton.SetActive(false);
@@ -640,7 +640,7 @@ public class UIController : MonoBehaviour
     }
     public void OnPressResetPaint()
     {
-        GameController.instance.currentPickedTool.GetComponent<PaintBrushTool>().paintCount = 0;
+       // GameController.instance.currentPickedTool.GetComponent<PaintBrushTool>().paintCount = 0;
         SetPaintCountContainer(0);
     }
     public void SetRoomProgress(string _paintText, bool _enable, int _trashCount, int _totalTrash)

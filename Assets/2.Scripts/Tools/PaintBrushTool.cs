@@ -17,7 +17,7 @@ public class PaintBrushTool : MonoBehaviour, IToolAction
         if (paintCount > 0)
         {
             ToolsManager.instance.SetAutoUseButton(!ToolsManager.instance.isAutoUse);
-           // var _index = RoomManager.instance.currentRoomNumber;
+            // var _index = RoomManager.instance.currentRoomNumber;
             //if (_index > -1)
             //{
             //    SoundController.instance.OnPlayInteractionSound(toolSound);
@@ -27,7 +27,7 @@ public class PaintBrushTool : MonoBehaviour, IToolAction
             //        ResetPaintBrushMaterial();
             //    }
             //}
-            TutorialManager.instance.OnCompleteTutorialTask(10);  
+            TutorialManager.instance.OnCompleteTutorialTask(10);
         }
         else
         {
@@ -56,7 +56,7 @@ public class PaintBrushTool : MonoBehaviour, IToolAction
         }
         if (paintCount > 0)
         {
-           // var _index = RoomManager.instance.currentRoomNumber;
+            // var _index = RoomManager.instance.currentRoomNumber;
             //if (_index > -1)
             //{
             //    SoundController.instance.OnPlayInteractionSound(toolSound);
@@ -80,7 +80,7 @@ public class PaintBrushTool : MonoBehaviour, IToolAction
         Material[] _mats = brushMesh.GetComponent<MeshRenderer>().materials;
         _mats[1] = defaultMaterial;
         brushMesh.GetComponent<MeshRenderer>().materials = _mats;
-       
+
     }
     public void SetPaintBrushAnim()
     {
@@ -88,14 +88,14 @@ public class PaintBrushTool : MonoBehaviour, IToolAction
     }
     public void SetPaintProperties(Material _mat, int _count, CategoryName _mainId, int _subId, int _itemId)
     {
-        
+
         currentMaterial = _mat;
         paintCount = _count;
         mainId = _mainId;
         subCatIdOfPaint = _subId;
         ItemId = _itemId;
         Material[] _mats = brushMesh.GetComponent<MeshRenderer>().materials;
-        
+
         _mats[1] = currentMaterial;
         brushMesh.GetComponent<MeshRenderer>().materials = _mats;
     }

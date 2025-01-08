@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaintBox : ItemPickandPlace, InteractableObjects,IRuntimeSpawn
+public class PaintBox : ItemPickandPlace, InteractableObjects, IRuntimeSpawn
 {
     public Material paintMaterial;
     public int paintCount = 30;
@@ -33,7 +33,7 @@ public class PaintBox : ItemPickandPlace, InteractableObjects,IRuntimeSpawn
             GameController.instance.UpdateCurrentPickedItem(gameObject);
 
         }
-        else if (toolPicked.gameObject.name == "Paint Brush" )
+        else if (toolPicked.gameObject.name == "Paint Brush")
         {
             if (toolPicked.GetComponent<PaintBrushTool>().paintCount <= 0)
             {
@@ -97,7 +97,7 @@ public class PaintBox : ItemPickandPlace, InteractableObjects,IRuntimeSpawn
             transform.localScale = Vector3.one * camChildScale;
             UIController.instance.OnChangeInteraction(1, true);
             GameController.instance.UpdateCurrentPickedItem(gameObject);
-           // RoomManager.instance.EnablePlacableItemIndicater(mainCat, SubCatId);
+            // RoomManager.instance.EnablePlacableItemIndicater(mainCat, SubCatId);
         }
         else
         {

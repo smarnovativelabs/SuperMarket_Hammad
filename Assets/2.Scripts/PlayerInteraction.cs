@@ -120,10 +120,10 @@ public class PlayerInteraction : MonoBehaviour
             else
             {
                 UIController.instance.DisplayHoverObjectName("", false);
-                if (GameController.instance.currentPicketItem == null && !ToolsManager.instance.IsPaintBrushActive())
-                {
-                    UIController.instance.OnChangeInteraction(0, false);
-                }
+                //if (GameController.instance.currentPicketItem == null && !ToolsManager.instance.IsPaintBrushActive())
+                //{
+                //    UIController.instance.OnChangeInteraction(0, false);
+                //}
                 if (currentInteractingObj != null)
                 {
                     currentInteractingObj.TurnOffOutline();
@@ -133,10 +133,10 @@ public class PlayerInteraction : MonoBehaviour
         }
         else
         {
-            if (GameController.instance.currentPicketItem == null && !ToolsManager.instance.IsPaintBrushActive())
-            {
-                UIController.instance.OnChangeInteraction(0, false);
-            }
+            //if (GameController.instance.currentPicketItem == null && !ToolsManager.instance.IsPaintBrushActive())
+            //{
+            //    UIController.instance.OnChangeInteraction(0, false);
+            //}
             if (currentInteractingObj != null)
             {
                 currentInteractingObj.TurnOffOutline();
