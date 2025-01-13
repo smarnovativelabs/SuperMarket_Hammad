@@ -38,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 13
-  m_BakeOnSceneLoad: 0
+  serializedVersion: 12
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -2601,6 +2601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd7c5230df9cf47a99fa367765fbf062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInitialized: 0
 --- !u!4 &335821348
 Transform:
   m_ObjectHideFlags: 0
@@ -4769,6 +4770,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b251c76fdc474987be0a04d0ab8c6c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAdsRemoved: 0
+  interstitialAdDelay: 0
 --- !u!114 &623875936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4793,6 +4796,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531a2e9c1ed3a4547a9d41c4d2094a46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iosInterstitialAdUnitId: ENTER_IOS_INTERSTITIAL_AD_UNIT_ID_HERE
+  iosRewardedAdUnitId: ENTER_IOS_REWARD_AD_UNIT_ID_HERE
+  iosRewardedInterstitialAdUnitId: ENTER_IOS_REWARD_INTER_AD_UNIT_ID_HERE
+  iosBannerAdUnitId: ENTER_IOS_BANNER_AD_UNIT_ID_HERE
+  iosMRecAdUnitId: ENTER_IOS_MREC_AD_UNIT_ID_HERE
+  androidInterstitialAdUnitId: ENTER_ANDROID_INTERSTITIAL_AD_UNIT_ID_HERE
+  androidRewardedAdUnitId: ENTER_ANDROID_REWARD_AD_UNIT_ID_HERE
+  androidRewardedInterstitialAdUnitId: ENTER_ANDROID_REWARD_INTER_AD_UNIT_ID_HERE
+  androidBannerAdUnitId: ENTER_ANDROID_BANNER_AD_UNIT_ID_HERE
+  androidMRecAdUnitId: ENTER_ANDROID_MREC_AD_UNIT_ID_HERE
+  isInitialized: 0
 --- !u!114 &623875938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4805,6 +4819,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c288a3f62e48a47399a2399441725946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  androidBannerId: 
+  androidInterstitialId: ca-app-pub-3940256099942544/1033173712
+  androidRewardedVideoId: ca-app-pub-3940256099942544/5224354917
+  iosBannerId: 
+  iosInterstitialId: 
+  iosRewardedVideoId: 
+  isInitialized: 0
 --- !u!4 &623875939
 Transform:
   m_ObjectHideFlags: 0
@@ -5238,12 +5259,8 @@ Light:
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
-  m_ForceVisible: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
-  m_LightUnit: 1
-  m_LuxAtDistance: 1
-  m_EnableSpotReflector: 1
 --- !u!4 &705507995
 Transform:
   m_ObjectHideFlags: 0
@@ -12322,22 +12339,6 @@ MonoBehaviour:
       rewardImg: {fileID: 0}
       rewardDesc: A Permanent Cashier
       amount: 0
-  - productID: com.peri.games.supermarket.motel.employee4
-    productName: Get A Cleaner
-    price: 1
-    localizedPriceString: $39.99
-    type: 0
-    purchaseMethod: 0
-    inAppCategory: 1
-    displayBtnRef: {fileID: 0}
-    iapBtnRef: {fileID: 146956532781026089, guid: e7a35c7683b3644ddb93554b1393d7dc, type: 3}
-    icon: {fileID: 221463736, guid: e4a9c6f9976d84151a31e6562b518c0c, type: 3}
-    bgImg: {fileID: 2097901273, guid: e1ab013f93b7a460b8e70ed1b874692d, type: 3}
-    rewards:
-    - rewardType: 3
-      rewardImg: {fileID: 0}
-      rewardDesc: A Permanent Cleaner
-      amount: 0
   - productID: com.peri.games.supermarket.motel.hotpkg1
     productName: Cashier Pack
     price: 1
@@ -12357,30 +12358,6 @@ MonoBehaviour:
     - rewardType: 4
       rewardImg: {fileID: -1605091271, guid: e4a9c6f9976d84151a31e6562b518c0c, type: 3}
       rewardDesc: Get 1500 Cash
-      amount: 1500
-    - rewardType: 6
-      rewardImg: {fileID: 1814594446, guid: e4a9c6f9976d84151a31e6562b518c0c, type: 3}
-      rewardDesc: Remove Ads
-      amount: 0
-  - productID: com.peri.games.supermarket.motel.hotpkg4
-    productName: Cleaner Pack
-    price: 1
-    localizedPriceString: $39.99
-    type: 0
-    purchaseMethod: 0
-    inAppCategory: 0
-    displayBtnRef: {fileID: 0}
-    iapBtnRef: {fileID: 146956532781026089, guid: 498a153e060d4401b85f110a87dc384b, type: 3}
-    icon: {fileID: 221463736, guid: e4a9c6f9976d84151a31e6562b518c0c, type: 3}
-    bgImg: {fileID: 2097901273, guid: e1ab013f93b7a460b8e70ed1b874692d, type: 3}
-    rewards:
-    - rewardType: 3
-      rewardImg: {fileID: 221463736, guid: e4a9c6f9976d84151a31e6562b518c0c, type: 3}
-      rewardDesc: Permanent Cleaner
-      amount: 0
-    - rewardType: 4
-      rewardImg: {fileID: -1605091271, guid: e4a9c6f9976d84151a31e6562b518c0c, type: 3}
-      rewardDesc: 1500 Cash
       amount: 1500
     - rewardType: 6
       rewardImg: {fileID: 1814594446, guid: e4a9c6f9976d84151a31e6562b518c0c, type: 3}
@@ -16049,6 +16026,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79eb790be6e9c4da28064c7b8ede1935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tenjinAndroidKey: 
+  tenjinIosKey: 
 --- !u!4 &1976584707
 Transform:
   m_ObjectHideFlags: 0

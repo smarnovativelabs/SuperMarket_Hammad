@@ -90,7 +90,7 @@ public class HiringStaffUIManager : ManagementTabUI
     {
         SoundController.instance.OnPlayInteractionSound(btnSound);
         OnSelectBtn(_index);
-        //GameManager.instance.CallFireBase("MngmtTab_" + _index.ToString());
+        GameManager.instance.CallFireBase("MngmtTab_" + _index.ToString());
     }
     public void OnpurchaseEmployee(int _index)
     {
@@ -147,7 +147,7 @@ public class HiringStaffUIManager : ManagementTabUI
         for(int i = 0; i < deptRefs.Count; i++)
         {
             print("this is dept ref  0 " + deptRefs[i]);
-            print("this is dept ref 1 " + deptRefs[1]);
+          //  print("this is dept ref 1 " + deptRefs[1]);
             print("Inside the Loop *********");
             print("this is +++++ reqLevel " + deptRefs[i].reqLevel);
             print("this is +++++++++ " + PlayerDataManager.instance.playerData.playerLevel);
@@ -192,7 +192,7 @@ public class HiringStaffUIManager : ManagementTabUI
                 if (!GameController.instance.gameData.superStoreOpenStatus)
                 {
                     UIController.instance.DisplayInstructions("Open Super Store To Hire Cashier");
-                   // GameManager.instance.CallFireBase("HirTryBfStrOpn");
+                    GameManager.instance.CallFireBase("HirTryBfStrOpn");
                     return;
                 }
                 break;
@@ -216,7 +216,7 @@ public class HiringStaffUIManager : ManagementTabUI
         }
         if (PlayerDataManager.instance.playerData.playerCash < (hiringPrice * hiringPeriod))
         {
-           // GameManager.instance.CallFireBase("NoCshEmp_" + curDeptId.ToString() + "_" + purchasingEmployeeId.ToString());
+            GameManager.instance.CallFireBase("NoCshEmp_" + curDeptId.ToString() + "_" + purchasingEmployeeId.ToString());
             UIController.instance.EnableNoCashPanel();
             hiringConfirmPanel.SetActive(false);
             return;
@@ -228,14 +228,14 @@ public class HiringStaffUIManager : ManagementTabUI
         if (_workplaceIndex < 0)
         {
             responseText.text = "You do not have any counter for additional Employees!";
-           // GameManager.instance.CallFireBase("NoCntrEmp_" + curDeptId.ToString()+"_" + purchasingEmployeeId.ToString());
+            GameManager.instance.CallFireBase("NoCntrEmp_" + curDeptId.ToString()+"_" + purchasingEmployeeId.ToString());
 
             return;
         }
         int _empLev= EmployeeManager.Instance.departments[curDeptId].avlEmployees[purchasingEmployeeId].unlockLevel;
         if (_empLev > PlayerDataManager.instance.playerData.playerLevel)
         {
-           // GameManager.instance.CallFireBase("EmpUnlkBfLev_" + curDeptId.ToString() + "_" + purchasingEmployeeId.ToString());
+            GameManager.instance.CallFireBase("EmpUnlkBfLev_" + curDeptId.ToString() + "_" + purchasingEmployeeId.ToString());
             responseText.text = "Need Level " + _empLev.ToString() + " to Unlock";
             return;
         }
@@ -247,7 +247,7 @@ public class HiringStaffUIManager : ManagementTabUI
         PlayerDataManager.instance.UpdateCash(-1 * ((int)(hiringPrice * hiringPeriod)));
         UIController.instance.UpdateCurrency(-1 * ((int)(hiringPrice * hiringPeriod)));
         hiringConfirmPanel.SetActive(false);
-       // GameManager.instance.CallFireBase("Cshr_" + curDeptId.ToString() + "_" + purchasingEmployeeId.ToString() + "_Hrd");
+        GameManager.instance.CallFireBase("Cshr_" + curDeptId.ToString() + "_" + purchasingEmployeeId.ToString() + "_Hrd");
     }
     public void OnCloseConfirmPanel()
     {

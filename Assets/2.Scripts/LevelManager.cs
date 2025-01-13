@@ -37,7 +37,7 @@ public class LevelManager : MonoBehaviour
     {
         int playerCurrentLevel = PlayerDataManager.instance.playerData.playerLevel;
         PlayerDataManager.instance.UpdateLevel(1);
-      //  GameManager.instance.CallFireBase("Level_" + playerCurrentLevel.ToString() + "_Up");
+        GameManager.instance.CallFireBase("Level_" + playerCurrentLevel.ToString() + "_Up");
         LevelUpUiManager.Instance.ShowLevelUpPanel();
        // RoomManager.instance.OnLevelUpdate();
        // GasStationManager.instance.UpdateFillingPointsLockState();

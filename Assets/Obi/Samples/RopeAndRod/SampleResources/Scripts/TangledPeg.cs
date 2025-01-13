@@ -41,7 +41,7 @@ public class TangledPeg : MonoBehaviour
         float distance = Vector3.Magnitude(vector);
 
         // simple damped spring: F = -kx - vu
-        Vector3 accel = stiffness * vector - damping * rb.linearVelocity;
+        Vector3 accel = stiffness * vector - damping * rb.velocity;
 
         // clamp spring acceleration:
         accel = Vector3.ClampMagnitude(accel, maxAccel);

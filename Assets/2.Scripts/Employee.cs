@@ -150,7 +150,7 @@ public class Employee : MonoBehaviour
             if (savableData.remDutyTime <= 0)
             {
                 OnEndDuty();
-               // GameManager.instance.CallFireBase("EmpLeav_" + savableData.employeeType + "_" + savableData.employeeId);
+                GameManager.instance.CallFireBase("EmpLeav_" + savableData.employeeType + "_" + savableData.employeeId);
                 return;
             }
             int _remSec = Mathf.FloorToInt(savableData.remDutyTime);

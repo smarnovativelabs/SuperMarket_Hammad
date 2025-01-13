@@ -222,7 +222,7 @@ public class CustomerManager : MonoBehaviour
     public void OnAllotRoom()
     {
         totalAllotedCustomers++;
-       // GameManager.instance.CallFireBase("CusServe_" + totalAllotedCustomers.ToString(), "served", totalAllotedCustomers);
+        GameManager.instance.CallFireBase("CusServe_" + totalAllotedCustomers.ToString(), "served", totalAllotedCustomers);
         if (PlayerPrefs.GetInt("CustomerServed", 0) == 0)
         {
             PlayerPrefs.SetInt("CustomerServed", 1);

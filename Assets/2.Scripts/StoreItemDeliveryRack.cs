@@ -197,7 +197,7 @@ public class StoreItemDeliveryRack : ItemPickandPlace, InteractableObjects, ISup
             }
             yield return new WaitForSeconds(0.2f);
         }
-       // GameManager.instance.CallFireBase("StoreItmPlac_" + mainCat.ToString() + "_" + SubCatId.ToString() + "_" + itemId.ToString());
+        GameManager.instance.CallFireBase("StoreItmPlac_" + mainCat.ToString() + "_" + SubCatId.ToString() + "_" + itemId.ToString());
         if (placingProductsQueue.Count <= 0)
         {
             isPlacingProducts = false;

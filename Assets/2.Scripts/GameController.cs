@@ -240,17 +240,17 @@ public class GameController : MonoBehaviour
             adsTimer += Time.deltaTime;
             UIController.instance.UpdateAdsTimer(-1);
         }
-        //else if(AdsMediation.AdsMediationManager.instance.CanShowInterstitial())
-        //{
-        //    adsTimer += Time.deltaTime;
-        //    UIController.instance.UpdateAdsTimer(_difference);
-        //    if (_difference < 1)
-        //    {
-        //        adsTimer = 0f;
-        //        AdsMediation.AdsMediationManager.instance.ShowInterstitial();
-        //        EnvInteract.instance.OnInGameAd();
-        //    }
-        //}
+        else if (AdsMediation.AdsMediationManager.instance.CanShowInterstitial())
+        {
+            adsTimer += Time.deltaTime;
+            UIController.instance.UpdateAdsTimer(_difference);
+            if (_difference < 1)
+            {
+                adsTimer = 0f;
+                AdsMediation.AdsMediationManager.instance.ShowInterstitial();
+                EnvInteract.instance.OnInGameAd();
+            }
+        }
         else
         {
             UIController.instance.UpdateAdsTimer(-1);
@@ -269,7 +269,7 @@ public class GameController : MonoBehaviour
         {
             firebaseTimer = 0f;
             firebaseQuarter++;
-           // GameManager.instance.CallFireBase("Q_" + firebaseQuarter.ToString(), "quarter", firebaseQuarter);
+            GameManager.instance.CallFireBase("Q_" + firebaseQuarter.ToString(), "quarter", firebaseQuarter);
         }
     }
     public void UpdateCurrentPickedItem(GameObject _item)

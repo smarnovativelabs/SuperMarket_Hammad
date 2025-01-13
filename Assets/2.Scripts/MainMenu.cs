@@ -75,8 +75,8 @@ public class MainMenu : MonoBehaviour
         SoundController.instance.OnPlayInteractionSound(uiButtonSound);
         GameManager.instance.EnableLoadingScreen(true,"Please Wait...");
         SceneManager.LoadScene(1);
-       // GameManager.instance.CallFireBase("OnPlay", "Play", 1);
-       // AdsMediation.AdsMediationManager.instance.ShowInterstitial();
+        GameManager.instance.CallFireBase("OnPlay", "Play", 1);
+        AdsMediation.AdsMediationManager.instance.ShowInterstitial();
 
     }
     public void OnPressSettingBtn()
@@ -86,8 +86,8 @@ public class MainMenu : MonoBehaviour
     public void OnPressRV()
     {
         SoundController.instance.OnPlayInteractionSound(uiButtonSound);
-        //AdsMediation.AdsMediationManager.instance.ShowRewardedVideo(OnAdSuccess, OnAdFailed);
-       // GameManager.instance.CallFireBase("MainScrn_RV", "MainScrn_Rv", 1);
+        AdsMediation.AdsMediationManager.instance.ShowRewardedVideo(OnAdSuccess, OnAdFailed);
+        GameManager.instance.CallFireBase("MainScrn_RV", "MainScrn_Rv", 1);
     }
     void OnAdSuccess(string _msg)
     {
@@ -96,23 +96,23 @@ public class MainMenu : MonoBehaviour
 
         rvResponseContianer.SetActive(true);
         rvResponseContianer.transform.GetChild(0).GetComponent<LocalizeText>().UpdateText(_msg);
-        //rvResponseContianer.transform.GetChild(0).GetComponent<Text>().text = "Reward Granted";
+        rvResponseContianer.transform.GetChild(0).GetComponent<Text>().text = "Reward Granted";
         Invoke("DisableRvResponseText", 2f);
-      //  GameManager.instance.CallFireBase("successRVAd_main", "successRVAd", 1);
+        GameManager.instance.CallFireBase("successRVAd_main", "successRVAd", 1);
     }
     void OnAdFailed(string _msg)
     {
         rvResponseContianer.SetActive(true);
         rvResponseContianer.transform.GetChild(0).GetComponent<LocalizeText>().UpdateText(_msg);
-        //rvResponseContianer.transform.GetChild(0).GetComponent<Text>().text = _msg;
+        rvResponseContianer.transform.GetChild(0).GetComponent<Text>().text = _msg;
         Invoke(nameof(DisableRvResponseText), 2f);
-        //GameManager.instance.CallFireBase("failRVAd_main", "failRVAd", 1);
+        GameManager.instance.CallFireBase("failRVAd_main", "failRVAd", 1);
     }
     public void DisplayResponseText(string _msg)
     {
         rvResponseContianer.SetActive(true);
         rvResponseContianer.transform.GetChild(0).GetComponent<LocalizeText>().UpdateText(_msg);
-        //rvResponseContianer.transform.GetChild(0).GetComponent<Text>().text = _msg;
+        rvResponseContianer.transform.GetChild(0).GetComponent<Text>().text = _msg;
         Invoke("DisableRvResponseText", 2f);
 
     }
@@ -140,7 +140,7 @@ public class MainMenu : MonoBehaviour
     }
     public void CrimeGameLink()
     {
-       // GameManager.instance.CallFireBase("CrimeAdClicked");
+        GameManager.instance.CallFireBase("CrimeAdClicked");
 #if UNITY_EDITOR
         Application.OpenURL("https://play.google.com/store/apps/details?id=com.peri.games.crime.scene.evidence.cleaner");
 #elif UNITY_ANDROID

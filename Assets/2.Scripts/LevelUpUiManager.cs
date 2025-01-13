@@ -102,7 +102,7 @@ public class LevelUpUiManager : MonoBehaviour
     public void OnDoubleLevelUpReward()
     {
         doubleRewardButton.interactable = false;
-       // AdsMediation.AdsMediationManager.instance.ShowRewardedVideo(OnAdSuccess, OnAdFailed);
+        AdsMediation.AdsMediationManager.instance.ShowRewardedVideo(OnAdSuccess, OnAdFailed);
     }
 
     void OnAdSuccess(string msg)

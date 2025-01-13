@@ -1,0 +1,5 @@
+C:/Users/SmarNovative Lab's/Desktop/SuperMarket_From_SmarNovative/SuperMarket_Hammad/.utmp/RelWithDebInfo/1t6z6s3g/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/SmarNovative Lab's/Desktop/SuperMarket_From_SmarNovative/SuperMarket_Hammad/.utmp/RelWithDebInfo/1t6z6s3g/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+C:/Users/SmarNovative Lab's/Desktop/SuperMarket_From_SmarNovative/SuperMarket_Hammad/.utmp/RelWithDebInfo/1t6z6s3g/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/Users/SmarNovative Lab's/Desktop/SuperMarket_From_SmarNovative/SuperMarket_Hammad/.utmp/RelWithDebInfo/1t6z6s3g/armeabi-v7a/FramePacing/CMakeFiles/edit_cache.dir
+C:/Users/SmarNovative Lab's/Desktop/SuperMarket_From_SmarNovative/SuperMarket_Hammad/.utmp/RelWithDebInfo/1t6z6s3g/armeabi-v7a/FramePacing/CMakeFiles/rebuild_cache.dir

@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
                 if (PlayerDataManager.instance.playerData.selectedQualitySettings < 1)
                 {
                     DecideQualitySettings();
-                    //CallFireBase("AutoQlty_" + PlayerDataManager.instance.playerData.selectedQualitySettings.ToString());
+                    CallFireBase("AutoQlty_" + PlayerDataManager.instance.playerData.selectedQualitySettings.ToString());
                 }
                 SetGameQuality(PlayerDataManager.instance.playerData.selectedQualitySettings);
                 avlQualityStngs.value = (PlayerDataManager.instance.playerData.selectedQualitySettings - 1);
@@ -101,19 +101,19 @@ public class GameManager : MonoBehaviour
 
             yield return new WaitForSeconds(0.5f);
 
-            //if (!AdsMediation.AdsMediationManager.instance.IsAdsInitialized())
-            //{
-            //    EnableLoadingScreen(true, "Loading Game Ads..");
-            //    AdsMediation.AdsMediationManager.instance.InitializeMediationAds();
-            //    yield return new WaitForSeconds(0.5f);
-            //}
-            //if (!FirebaseManager.instance.isInitialized)
-            //{
-            //    EnableLoadingScreen(true, "Connecting With Remote..");
-            //    FirebaseManager.instance.InitializeFirebase();
-            //    yield return new WaitForSeconds(0.1f);
-            //}
-            if (!LocalizationManager.instance.IsLocalizationDataFethced())
+        if (!AdsMediation.AdsMediationManager.instance.IsAdsInitialized())
+        {
+            EnableLoadingScreen(true, "Loading Game Ads..");
+            AdsMediation.AdsMediationManager.instance.InitializeMediationAds(0);
+            yield return new WaitForSeconds(0.5f);
+        }
+        if (!FirebaseManager.instance.isInitialized)
+        {
+            EnableLoadingScreen(true, "Connecting With Remote..");
+            FirebaseManager.instance.InitializeFirebase();
+            yield return new WaitForSeconds(0.1f);
+        }
+        if (!LocalizationManager.instance.IsLocalizationDataFethced())
             {
                 LocalizationManager.instance.InitializeLocalization();
             }
@@ -139,7 +139,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerDataManager.instance.playerData.selectedQualitySettings = _val + 1;
         SetGameQuality(_val + 1);
-        //CallFireBase("PlyrQlty_" + (_val + 1).ToString());
+        CallFireBase("PlyrQlty_" + (_val + 1).ToString());
     }
     void DecideQualitySettings()
     {
@@ -243,7 +243,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            //AdsMediation.AdsMediationManager.instance.ShowInterstitial();
+            AdsMediation.AdsMediationManager.instance.ShowInterstitial();
             Destroy(gameObject);
         }
     }
@@ -277,7 +277,7 @@ public class GameManager : MonoBehaviour
     public void OnContinueFailedFetching()
     {
         noInternetPanel.SetActive(false);
-        //CallFireBase("Lclztn_FlPnl");
+        CallFireBase("Lclztn_FlPnl");
     }
     public void OnContinueInitialLanguagePanel()
     {
@@ -359,15 +359,15 @@ public class GameManager : MonoBehaviour
         SettingPanel.gameObject.SetActive(true);
         SoundController.instance.OnPlayInteractionSound(uiButtonSound);
 
-        //CallFireBase("OnSettingPrs", "Setting", 1);
-        //if (AdsMediation.AdsMediationManager.instance.CanShowInterstitial())
-        //{
-        //    if (GameController.instance != null)
-        //    {
-        //        GameController.instance.ResetAdsTimer();
-        //    }
-        //}
-        //AdsMediation.AdsMediationManager.instance.ShowInterstitial();
+        CallFireBase("OnSettingPrs", "Setting", 1);
+        if (AdsMediation.AdsMediationManager.instance.CanShowInterstitial())
+        {
+            if (GameController.instance != null)
+            {
+                GameController.instance.ResetAdsTimer();
+            }
+        }
+        AdsMediation.AdsMediationManager.instance.ShowInterstitial();
         Invoke("OnChangeLocalizationLanguage", 0.1f);
 
     }
@@ -382,14 +382,21 @@ public class GameManager : MonoBehaviour
     {
         SettingPanel.gameObject.SetActive(false);
         SoundController.instance.OnPlayInteractionSound(uiButtonSound);
-        //if (AdsMediation.AdsMediationManager.instance.CanShowInterstitial())
-        //{
-        //    if (GameController.instance != null)
-        //    {
-        //        GameController.instance.ResetAdsTimer();
-        //    }
-        //}
-        //AdsMediation.AdsMediationManager.instance.ShowInterstitial();
+        if (AdsMediation.AdsMediationManager.instance.CanShowInterstitial())
+        {
+            if (GameController.instance != null)
+            {
+                GameController.instance.ResetAdsTimer();
+            }
+        }
+        AdsMediation.AdsMediationManager.instance.ShowInterstitial();        if (AdsMediation.AdsMediationManager.instance.CanShowInterstitial())
+        {
+            if (GameController.instance != null)
+            {
+                GameController.instance.ResetAdsTimer();
+            }
+        }
+        AdsMediation.AdsMediationManager.instance.ShowInterstitial();
     }
     public void OnUpdateSlider()
     {
@@ -438,11 +445,11 @@ public class GameManager : MonoBehaviour
         loadingIns.gameObject.GetComponent<LocalizeText>().UpdateText(_msg);
         loadingPanel.gameObject.SetActive(_enable);
     }
-    //public void CallFireBase(string eventName, string paramName="", int val=1)
-    //{
-    //    if(FirebaseManager.instance!=null)
-    //        FirebaseManager.instance.CallFirebasEvent(eventName);
-    //}
+    public void CallFireBase(string eventName, string paramName = "", int val = 1)
+    {
+        if (FirebaseManager.instance != null)
+            FirebaseManager.instance.CallFirebasEvent(eventName);
+    }
     public void UpdateInGameAdsTimer(long _val)
     {
         inGameAdsTimer = (float)_val;

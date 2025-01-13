@@ -68,7 +68,7 @@ public class TutorialManager : MonoBehaviour
             tutorial[instructionCounter].tutorialObjects.SetActive(false);
             instructionCounter++;
             PlayerPrefs.SetInt("completeIndex", instructionCounter);
-            //GameManager.instance.CallFireBase("TutInsPress_" + instructionCounter.ToString(), "tutorial", _index);
+            GameManager.instance.CallFireBase("TutInsPress_" + instructionCounter.ToString(), "tutorial", _index);
             FirePercentEvent();
 
             if (instructionCounter >= tutorial.Length)
@@ -92,7 +92,7 @@ public class TutorialManager : MonoBehaviour
             variantBTutorial[instructionCounter].tutorialObjects.SetActive(false);
             instructionCounter++;
             PlayerPrefs.SetInt("completeIndex", instructionCounter);
-          //  GameManager.instance.CallFireBase("TutInsPress_" + instructionCounter.ToString(), "tutorial", _index);
+            GameManager.instance.CallFireBase("TutInsPress_" + instructionCounter.ToString(), "tutorial", _index);
             FirePercentEvent();
 
             if (instructionCounter >= variantBTutorial.Length)
@@ -132,7 +132,7 @@ public class TutorialManager : MonoBehaviour
         int _currenQuarter = (int)(_percent / 25);
         if (_currenQuarter > firebaseQuarter)
         {
-            //GameManager.instance.CallFireBase("TutWatch_" + (_currenQuarter * 25).ToString(), "percent", _currenQuarter);
+            GameManager.instance.CallFireBase("TutWatch_" + (_currenQuarter * 25).ToString(), "percent", _currenQuarter);
             firebaseQuarter = _currenQuarter;
         }
     }

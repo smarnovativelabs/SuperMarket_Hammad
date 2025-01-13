@@ -80,7 +80,7 @@ public class EmployeeUIBtn : MonoBehaviour
             }
             //Call Firing From Here
             employeeRef.GetComponent<Employee>().OnEndDuty();
-          //  GameManager.instance.CallFireBase("EmpFrd_"+ ((int)employeeRef.GetComponent<Employee>().savableData.employeeType) + "_"+ employeeRef.GetComponent<Employee>().savableData.employeeId.ToString());
+            GameManager.instance.CallFireBase("EmpFrd_"+ ((int)employeeRef.GetComponent<Employee>().savableData.employeeType) + "_"+ employeeRef.GetComponent<Employee>().savableData.employeeId.ToString());
 
             RemoveBtn();
         }

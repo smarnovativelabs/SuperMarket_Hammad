@@ -253,12 +253,12 @@ public class CashCounterManager : MonoBehaviour
             DestroyChangeCreated();
             EnableCashBillingScreen(false);
             StartCoroutine(MoveToNextCustomer());
-           // GameManager.instance.CallFireBase("CashCusSrvd");
+            GameManager.instance.CallFireBase("CashCusSrvd");
 
         }
         else
         {
-           // GameManager.instance.CallFireBase("InvldCshEntr");
+            GameManager.instance.CallFireBase("InvldCshEntr");
             customer.GetComponent<SuperStoreCustomer>().OnWrongCheckout();
             decimal _difference = Math.Abs(changeRequired - changeGiven);
             if (_difference < 1)
@@ -535,12 +535,12 @@ public class CashCounterManager : MonoBehaviour
                 StartCoroutine(MoveToNextCustomer()); // Move to the next customer after successful payment
                 cardPaymentAmount = "0";
                 UIController.instance.UpdateCardEnteredText(cardPaymentAmount);
-                //GameManager.instance.CallFireBase("CardCusSrvd");
+                GameManager.instance.CallFireBase("CardCusSrvd");
 
             }
             else
             {
-               // GameManager.instance.CallFireBase("InvldCrdEntr");
+                GameManager.instance.CallFireBase("InvldCrdEntr");
                 decimal _difference = Math.Abs(_addedAmount - totalBill);
                 if (_difference < 1)
                 {

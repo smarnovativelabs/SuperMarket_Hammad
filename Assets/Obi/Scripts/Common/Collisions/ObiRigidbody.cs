@@ -34,7 +34,7 @@ namespace Obi{
         {
             prevPosition = unityRigidbody.position;
             prevRotation = unityRigidbody.rotation;
-            linearVelocity = unityRigidbody.linearVelocity;
+            linearVelocity = unityRigidbody.velocity;
             angularVelocity = unityRigidbody.angularVelocity;
         }
 
@@ -54,7 +54,7 @@ namespace Obi{
             else
             {
                 // if the object is non-kinematic, just copy velocities.
-                linearVelocity = unityRigidbody.linearVelocity;
+                linearVelocity = unityRigidbody.velocity;
                 angularVelocity = unityRigidbody.angularVelocity;
             }
 
@@ -91,7 +91,7 @@ namespace Obi{
             {
                 if (Vector3.SqrMagnitude(linearDelta) > 0.00001f || Vector3.SqrMagnitude(angularDelta) > 0.00001f)
                 {
-                    unityRigidbody.linearVelocity += linearDelta;
+                    unityRigidbody.velocity += linearDelta;
                     unityRigidbody.angularVelocity += angularDelta;
                 }
             }

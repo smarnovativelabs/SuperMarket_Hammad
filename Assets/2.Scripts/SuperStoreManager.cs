@@ -93,11 +93,11 @@ public class SuperStoreManager : MonoBehaviour
         {
             StartSpawningCustomers(1f);
             UpdateGameProgressBar(true);
-           // GameManager.instance.CallFireBase("StoreOpened");
+            GameManager.instance.CallFireBase("StoreOpened");
         }
         else
         {
-          //  GameManager.instance.CallFireBase("StoreClosed");
+            GameManager.instance.CallFireBase("StoreClosed");
         }
     }
     public void UpdateAroundStoreTrigger(bool _isAround)
@@ -158,7 +158,7 @@ public class SuperStoreManager : MonoBehaviour
         {
             canDisplayAds = false;
             storeAdsTimer = 0f;
-            //AdsMediation.AdsMediationManager.instance.ShowInterstitial();
+            AdsMediation.AdsMediationManager.instance.ShowInterstitial();
         }
     }
     #region Super Store Cleaning
@@ -172,7 +172,7 @@ public class SuperStoreManager : MonoBehaviour
         //    superMarketDoor.InteractWithDoor(true);
 
         //}
-        //GameManager.instance.CallFireBase("StoreWoodRmv" + storeData.doorWoodsRemovedCounter.ToString());
+        GameManager.instance.CallFireBase("StoreWoodRmv" + storeData.doorWoodsRemovedCounter.ToString());
     }
     public void OnRemoveStoreTrash()
     {
@@ -183,7 +183,7 @@ public class SuperStoreManager : MonoBehaviour
             TutorialManager.instance.OnCompleteTutorialTask(9);
         }
         UpdateGameProgressBar(true);
-       // GameManager.instance.CallFireBase("StoreTrashRmv" + storeData.trashPickedCounter.ToString());
+        GameManager.instance.CallFireBase("StoreTrashRmv" + storeData.trashPickedCounter.ToString());
     }
     public void OnRemoveStoreDust()
     {
@@ -194,7 +194,7 @@ public class SuperStoreManager : MonoBehaviour
             TutorialManager.instance.OnCompleteTutorialTask(10);
         }
         UpdateGameProgressBar(true);
-       // GameManager.instance.CallFireBase("StoreDustRmv" + storeData.dustRemovedCounter.ToString());
+        GameManager.instance.CallFireBase("StoreDustRmv" + storeData.dustRemovedCounter.ToString());
 
     }
     #endregion
@@ -394,12 +394,12 @@ public class SuperStoreManager : MonoBehaviour
     public void OnCustomerReachedToCounter()
     {
         customerReachedAtCounter++;
-       // GameManager.instance.CallFireBase("StoreCusCntr_" + customerReachedAtCounter.ToString());
+        GameManager.instance.CallFireBase("StoreCusCntr_" + customerReachedAtCounter.ToString());
     }
     public void OnCustomerServed()
     {
         servedCustomerCount++;
-       // GameManager.instance.CallFireBase("StoreCusSrvd_" + servedCustomerCount.ToString());
+        GameManager.instance.CallFireBase("StoreCusSrvd_" + servedCustomerCount.ToString());
 
     }
     public void UpdateAtStoreCounterState(bool _atCouner)
@@ -432,14 +432,14 @@ public class SuperStoreManager : MonoBehaviour
         }
         if (superStoreReqLevel > PlayerDataManager.instance.playerData.playerLevel)
         {
-           // GameManager.instance.CallFireBase("SpStrUnlkBfLev");
+            GameManager.instance.CallFireBase("SpStrUnlkBfLev");
 
             UIController.instance.EnablePopupNotification("Super Market Will Unlock At Level " + superStoreReqLevel.ToString());
             return false;
         }
         if(superStorePrice>PlayerDataManager.instance.playerData.playerCash)
         {
-           // GameManager.instance.CallFireBase("NoCshSpStr");
+            GameManager.instance.CallFireBase("NoCshSpStr");
 
             UIController.instance.EnableNoCashPanel();
             return false;
@@ -879,14 +879,14 @@ public class SuperStoreManager : MonoBehaviour
         if (posCounters[_counterIndex].requiredLevelToUnlock > PlayerDataManager.instance.playerData.playerLevel)
         {
             UIController.instance.EnablePopupNotification("Super Market Counter Will Unlock At Level " + posCounters[_counterIndex].requiredLevelToUnlock.ToString());
-          //  GameManager.instance.CallFireBase("CcUnlkBfLev_" + _counterIndex.ToString());
+            GameManager.instance.CallFireBase("CcUnlkBfLev_" + _counterIndex.ToString());
 
             return false;
         }
         if (posCounters[_counterIndex].Cost > PlayerDataManager.instance.playerData.playerCash)
         {
             UIController.instance.EnableNoCashPanel();
-           // GameManager.instance.CallFireBase("NoCshCcMchn_" + _counterIndex.ToString());
+            GameManager.instance.CallFireBase("NoCshCcMchn_" + _counterIndex.ToString());
             return false;
         }
         storeData.activeCountersIndex.Add(_counterIndex);
@@ -903,7 +903,7 @@ public class SuperStoreManager : MonoBehaviour
         {
             UIController.instance.DisplayInstructions("Super Market Cash Counter Unlocked!");
         }
-       // GameManager.instance.CallFireBase("Cc_" + _counterIndex.ToString() + "_prchsd");
+        GameManager.instance.CallFireBase("Cc_" + _counterIndex.ToString() + "_prchsd");
         return true;
     }
 
@@ -955,14 +955,14 @@ public class SuperStoreManager : MonoBehaviour
         if (superStoreExpension[_expensionIndex].levelRequired > PlayerDataManager.instance.playerData.playerLevel)
         {
             UIController.instance.EnablePopupNotification("Super Market expension Will Unlock At Level " + superStoreExpension[_expensionIndex].levelRequired.ToString());
-           // GameManager.instance.CallFireBase("SSexpUnlkBfLev_" + _expensionIndex.ToString());
+            GameManager.instance.CallFireBase("SSexpUnlkBfLev_" + _expensionIndex.ToString());
 
             return false;
         }
         if (superStoreExpension[_expensionIndex].expensionCost > PlayerDataManager.instance.playerData.playerCash)
         {
             UIController.instance.EnableNoCashPanel();
-           // GameManager.instance.CallFireBase("NoCshSSexpMchn_" + _expensionIndex.ToString());
+            GameManager.instance.CallFireBase("NoCshSSexpMchn_" + _expensionIndex.ToString());
 
             return false;
         }
@@ -979,7 +979,7 @@ public class SuperStoreManager : MonoBehaviour
        
         UIController.instance.DisplayInstructions("Super Market expension Unlocked!");
        
-        //GameManager.instance.CallFireBase("Sexp_" + _expensionIndex.ToString() + "_prchsd");
+        GameManager.instance.CallFireBase("Sexp_" + _expensionIndex.ToString() + "_prchsd");
         return true;
     }
     public void UpdateSuperMarketExpensionLockState()

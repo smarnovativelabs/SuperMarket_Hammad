@@ -223,7 +223,7 @@ public class UIController : MonoBehaviour
     {
         adsTimerDisplay.transform.parent.gameObject.SetActive(_time > 0);
         adsTimerDisplay.GetComponent<LocalizeText>().UpdateText("Displaying Ad In: " + _time.ToString() + " Seconds");
-        //adsTimerDisplay.text = "Displaying Ad In: " + _time.ToString() + " Seconds";
+        adsTimerDisplay.text = "Displaying Ad In: " + _time.ToString() + " Seconds";
     }
     //public void UpdateGasReserves()
     //{
@@ -281,7 +281,7 @@ public class UIController : MonoBehaviour
         UpdateMotelLevelAndXPBar();
         //GasStationManager.instance.UpdateReservesText();
         string _variant = GameManager.instance.selectedDeliveryMode == 0 ? "DeliveryMode" : "InHandMode";
-        //GameManager.instance.CallFireBase(_variant);
+        GameManager.instance.CallFireBase(_variant);
         //PlayerInventoryObjectBtnClick(0); // call it for make the player State is empty when the game is start 
     }
     public void SetPlayerCurrency()
@@ -381,7 +381,7 @@ public class UIController : MonoBehaviour
             superStoreToggle.sprite = toggleSprite[0];
             GameController.instance.OnOpenSuperStore(false);
             DisplayInstructions("Super Store Closed!");
-           // GameManager.instance.CallFireBase("SuperStoreClosed");
+            GameManager.instance.CallFireBase("SuperStoreClosed");
             return;
         }
         if (SuperStoreManager.instance.CanOpenSuperStore())
@@ -389,11 +389,11 @@ public class UIController : MonoBehaviour
             superStoreToggle.sprite = toggleSprite[1];
             GameController.instance.OnOpenSuperStore();
             DisplayInstructions("Super Store Opened!");
-          //  GameManager.instance.CallFireBase("SuperStoreOpened");
+            GameManager.instance.CallFireBase("SuperStoreOpened");
         }
         else
         {
-           // GameManager.instance.CallFireBase("StoreNotReady");
+            GameManager.instance.CallFireBase("StoreNotReady");
         }
     }
     public void OnPressOpenPool()
@@ -514,7 +514,7 @@ public class UIController : MonoBehaviour
         SoundController.instance.OnPlayInteractionSound(uiButtonSound);
         pausePanel.SetActive(true);
         Time.timeScale = 0;
-        //GameManager.instance.CallFireBase("OnPausePrs", "Setting", 1);
+        GameManager.instance.CallFireBase("OnPausePrs", "Setting", 1);
     }
     public void OnLeaveCounter()
     {
@@ -526,7 +526,7 @@ public class UIController : MonoBehaviour
         bool isActive = toolOpenPanel.activeSelf;
         SoundController.instance.OnPlayInteractionSound(uiButtonSound);
         toolOpenPanel.SetActive(!isActive);
-       // GameManager.instance.CallFireBase("OnToolPanelPrs", "ToolPanel", 1);
+        GameManager.instance.CallFireBase("OnToolPanelPrs", "ToolPanel", 1);
     }
 
     public void DisableAllToolsInStart()
@@ -578,16 +578,16 @@ public class UIController : MonoBehaviour
         SoundController.instance.OnPlayInteractionSound(uiButtonSound);
         pausePanel.SetActive(false);
         Time.timeScale = 1;
-        //if (AdsMediation.AdsMediationManager.instance.CanShowInterstitial())
-        //{
-        //    if (GameController.instance != null)
-        //    {
-        //        GameController.instance.ResetAdsTimer();
-        //    }
-        //}
-        //AdsMediation.AdsMediationManager.instance.ShowInterstitial();
+        if (AdsMediation.AdsMediationManager.instance.CanShowInterstitial())
+        {
+            if (GameController.instance != null)
+            {
+                GameController.instance.ResetAdsTimer();
+            }
+        }
+        AdsMediation.AdsMediationManager.instance.ShowInterstitial();
 
-        //GameManager.instance.CallFireBase("OnResumePrs", "Setting", 1);
+        GameManager.instance.CallFireBase("OnResumePrs", "Setting", 1);
     }
 
     public void OnPressHome()
@@ -596,7 +596,7 @@ public class UIController : MonoBehaviour
         GameManager.instance.EnableLoadingScreen(true, "Saving Progress...");
         GameController.instance.SaveData();
         SoundController.instance.OnPlayInteractionSound(uiButtonSound);
-        //GameManager.instance.CallFireBase("OnHomePrs", "EndPanel", 1);
+        GameManager.instance.CallFireBase("OnHomePrs", "EndPanel", 1);
         StartCoroutine(LoadHome());
         
     }
@@ -629,18 +629,18 @@ public class UIController : MonoBehaviour
         updatePrice = _reward;
         existingUserUpdateRewardPanel.SetActive(true);
         existinUserUpdateRewardText.text = "$"+_reward.ToString() +" REFUNDED";
-       // GameManager.instance.CallFireBase("ExsRwdPnlDsply");
+        GameManager.instance.CallFireBase("ExsRwdPnlDsply");
 
     }
     public void CloseExistingUpdatePanel()
     {
         existingUserUpdateRewardPanel.SetActive(false);
         UpdateCurrency(updatePrice);
-       // GameManager.instance.CallFireBase("ExsRwdPnlClsd");
+        GameManager.instance.CallFireBase("ExsRwdPnlClsd");
     }
     public void OnPressResetPaint()
     {
-       // GameController.instance.currentPickedTool.GetComponent<PaintBrushTool>().paintCount = 0;
+        GameController.instance.currentPickedTool.GetComponent<PaintBrushTool>().paintCount = 0;
         SetPaintCountContainer(0);
     }
     public void SetRoomProgress(string _paintText, bool _enable, int _trashCount, int _totalTrash)
@@ -678,7 +678,7 @@ public class UIController : MonoBehaviour
     }
     public void OnPressHiringRV()
     {
-        //AdsMediation.AdsMediationManager.instance.ShowRewardedVideo(OnSuccessHiringRV, OnFailHiringRV);
+        AdsMediation.AdsMediationManager.instance.ShowRewardedVideo(OnSuccessHiringRV, OnFailHiringRV);
     }
     public void OnCloseHiringRV()
     {
@@ -732,12 +732,12 @@ public class UIController : MonoBehaviour
     {
         if (!InternetConnectivity.instance.isInterNetAvailable())
         {
-          //  GameManager.instance.CallFireBase("Clickhoverbox_no_net");
+            GameManager.instance.CallFireBase("Clickhoverbox_no_net");
             OpenNoNetPanel();
             return;
         }
-       // GameManager.instance.CallFireBase("watchhoverboardad");
-       // AdsMediation.AdsMediationManager.instance.ShowRewardedVideo(OnSuccessMonetizationRV, OnFailMonetizationRV);
+        GameManager.instance.CallFireBase("watchhoverboardad");
+        AdsMediation.AdsMediationManager.instance.ShowRewardedVideo(OnSuccessMonetizationRV, OnFailMonetizationRV);
     }
     public void OnCloseMonetizationRV()
     {
@@ -745,13 +745,13 @@ public class UIController : MonoBehaviour
     }
     public void OnSuccessMonetizationRV(string _msg)
     {
-      //  GameManager.instance.CallFireBase("hoverboardadacquired");
+        GameManager.instance.CallFireBase("hoverboardadacquired");
         ShowHoverbaordRVPanel(false);
         successRvMonetization?.Invoke();
     }
     public void OnFailMonetizationRV(string _msg)
     {
-       // GameManager.instance.CallFireBase("hoverboardnoad");
+        GameManager.instance.CallFireBase("hoverboardnoad");
         ShowHoverbaordRVPanel(false);
         failRVMonetization?.Invoke();
         DisplayInstructions(_msg);
@@ -782,12 +782,12 @@ public class UIController : MonoBehaviour
     {
         if (!InternetConnectivity.instance.isInterNetAvailable())
         {
-          //  GameManager.instance.CallFireBase("ClickMoneybox_no_net");
+            GameManager.instance.CallFireBase("ClickMoneybox_no_net");
             OpenNoNetPanel();
             return;
         }
-       // GameManager.instance.CallFireBase("ClickMoneybox");
-       // AdsMediation.AdsMediationManager.instance.ShowRewardedVideo(OnSuccessRVMoneyBox, OnFailRVMoneyBox);
+        GameManager.instance.CallFireBase("ClickMoneybox");
+        AdsMediation.AdsMediationManager.instance.ShowRewardedVideo(OnSuccessRVMoneyBox, OnFailRVMoneyBox);
     }
     public void OnCloseRVMoneyBox()
     {
@@ -795,13 +795,13 @@ public class UIController : MonoBehaviour
     }
     public void OnSuccessRVMoneyBox(string _msg)
     {
-       // GameManager.instance.CallFireBase("moneyboxcashcollected");
+        GameManager.instance.CallFireBase("moneyboxcashcollected");
         ShowMoneyBoxRVPanel(false);
         successRvMonetization?.Invoke();
     }
     public void OnFailRVMoneyBox(string _msg)
     {
-       // GameManager.instance.CallFireBase("failmoneyboxnoAd");
+        GameManager.instance.CallFireBase("failmoneyboxnoAd");
 
         ShowMoneyBoxRVPanel(false);
         failRVMonetization?.Invoke();
@@ -1062,7 +1062,7 @@ public class UIController : MonoBehaviour
         StoreItemsValuse.totalBill = 0;
         totalBillPriceText.text = "$ 0";
         AdjustParentHeight();
-       // GameManager.instance.CallFireBase("ItemsCleared");
+        GameManager.instance.CallFireBase("ItemsCleared");
     }
 
     public void AdjustParentHeight(int _childToAdd=0)
@@ -1088,14 +1088,14 @@ public class UIController : MonoBehaviour
         {
             return;
         }
-        //if (AdsMediation.AdsMediationManager.instance.CanShowInterstitial())
-        //{
-        //    if (GameController.instance != null)
-        //    {
-        //        GameController.instance.ResetAdsTimer();
-        //    }
-        //}
-        //AdsMediation.AdsMediationManager.instance.ShowInterstitial();
+        if (AdsMediation.AdsMediationManager.instance.CanShowInterstitial())
+        {
+            if (GameController.instance != null)
+            {
+                GameController.instance.ResetAdsTimer();
+            }
+        }
+        AdsMediation.AdsMediationManager.instance.ShowInterstitial();
         TutorialManager.instance.OnCompleteTutorialTask(11);
         if (PlayerDataManager.instance.playerData.playerCash >= StoreItemsValuse.totalBill)
         {
@@ -1111,7 +1111,7 @@ public class UIController : MonoBehaviour
                     _box.item = parentItemUnitPriceBar.transform.GetChild(i).GetComponent<CartItemValues>().itemData;
                     _box.count = parentItemUnitPriceBar.transform.GetChild(i).GetComponent<CartItemValues>().itemCount;
                     string _event = "ItemBuy_" + ((int)_box.item.mainCatID).ToString()+"_" + _box.item.subCatID.ToString()+"_" + _box.item.itemID.ToString();
-                  //  GameManager.instance.CallFireBase(_event);
+                    GameManager.instance.CallFireBase(_event);
                     _items.Add(_box);
                 }
             }
@@ -1122,12 +1122,12 @@ public class UIController : MonoBehaviour
 
             UpdateCurrency(-1 * StoreItemsValuse.totalBill);
             DisplayInstructions("Order Placed!");
-          //  GameManager.instance.CallFireBase("CartItemOrdered");
+            GameManager.instance.CallFireBase("CartItemOrdered");
             OnPressRemoveAllItems();
         }
         else
         {
-            //GameManager.instance.CallFireBase("NoCashForCart");
+            GameManager.instance.CallFireBase("NoCashForCart");
             notEnoughCashPanel.SetActive(true);
         }
         
@@ -1137,7 +1137,7 @@ public class UIController : MonoBehaviour
     {
         if (PlayerDataManager.instance.playerData.playerCash < _item.itemPrice)
         {
-           // GameManager.instance.CallFireBase("NoCashSinglePur");
+            GameManager.instance.CallFireBase("NoCashSinglePur");
             notEnoughCashPanel.SetActive(true);
             return;
         }
@@ -1183,20 +1183,20 @@ public class UIController : MonoBehaviour
         //    _furniture.GetComponent<IRuntimeSpawn>().OnNewSpawnItem();
         //}
 
-        //if (AdsMediation.AdsMediationManager.instance.CanShowInterstitial())
-        //{
-        //    if (GameController.instance != null)
-        //    {
-        //        GameController.instance.ResetAdsTimer();
-        //    }
-        //}
-        //AdsMediation.AdsMediationManager.instance.ShowInterstitial();
+        if (AdsMediation.AdsMediationManager.instance.CanShowInterstitial())
+        {
+            if (GameController.instance != null)
+            {
+                GameController.instance.ResetAdsTimer();
+            }
+        }
+        AdsMediation.AdsMediationManager.instance.ShowInterstitial();
         //TutorialManager.instance.OnCompleteTutorialTask(9);
         TutorialManager.instance.OnCompleteTutorialTask(9);
         //int _cash = PlayerDataManager.instance.playerData.playerCash - _item.itemPrice;
         PlayerDataManager.instance.UpdateCash(-1 * _item.itemPrice);
         UpdateCurrency(-1 * _item.itemPrice);
-       // GameManager.instance.CallFireBase("ItemInHand_"+ ((int)_item.mainCatID).ToString() + "_" + _item.subCatID.ToString() + "_" + _item.itemID.ToString());
+        GameManager.instance.CallFireBase("ItemInHand_"+ ((int)_item.mainCatID).ToString() + "_" + _item.subCatID.ToString() + "_" + _item.itemID.ToString());
         //OnClosePCPanel();
     }
 
@@ -1448,7 +1448,7 @@ public class UIController : MonoBehaviour
         {
             UpgradesUIManager.instance.OnUpgradeCatBtnPressed(0);
         }
-        //GameManager.instance.CallFireBase("TabBtnPressed_" + _tabId.ToString());
+        GameManager.instance.CallFireBase("TabBtnPressed_" + _tabId.ToString());
         SoundController.instance.OnPlayInteractionSound(uiButtonSound);
     }
     //public void SetFuelPanelValues()

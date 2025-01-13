@@ -137,7 +137,7 @@ public class EmployeesUIManager : ManagementTabUI
     {
         SoundController.instance.OnPlayInteractionSound(btnSound);
         OnSelectBtn(_index);
-       // GameManager.instance.CallFireBase("MngmtTab_" + _index.ToString());
+        GameManager.instance.CallFireBase("MngmtTab_" + _index.ToString());
 
     }
     public override void OnSelectBtn(int _index)

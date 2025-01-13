@@ -48,7 +48,7 @@ public class EmployeeRV : MonoBehaviour,InteractableObjects
             }
             totalRVWatched = 0;
            
-          //  GameManager.instance.CallFireBase("EmpHrRV_" + ((int)employeeData.employeeType).ToString());
+            GameManager.instance.CallFireBase("EmpHrRV_" + ((int)employeeData.employeeType).ToString());
         }
         updateUI();
     }

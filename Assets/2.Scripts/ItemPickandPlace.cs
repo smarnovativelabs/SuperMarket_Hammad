@@ -391,7 +391,7 @@ public class ItemPickandPlace : MonoBehaviour
         {
             GetComponent<Rigidbody>().isKinematic = false;
             GetComponent<Rigidbody>().useGravity = false;
-            GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
             GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         }
         for (int i = 0; i < transform.childCount; i++)
@@ -449,8 +449,8 @@ public class ItemPickandPlace : MonoBehaviour
             //}
         }
         itemsSavingProps.isPlacedRight = true;
-       // GameManager.instance.CallFireBase("ItmPlcd_" + itemsSavingProps.mainCatId.ToString() + "_" + itemsSavingProps.subCatId.ToString()
-           // + "_" + itemsSavingProps.itemId.ToString());
+        GameManager.instance.CallFireBase("ItmPlcd_" + itemsSavingProps.mainCatId.ToString() + "_" + itemsSavingProps.subCatId.ToString()
+            + "_" + itemsSavingProps.itemId.ToString());
         OnEndPlacement();
     }
 
