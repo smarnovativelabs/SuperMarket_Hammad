@@ -14492,6 +14492,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cash
       objectReference: {fileID: 0}
+    - target: {fileID: 6828627494218195778, guid: b39b6b3582a543643a19e38e5bf54e50, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8103121407842439665, guid: b39b6b3582a543643a19e38e5bf54e50, type: 3}
       propertyPath: m_Pivot.x
       value: 0
