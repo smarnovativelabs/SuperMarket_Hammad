@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using KinematicCharacterController.Examples;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ public class PlayervehicleInteraction : MonoBehaviour
 {
     //refrence to the hoverboard disabled initilally and wil be enabled when player ride it
     public GameObject hoverBoard;
+    GameObject tolleyActive;
     public Transform trollyParent;
     public GameObject ridingVehicle;
     public AudioClip hoverbaordSound;
@@ -58,10 +60,11 @@ public class PlayervehicleInteraction : MonoBehaviour
     }
     public void EnterVechicle(float _speed,PlayerVechicle.VechicleType _vechicleType,float _acquireTime,int _spawnedIndex,GameObject _ridingVehicle)//,GameObject _ridingVehicle)
     {
+        Debug.Log("This is the Riding Vehicle Now ~~~~~" + _ridingVehicle);
+        print("This is the Vehicle Type  Now ~~~~~" + _vechicleType);
         ridingVehicleIndex = _spawnedIndex;
         VechicleType = _vechicleType;
         ridingVehicle = _ridingVehicle;
-       
         //enabling dummmy vehicle inside player
         if (VechicleType == PlayerVechicle.VechicleType.HoverBoard)
         {
@@ -79,9 +82,13 @@ public class PlayervehicleInteraction : MonoBehaviour
 
        else if (VechicleType == PlayerVechicle.VechicleType.Trolly)
         {
+            print("Inside if of Trolley~~~~~~~~");
             audioSource.clip = trollySound;
+            print("This is the Riding Vehicle Now ~~~~~21" + _ridingVehicle);
             ridingVehicle.SetActive(true);
+            print("This is Trolly Parent" + trollyParent);
             ridingVehicle.transform.SetParent(trollyParent);
+            //ridingVehicle.SetActive(true);
             ridingVehicle.transform.localPosition = Vector3.zero;
             ridingVehicle.transform.localRotation =Quaternion.identity;
             ridingVehicle.GetComponent<Outline>().enabled = false;
@@ -95,9 +102,13 @@ public class PlayervehicleInteraction : MonoBehaviour
 
     public void EnterVechicleAgain(float _speed, PlayerVechicle.VechicleType _vechicleType, int _spawnedIndex, GameObject _ridingVehicle)
     {
+        Debug.Log("why76");
+        Debug.Log("This is the Riding Vehicle Now" + _ridingVehicle.name);
+        print("This is the Vehicle Type  Now ~~~~~" + _vechicleType);
         ridingVehicleIndex = _spawnedIndex;
         VechicleType = _vechicleType;
         ridingVehicle = _ridingVehicle;
+       
 
         //enabling dummmy vehicle inside player
         if (VechicleType == PlayerVechicle.VechicleType.HoverBoard)
@@ -147,11 +158,15 @@ public class PlayervehicleInteraction : MonoBehaviour
     }
 
     public void ExitVehicle() {
-
+        print("Exit button is called");
         startTimer = false;
+        print("Vehicle Type in Exit Vehicle button" + VechicleType);
+    //    VechicleType = PlayerVechicle.VechicleType.HoverBoard;
+     //   print("Vehicle Type in Exit Vehicle button After Set Hard Code" + VechicleType);
 
         if (VechicleType == PlayerVechicle.VechicleType.HoverBoard)
         {
+            print("Exit button is called in hoverboard");
             hoverBoard.GetComponent<Animator>().SetBool("unmount", true);
             hoverBoard.gameObject.SetActive(false);
             Vector3 spawnPosition = Controlsmanager.instance.kinematicCharacterMotor.gameObject.transform.position + Controlsmanager.instance.kinematicCharacterMotor.gameObject.transform.forward * 1f;
@@ -165,7 +180,8 @@ public class PlayervehicleInteraction : MonoBehaviour
 
        else if (VechicleType == PlayerVechicle.VechicleType.Trolly)
         {
-          //  trolly.gameObject.SetActive(false);
+            print("Exit button is called in trolley");
+            // trolly.gameObject.SetActive(false);
             if (ridingVehicle == null) return;
             ridingVehicle.transform.SetParent(null);
            // Vector3 spawnPosition = Controlsmanager.instance.kinematicCharacterMotor.gameObject.transform.position + Controlsmanager.instance.kinematicCharacterMotor.gameObject.transform.forward * 1f;

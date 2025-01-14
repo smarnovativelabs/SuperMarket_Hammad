@@ -61,7 +61,7 @@ public class GameController : MonoBehaviour
         AddSavingAction(PlayerDataManager.instance.SavePlayerData);
         GameManager.instance.EnableLoadingScreen(true, "Loading Game Data");
         yield return null;
-        EnvironmentManager.instance.SetEnvironmentLights();
+      //  EnvironmentManager.instance.SetEnvironmentLights();
         yield return new WaitForSeconds(0.5f);
         bool _existingRewardGiven = false;
         if (PlayerDataManager.instance.playerData.playerRewardGivenState < 1)
@@ -147,7 +147,7 @@ public class GameController : MonoBehaviour
 
         MonetizationManager.instance.InitilizeMonetizationManager();
         yield return null;
-        EnvironmentManager.instance.StartEnvironmentCycle();
+       // EnvironmentManager.instance.StartEnvironmentCycle();
 
     }
     public void OnOpenMotel(bool _open=true)

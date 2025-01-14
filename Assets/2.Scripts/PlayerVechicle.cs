@@ -12,23 +12,23 @@ public class PlayerVechicle : MonoBehaviour, InteractableObjects
     [HideInInspector]
     public int spawnedIndex;
     public int requiredRVToUnlocked;
-   // [HideInInspector]
+    // [HideInInspector]
     public int totalRVWatched;
     public TextMeshProUGUI totalAdsText;
     public Sprite icon;
     public enum VechicleType
     {
-        Walk=0,
-        HoverBoard=1,
-        GolfCart=2,
-        Scooter=3,
-        Trolly=4
+        Walk = 0,
+        HoverBoard = 1,
+        GolfCart = 2,
+        Scooter = 3,
+        Trolly = 4
     }
 
     void Start()
     {
         updateUI();
-        Invoke("EnableOutline",0.5f);
+        Invoke("EnableOutline", 0.5f);
     }
 
     void EnableOutline()
@@ -49,23 +49,24 @@ public class PlayerVechicle : MonoBehaviour, InteractableObjects
                 MonetizationManager.instance.totalHoverBoardsAdsWatched++;
                 gameObject.SetActive(false);
             }
-            Controlsmanager.instance.playervehicleInteraction.EnterVechicle(vehicleSpeed, vechicleType, acquireTime, spawnedIndex,gameObject);
-      
-           
-          
+            print("This is Vehicle Type in PlayerVehicle" + vechicleType + acquireTime + gameObject);
+            Controlsmanager.instance.playervehicleInteraction.EnterVechicle(vehicleSpeed, vechicleType, acquireTime, spawnedIndex, gameObject);
+
+
+
         }
         updateUI();
     }
 
-   
+
 
     void updateUI()
     {
         int required = (requiredRVToUnlocked - totalRVWatched);
-       // print("required rv :" + required);
-       if(totalAdsText != null) 
-        totalAdsText.text = required.ToString();
-     
+        // print("required rv :" + required);
+        if (totalAdsText != null)
+            totalAdsText.text = required.ToString();
+
     }
 
     void OnFailureRV()
@@ -82,9 +83,9 @@ public class PlayerVechicle : MonoBehaviour, InteractableObjects
         }
         else
         {
-           
+
             int required = (requiredRVToUnlocked - totalRVWatched);
-            UIController.instance.EnableMonetizationRVPanel(vehicleName, icon,vechicleType, acquireTime, requiredRVToUnlocked, OnSuccessRV, OnFailureRV, required);
+            UIController.instance.EnableMonetizationRVPanel(vehicleName, icon, vechicleType, acquireTime, requiredRVToUnlocked, OnSuccessRV, OnFailureRV, required);
         }
     }
 
@@ -102,7 +103,7 @@ public class PlayerVechicle : MonoBehaviour, InteractableObjects
         else
         {
             int required = (requiredRVToUnlocked - totalRVWatched);
-            UIController.instance.EnableMonetizationRVPanel(vehicleName, icon,vechicleType, acquireTime, requiredRVToUnlocked, OnSuccessRV, OnFailureRV, required);
+            UIController.instance.EnableMonetizationRVPanel(vehicleName, icon, vechicleType, acquireTime, requiredRVToUnlocked, OnSuccessRV, OnFailureRV, required);
         }
     }
 
@@ -111,3 +112,10 @@ public class PlayerVechicle : MonoBehaviour, InteractableObjects
         UIController.instance.ShowHoverbaordRVPanel(false);
     }
 }
+
+
+
+
+
+
+

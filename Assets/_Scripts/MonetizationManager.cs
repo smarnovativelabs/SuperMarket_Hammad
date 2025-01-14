@@ -61,6 +61,7 @@ public class MonetizationManager : MonoBehaviour
     {
         if (startResponeVehicleTimer)
         {
+            Debug.Log("w9090" + startResponeVehicleTimer);
             reSpawnTimerVehicle -= Time.deltaTime;
             if (reSpawnTimerVehicle <= 0)
             {
