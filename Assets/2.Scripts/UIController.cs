@@ -1651,7 +1651,7 @@ public class UIController : MonoBehaviour
     {
       //  print("bar value is:" + LevelManager.Instance.GetLevelBarFillValue());
         xpBar.fillAmount = LevelManager.Instance.GetLevelBarFillValue();
-        motelLevelText.text = "MOTEL LEVEL " + PlayerDataManager.instance.playerData.playerLevel;
+        motelLevelText.text = "SUPERMARKET LEVEL " + PlayerDataManager.instance.playerData.playerLevel;
         XPText.text = LevelManager.Instance.GetCurrentAndNextLevelRequiredXPS();
     }
     #endregion
