@@ -56,10 +56,10 @@ public class LevelManager : MonoBehaviour
     /// </summary>
     public void AddXP()
     {
-        PlayerDataManager.instance.UpdateXP(100);  
+        PlayerDataManager.instance.UpdateXP(50);  
       //  CheckForLevelUp();
        // UIController.instance.UpdateMotelLevelAndXPBar();
-        UIController.instance.UpdateXP(100);
+        UIController.instance.UpdateXP(50);
     }
 
     public int GetRequiredXP()
@@ -97,6 +97,10 @@ public class LevelManager : MonoBehaviour
 
         return ((float)(PlayerDataManager.instance.playerData.playerXP - _prevLevelXps) / (float)(GetRequiredXP() - _prevLevelXps));
         
+    }
+    public void PlayLevelUpSound()
+    {
+        gameObject.GetComponent<AudioSource>().Play();
     }
 }
 

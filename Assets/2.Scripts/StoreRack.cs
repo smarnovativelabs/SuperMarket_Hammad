@@ -13,6 +13,7 @@ public class StoreRack : ItemPickandPlace, InteractableObjects,IRuntimeSpawn
     public List<RackItemPlacers> rackItemPlacers;
     public Transform rackCustomerPoint;
     public bool isPlacingDynamically;
+    int placedItemsCount;
 
     #region Rack Initialization
     public void InitializeRack()
@@ -24,6 +25,7 @@ public class StoreRack : ItemPickandPlace, InteractableObjects,IRuntimeSpawn
             int _temp = i;
             _rackPlacer.itemPlacerPoint = placersContainer.GetChild(_temp);
             rackItemPlacers.Add(_rackPlacer);
+            placedItemsCount = 0;
         }
     }
     public void OnSpawnInitialRack(Transform _placingPoint)
@@ -65,6 +67,7 @@ public class StoreRack : ItemPickandPlace, InteractableObjects,IRuntimeSpawn
                 rackItemPlacers[_item.rackPlaceId].placedItemRef = _obj;
                 rackItemPlacers[_item.rackPlaceId].placedItemProps = _item;
                 rackItemPlacers[_item.rackPlaceId].isOccupied = true;
+                placedItemsCount++;
             }
             else
             {
@@ -110,6 +113,7 @@ public class StoreRack : ItemPickandPlace, InteractableObjects,IRuntimeSpawn
 
         rackItemPlacers[_rackPlacerIndex].placedItemRef = _itemRef;
         rackItemPlacers[_rackPlacerIndex].isOccupied = true;
+        placedItemsCount++;
         rackItemPlacers[_rackPlacerIndex].placedItemProps = _newItem;
         TutorialManager.instance.OnCompleteTutorialTask(14);
         SuperStoreManager.instance.OnAddItem(_newItem);
@@ -122,6 +126,7 @@ public class StoreRack : ItemPickandPlace, InteractableObjects,IRuntimeSpawn
             return;
         }
         rackItemPlacers[_itemPlacerIndex].isOccupied = false;
+        placedItemsCount--;
         rackItemPlacers[_itemPlacerIndex].placedItemProps = null;
         if (rackItemPlacers[_itemPlacerIndex].placedItemRef != null)
         {
@@ -132,8 +137,10 @@ public class StoreRack : ItemPickandPlace, InteractableObjects,IRuntimeSpawn
 
     public void OnHoverItems()
     {
+       
         if(GameController.instance.currentPicketItem==null && GameController.instance.currentPickedTool == null)
         {
+           
             UIController.instance.DisplayHoverObjectName("Tap to Reposition Rack", true, HoverInstructionType.General);
             UIController.instance.OnChangeInteraction(0, true);
 
@@ -145,12 +152,21 @@ public class StoreRack : ItemPickandPlace, InteractableObjects,IRuntimeSpawn
         }
         if (GameController.instance.currentPicketItem != null)
         {
+            
             CategoryName _pickedItemMainCat = GameController.instance.currentPicketItem.GetComponent<ItemPickandPlace>().mainCat;
             int _itemSubCatId = GameController.instance.currentPicketItem.GetComponent<ItemPickandPlace>().SubCatId;
+           
 
             if (placableCategories.Contains(_pickedItemMainCat) && placableSubCatIds.Contains(_itemSubCatId) &&
-                isPlacingDynamically && itemsSavingProps.isPlacedRight)
+                !isPlacingDynamically && itemsSavingProps.isPlacedRight)
             {
+               
+                if (placedItemsCount >= rackItemPlacers.Count)
+                {
+                  
+                    UIController.instance.DisplayHoverObjectName("This Rack Is Full", true, HoverInstructionType.Warning);
+                    return;
+                }
                 UIController.instance.DisplayHoverObjectName("Tap to Place Items In Rack", true, HoverInstructionType.Warning);
                 if (GetComponent<Outline>())
                 {

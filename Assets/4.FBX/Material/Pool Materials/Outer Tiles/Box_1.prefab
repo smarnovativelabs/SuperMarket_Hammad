@@ -521,7 +521,6 @@ MonoBehaviour:
   SubCatId: 0
   itemId: 0
   itemName: Box
-  isFurniture: 0
   placedRoomIndex: -1
   indexInRoomList: -1
   indicator:
@@ -537,8 +536,35 @@ MonoBehaviour:
   targetScale: {x: 0, y: 0, z: 0}
   itemPickSound: {fileID: 8300000, guid: d5c09fbc84adf1b498edf053ec21c6b0, type: 3}
   itemThrowSound: {fileID: 8300000, guid: cbbd628944aef4905bc09b29296774a2, type: 3}
+  itemsSavingProps:
+    positionSaved: 0
+    mainCatId: 0
+    subCatId: 0
+    itemId: 0
+    isInBox: 0
+    itemCount: 0
+    placedAreaId: -1
+    itemUniqueId: -1
+    isPlacedRight: 0
+    isXpGiven: 0
+    itemPosition: {x: 0, y: 0, z: 0}
+    itemRotation: {x: 0, y: 0, z: 0, w: 1}
+    itemScale: {x: 0, y: 0, z: 0, w: 0}
+  canPlaceDynamically: 1
+  objectRelatedTo: 1
+  rotationAxis: 1
+  initialplayerDistance: 4
+  validTags: []
+  placableTags:
+  - TrolleyTop
+  ignoredTags: []
+  isObjectInteracting: 0
+  areaId: 0
+  invalidTriggeredColliders: []
+  placableTriggerColliders: []
   itemCondition: 3
   itemData: {fileID: 0}
   boxItemImages:
   - {fileID: 5223385042173096633}
   - {fileID: 3950455657004752580}
+  isAtTrolley: 0

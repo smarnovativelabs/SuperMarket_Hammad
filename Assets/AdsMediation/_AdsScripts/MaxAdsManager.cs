@@ -44,7 +44,7 @@ namespace AdsMediation
         AdsMediationManager.RewardedVieoResponse rewardedInterFailure;
 
 
-        public void InitializeAds()
+        public void InitializeAds(bool _loadAds = true)
         {
             if (isInitialized)
                 return;
@@ -167,6 +167,7 @@ namespace AdsMediation
         private void OnInterstitialDismissedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
         {
             // Interstitial ad is hidden. Pre-load the next ad
+            AdsMediationManager.instance.OnInterClosedForNonRewardedAd();
             Debug.Log("Interstitial dismissed");
             LoadInterstitial();
         }
@@ -293,7 +294,14 @@ namespace AdsMediation
         {
             yield return new WaitForSeconds(0.1f);
             if (rvRewardReceived)
+            {
+                if (GameController.instance != null)
+                {
+                    GameController.instance.ResetAdsTimer();
+                    AdsMediation.AdsMediationManager.instance.OnInterstitialClosed();
+                }
                 rvSuccessResponse?.Invoke("Reward Received!");
+            }
             else
                 rvFailureResponse?.Invoke("Rewarded Video Closed Early!");
 

@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     public int soundCounter = 0;
     public int musicCounter = 0;
     public int selectedDeliveryMode = 0;
-    public float inGameAdsTimer = 180f;
+    public float inGameAdsTimer = 105f;
     public bool welcomeBackRewardDisplayed;
     private void Awake()
     {
@@ -366,8 +366,9 @@ public class GameManager : MonoBehaviour
             {
                 GameController.instance.ResetAdsTimer();
             }
+            AdsMediation.AdsMediationManager.instance.ShowInterstitial();
         }
-        AdsMediation.AdsMediationManager.instance.ShowInterstitial();
+       
         Invoke("OnChangeLocalizationLanguage", 0.1f);
 
     }
@@ -389,14 +390,8 @@ public class GameManager : MonoBehaviour
                 GameController.instance.ResetAdsTimer();
             }
         }
-        AdsMediation.AdsMediationManager.instance.ShowInterstitial();        if (AdsMediation.AdsMediationManager.instance.CanShowInterstitial())
-        {
-            if (GameController.instance != null)
-            {
-                GameController.instance.ResetAdsTimer();
-            }
-        }
         AdsMediation.AdsMediationManager.instance.ShowInterstitial();
+
     }
     public void OnUpdateSlider()
     {

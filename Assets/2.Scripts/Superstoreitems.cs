@@ -58,35 +58,40 @@ public class Superstoreitems : MonoBehaviour
             GetComponent<Outline>().enabled = false;
         }
         HapticFeedback.LightFeedback();
-
+        print("me calling");
         // Start a coroutine to check if all items have been scanned
         StartCoroutine(CheckBillingComplete(_id));
     }
 
     public void OnCashierInteract(int _id)
     {
+       
         SuperStoreManager.instance.PlayCashCounterSound(_id);
-       // CashCounterManager.instance.PlayCashCounterSound(UIController.instance.uiButtonSound);
+        // CashCounterManager.instance.PlayCashCounterSound(UIController.instance.uiButtonSound);
         // Set the animation state of the item to 'AfterBill'
+       
         gameObject.GetComponent<Billingitemsanimation>().animationState = BillingItemsAnimationState.AfterBill;
-
+        
         // Instantiate the price tag at the item's position
         GameObject _price = Instantiate(SuperStoreManager.instance.GetItemPricePrefab(_id), transform.position, SuperStoreManager.instance.GetItemPricePrefab(_id).transform.rotation);
-
+       
         // Set the price text on the price tag
         _price.gameObject.GetComponent<TextMeshPro>().text = "$" + Price.ToString("###.00");
-
+        
         // Adjust the price tag's position to match the item's position
         _price.transform.position = transform.position;
-
+      
         // Add the price of this item to the total bill in the cash counter manager
-       // CashCounterManager.instance.AddTotalBill(Price);
+        // CashCounterManager.instance.AddTotalBill(Price);
+
         SuperStoreManager.instance.AddToBill(_id, Price);
+       
         if (GetComponent<Outline>())
         {
             GetComponent<Outline>().enabled = false;
         }
         // Start a coroutine to check if all items have been scanned
+        print("Cashier calling");
         StartCoroutine(CheckBillingComplete(_id));
     }
     /// <summary>
@@ -96,7 +101,7 @@ public class Superstoreitems : MonoBehaviour
     IEnumerator CheckBillingComplete(int _id)
     {
         // Wait for 0.2 seconds to allow for animation and UI updates
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.6f);
 
         // Decrement the total number of items left to scan
         //  CashCounterManager.instance.totalItemsToScan--;

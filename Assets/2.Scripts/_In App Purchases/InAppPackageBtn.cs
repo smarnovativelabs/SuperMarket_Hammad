@@ -34,6 +34,7 @@ public class InAppPackageBtn : InAppBtn
     }
     public void OnPressPurchase()
     {
+        Debug.Log("55555");
         IAPUiManager.Instance.PlayBtnSound();
         if (productToBuy == null)
         {
@@ -45,6 +46,7 @@ public class InAppPackageBtn : InAppBtn
         {
             if ((int)productToBuy.rewards[i].rewardType < 4)
             {
+                Debug.Log("66666");
                 _canPurchase = EmployeeManager.Instance.CanPurchaseEmployee((int)(productToBuy.rewards[i].rewardType));
                 if (!_canPurchase)
                     break;
@@ -56,11 +58,14 @@ public class InAppPackageBtn : InAppBtn
             IAPUiManager.Instance.OnFailPurchase("No More Workplace Available For This Employee");
             return;
         }
+        Debug.Log("77777");
         IAPUiManager.Instance.ShowLoadingPanel();
         StoreManager.Instance.OnRequestPurchase(productToBuy);
     }
     public override void OnSuccessPurchase()
     {
+        print("Men Call Hun");
+        
         IAPUiManager.Instance.EnableSuccessResponsePanel(productToBuy.productName + " Purchased Successfully!", productToBuy.icon);
 
         for (int j = 0; j < productToBuy.rewards.Count; j++)
@@ -73,6 +78,15 @@ public class InAppPackageBtn : InAppBtn
             {
                 UIController.instance.UpdateCurrency(productToBuy.rewards[j].amount);
             }
+
+            if (productToBuy.rewards[j].rewardType == RewardType.RemoveAds)
+            {
+                print("Men b hun");
+                AdsMediation.AdsMediationManager.instance.OnRemoveAds();
+                //UIController.instance.UpdateCurrency(productToBuy.rewards[j].amount);
+            }
+
+
 
         }
        

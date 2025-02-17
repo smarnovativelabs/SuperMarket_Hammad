@@ -59,6 +59,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -164,6 +166,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -269,6 +273,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -374,6 +380,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -479,6 +487,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -592,6 +602,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -650,7 +662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 860b1f30a893b4d7986231c8c4ba40b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCat: 3
+  mainCat: 0
   SubCatId: 8
   itemId: 4
   itemName: Saws
@@ -670,13 +682,16 @@ MonoBehaviour:
   itemPickSound: {fileID: 8300000, guid: d5c09fbc84adf1b498edf053ec21c6b0, type: 3}
   itemThrowSound: {fileID: 8300000, guid: cbbd628944aef4905bc09b29296774a2, type: 3}
   itemsSavingProps:
+    positionSaved: 0
     mainCatId: 0
     subCatId: 0
     itemId: 0
     isInBox: 0
     itemCount: 0
     placedAreaId: -1
+    itemUniqueId: -1
     isPlacedRight: 0
+    isXpGiven: 0
     itemPosition: {x: 0, y: 0, z: 0}
     itemRotation: {x: 0, y: 0, z: 0, w: 1}
     itemScale: {x: 0, y: 0, z: 0, w: 0}
@@ -686,10 +701,12 @@ MonoBehaviour:
   initialplayerDistance: 4
   validTags: []
   placableTags: []
+  ignoredTags: []
   isObjectInteracting: 0
   areaId: 0
+  invalidTriggeredColliders: []
+  placableTriggerColliders: []
   itemCondition: 3
-  isXpGiven: 0
   productsContaienr: {fileID: 5423858874701318404}
   placeItemSound: {fileID: 8300000, guid: 64819584ac189432883a74772d91e917, type: 3}
 --- !u!114 &3670563296682269128

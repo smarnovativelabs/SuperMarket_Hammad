@@ -26,6 +26,7 @@ public class LevelUpUiManager : MonoBehaviour
     /// </summary>
     public void ShowLevelUpPanel()
     {
+        LevelManager.Instance.PlayLevelUpSound();
         levelUpPanel.gameObject.SetActive(true);
 
        // canvasComponent.renderMode = RenderMode.ScreenSpaceCamera;

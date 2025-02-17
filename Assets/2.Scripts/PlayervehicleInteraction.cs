@@ -14,16 +14,17 @@ public class PlayervehicleInteraction : MonoBehaviour
     public GameObject ridingVehicle;
     public AudioClip hoverbaordSound;
     public AudioClip trollySound;
-    [HideInInspector]
+    public VehicleType VehicleType;
     public AudioClip currentClip;
     public AudioSource audioSource;
     //vehicle type can be hver board or scooter or anything else
     public PlayerVechicle.VechicleType VechicleType;
+    //public VehicleType VehicleType;
     public float acquireTime;
     public bool startTimer;
     public int ridingVehicleIndex = -1;
     public bool isTimeBasedVehicle;
-
+    public TrolleyCollision trolleyCollision;
 
     public void SetAndStartVehicleAcquiringTime(float _acquireTime)
     {
@@ -37,6 +38,7 @@ public class PlayervehicleInteraction : MonoBehaviour
         if (startTimer && isTimeBasedVehicle)
         {
             acquireTime-=Time.deltaTime;
+           // print("This is acquire time" + acquireTime);
             if (acquireTime <= 0)
             {
                 if (ridingVehicle != null)
@@ -60,8 +62,8 @@ public class PlayervehicleInteraction : MonoBehaviour
     }
     public void EnterVechicle(float _speed,PlayerVechicle.VechicleType _vechicleType,float _acquireTime,int _spawnedIndex,GameObject _ridingVehicle)//,GameObject _ridingVehicle)
     {
-        Debug.Log("This is the Riding Vehicle Now ~~~~~" + _ridingVehicle);
-        print("This is the Vehicle Type  Now ~~~~~" + _vechicleType);
+      //  Debug.Log("This is the Riding Vehicle Now ~~~~~" + _ridingVehicle);
+     //   print("This is the Vehicle Type  Now ~~~~~" + _vechicleType);
         ridingVehicleIndex = _spawnedIndex;
         VechicleType = _vechicleType;
         ridingVehicle = _ridingVehicle;
@@ -82,14 +84,18 @@ public class PlayervehicleInteraction : MonoBehaviour
 
        else if (VechicleType == PlayerVechicle.VechicleType.Trolly)
         {
-            print("Inside if of Trolley~~~~~~~~");
+          
+            VehicleType =VehicleType.Trolly;
+          //  print("Inside if of Trolley~~~~~~~~");
             audioSource.clip = trollySound;
-            print("This is the Riding Vehicle Now ~~~~~21" + _ridingVehicle);
+          //  print("This is the Riding Vehicle Now ~~~~~21" + _ridingVehicle);
             ridingVehicle.SetActive(true);
-            print("This is Trolly Parent" + trollyParent);
+         //   print("This is Trolly Parent" + trollyParent);
             ridingVehicle.transform.SetParent(trollyParent);
             //ridingVehicle.SetActive(true);
             ridingVehicle.transform.localPosition = Vector3.zero;
+            trolleyCollision = ridingVehicle.transform.GetChild(1).gameObject.GetComponent<TrolleyCollision>();
+            GameController.instance.SetTrolleyMounting(true);
             ridingVehicle.transform.localRotation =Quaternion.identity;
             ridingVehicle.GetComponent<Outline>().enabled = false;
             ridingVehicle.GetComponent<BoxCollider>().enabled = false;
@@ -102,9 +108,9 @@ public class PlayervehicleInteraction : MonoBehaviour
 
     public void EnterVechicleAgain(float _speed, PlayerVechicle.VechicleType _vechicleType, int _spawnedIndex, GameObject _ridingVehicle)
     {
-        Debug.Log("why76");
-        Debug.Log("This is the Riding Vehicle Now" + _ridingVehicle.name);
-        print("This is the Vehicle Type  Now ~~~~~" + _vechicleType);
+      //  Debug.Log("why76");
+      //  Debug.Log("This is the Riding Vehicle Now" + _ridingVehicle.name);
+     //   print("This is the Vehicle Type  Now ~~~~~" + _vechicleType);
         ridingVehicleIndex = _spawnedIndex;
         VechicleType = _vechicleType;
         ridingVehicle = _ridingVehicle;
@@ -116,28 +122,34 @@ public class PlayervehicleInteraction : MonoBehaviour
             audioSource.clip = hoverbaordSound;
             ridingVehicle.SetActive(false);
             Controlsmanager.instance.charactercontroller.setMaxSpeed(0);
-            isTimeBasedVehicle = false;
+            isTimeBasedVehicle = true;
             hoverBoard.gameObject.SetActive(true);
             hoverBoard.GetComponent<Animator>().SetBool("mount", true);
             StartCoroutine(EnableSpeedyMovement(_speed));
             Invoke("MountHoverBoard", 0.8f);
+            startTimer = true;
+            UIController.instance.playerVehicleTimerContainer.gameObject.SetActive(true);
         }
 
         else if (VechicleType == PlayerVechicle.VechicleType.Trolly)
         {
+        
+            VehicleType = VehicleType.Trolly;
             audioSource.clip = trollySound;
             //  trolly.gameObject.SetActive(true);
             ridingVehicle.SetActive(true);
             ridingVehicle.transform.SetParent(trollyParent);
+            trolleyCollision = ridingVehicle.transform.GetChild(1).gameObject.GetComponent<TrolleyCollision>();
             ridingVehicle.transform.localPosition = Vector3.zero;
             ridingVehicle.transform.localRotation = Quaternion.identity;
             ridingVehicle.GetComponent<Outline>().enabled = false;
+            GameController.instance.SetTrolleyMounting(true);
             ridingVehicle.GetComponent<BoxCollider>().enabled = false;
             Controlsmanager.instance.UpdateCharacterSpeed(_speed);
         }
      
-        startTimer = true;
-        UIController.instance.playerVehicleTimerContainer.gameObject.SetActive(true);
+     
+        
         UIController.instance.EnableVehicleControllerPanel(true);
     }
     void MountHoverBoard()
@@ -188,8 +200,9 @@ public class PlayervehicleInteraction : MonoBehaviour
           //  ridingVehicle.transform.position = new Vector3(spawnPosition.x, 0, spawnPosition.z);
           //  ridingVehicle.SetActive(true);
             ridingVehicle.GetComponent<Outline>().enabled = false;
-          ////  ridingVehicle.transform.localPosition = trollyParent.transform.localPosition;
-           // ridingVehicle.transform.localRotation = trollyParent.transform.localRotation;
+            GameController.instance.SetTrolleyMounting(false);
+            ////  ridingVehicle.transform.localPosition = trollyParent.transform.localPosition;
+            // ridingVehicle.transform.localRotation = trollyParent.transform.localRotation;
             ridingVehicle.GetComponent<BoxCollider>().enabled = true;
 
 
@@ -213,17 +226,48 @@ public class PlayervehicleInteraction : MonoBehaviour
        else return false;
     }
 
-    public void OnExitVehicle(){
+    //public void OnExitVehicle(){
+
+    //    if (ridingVehicle != null && VechicleType == PlayerVechicle.VechicleType.Trolly)
+    //    {
+    //       if(ridingVehicle.transform.GetChild(0).gameObject.GetComponent<TrolleyCollision>().collisionCount!=0)
+    //        {
+    //            UIController.instance. DisplayInstructions("Move the Trolley to a proper spot first!");
+    //            return;
+    //        }
+    //    }
+    //    ExitVehicle();
+    //    //call method here realted to trolly stuff
+    //}
+    public void OnExitVehicle()
+    {
 
         if (ridingVehicle != null && VechicleType == PlayerVechicle.VechicleType.Trolly)
         {
-           if(ridingVehicle.transform.GetChild(0).gameObject.GetComponent<TrolleyCollision>().collisionCount!=0)
+            Debug.Log("invalid collider count" + trolleyCollision.invalidColliders.Count);
+            if (trolleyCollision.invalidColliders.Count>0)
             {
-                UIController.instance. DisplayInstructions("Move the Trolley to a proper spot first!");
+                UIController.instance.DisplayInstructions("Move the Trolley to a proper spot first!");
                 return;
             }
+            GameManager.instance.CallFireBase("unmounttrolley");
         }
+        else
+        {
+            GameManager.instance.CallFireBase("unmounthoverboard");
+        }
+
         ExitVehicle();
-        //call method here realted to trolly stuff
+
     }
+
+}
+
+public enum VehicleType
+{
+    Walk = 0,
+    HoverBoard = 1,
+    GolfCart = 2,
+    Scooter = 3,
+    Trolly = 4
 }

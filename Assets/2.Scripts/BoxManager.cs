@@ -12,6 +12,7 @@ public class BoxManager : MonoBehaviour
     public AudioClip boxDeliverSound;
     private bool isSpawningBoxes = false;
     private Queue<SpawnItemData> boxQueue = new Queue<SpawnItemData>();
+   
 
     public void StartSpawnBoxes(List<BoxDataToSpawn> _items)
     {
@@ -92,6 +93,7 @@ public class BoxManager : MonoBehaviour
             TutorialManager.instance.OnCompleteTutorialTask(12);
         }
     }
+   
 }
 
 [System.Serializable]

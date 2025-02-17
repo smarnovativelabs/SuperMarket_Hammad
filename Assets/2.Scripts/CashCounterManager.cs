@@ -375,7 +375,7 @@ public class CashCounterManager : MonoBehaviour
     /// <param name="method">The chosen payment method (Cash or Card).</param>
     public void OnInteractionWithCashOrCard(PaymentMethod method)
     {
-      
+        print("nice1");
         customer.GetComponent<SuperStoreCustomer>().UpdateAnimation(false);
         //customer.GetComponent<SuperStoreCustomer>().UpdateAnimation(false);
 
@@ -389,8 +389,10 @@ public class CashCounterManager : MonoBehaviour
         }
         else
         {
+            print("huuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");
             UIController.instance.EnableCardPanel(true);
             cashCounterState = CashCounter.CardBilling;
+            print("Card Collect Sound is actoive" + SuperStoreManager.instance.cardCollectSound);
             PlayCashCounterSound(SuperStoreManager.instance.cardCollectSound);
 
         }
@@ -430,9 +432,10 @@ public class CashCounterManager : MonoBehaviour
 
         // TODO: Enable the customer giving cash animation (not implemented)
         cashCounterState = CashCounter.PaymentMode;
-
+       
         if (customer != null)
         {
+            print("qwert");
             customer.GetComponent<SuperStoreCustomer>().UpdateAnimation(true);
         }
        // customer.GetComponent<SuperStoreCustomer>().UpdateAnimation(true);
@@ -638,13 +641,47 @@ public class CashCounterManager : MonoBehaviour
 
     public void PlayCashCounterSound(AudioClip _clip)
     {
+        print("20f");
         if (_clip == null)
             return;
         if (!SoundController.instance.isSoundOn)
         {
             return;
         }
+        print("final");
+        print("final1" + _clip);
+        //PlayCounterSound(_clip);
+   //     SuperStoreManager.instance.counterSoundPlayer.clip = _clip;
         SuperStoreManager.instance.counterSoundPlayer.PlayOneShot(_clip);
+    }
+    public void PlayCounterSound(AudioClip _clip)
+    {
+        if (_clip == null)
+        {
+            Debug.LogError("AudioClip is null!");
+            return;
+        }
+
+        if (!SuperStoreManager.instance.counterSoundPlayer.enabled)
+        {
+            Debug.Log("AudioSource is disabled!");
+            SuperStoreManager.instance.counterSoundPlayer.enabled = true;
+        }
+
+        if (SuperStoreManager.instance.counterSoundPlayer.volume <= 0)
+        {
+            Debug.Log("AudioSource volume is too low!");
+            SuperStoreManager.instance.counterSoundPlayer.volume = 1f;
+        }
+
+        if (SuperStoreManager.instance.counterSoundPlayer.isPlaying)
+        {
+            Debug.Log("AudioSource is already playing a clip. Stopping it now.");
+            SuperStoreManager.instance.counterSoundPlayer.Stop();
+        }
+
+        SuperStoreManager.instance.counterSoundPlayer.PlayOneShot(_clip);
+        Debug.Log("Audio is now playing!");
     }
     #region Cashier
 
@@ -684,7 +721,9 @@ public class CashCounterManager : MonoBehaviour
 
     public void UpdateAnimationForCustomerForCashier()
     {
+      //  print("called by cashier+++++++++++++++++++++++++++++++++++");
         customer.GetComponent<SuperStoreCustomer>().UpdateAnimation(false);
+        
     }
 
     /* public void AddCashier(Register _cashier)
@@ -727,6 +766,7 @@ public class CashCounterManager : MonoBehaviour
 
     public void CheckForCashierSpawnRV()
     {
+        print("k1");
         if (cashier != null)
         {
             print("cashier already exist");
@@ -737,7 +777,12 @@ public class CashCounterManager : MonoBehaviour
         {
             print("spawning new customer");
             rvCashier.SetActive(true);
-            rvCashier.transform.localPosition = rvCashierSpawnedPoint.localPosition;
+            print("RVcashier is " + rvCashierSpawnedPoint.name);
+            print("RVcashier 1 is " + rvCashierSpawnedPoint.position.x);
+            print("RVcashier 2 is " + rvCashierSpawnedPoint.position.y);
+            print("RVcashier 3 is " + rvCashierSpawnedPoint.position.z);
+            rvCashier.transform.position = rvCashierSpawnedPoint.position;
+
             // rvCashierSpawned.transform.rotation = rvCashierSpawnedPoint.transform.rotation;
             rvCashier.GetComponent<EmployeeRV>().SetEmployeeToIdle();
         }

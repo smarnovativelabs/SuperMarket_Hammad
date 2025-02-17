@@ -74,6 +74,7 @@ public class Countercamera : MonoBehaviour
         // Handle mouse click interaction with various objects
         if (Input.GetMouseButtonDown(0) && !startTransition)
         {
+            print("20a");
             HandleObjectInteraction();
         }
     }
@@ -177,6 +178,7 @@ public class Countercamera : MonoBehaviour
     /// </summary>
     private void HandleObjectInteraction()
     {
+        print("20b");
         // Generate a ray from the camera based on the mouse click position
         Ray _ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
 
@@ -201,6 +203,7 @@ public class Countercamera : MonoBehaviour
             }
             else if (_hit.collider.gameObject.GetComponent<Paymentmethod>())
             {
+                print("20c");
                 currentInteractingObj = _hit.collider.gameObject;
                 currentInteractingObj.GetComponent<Paymentmethod>().OnInteract(counterId);
             }

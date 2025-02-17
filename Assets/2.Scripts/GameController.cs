@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
     public GameObject currentPicketItem;
     public GameObject currentPickedTool;
     bool canPickItem = true;
+    bool isMountedOnTrolley;
     public GameData gameData;
     bool gameStarted = false;
     public delegate void ChangeGameStatus(bool _enable);
@@ -50,6 +51,7 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1;
         StartCoroutine(InitilizeGame());
         canPickItem = true;
+       AdsMediation.AdsMediationManager.instance.HideBannerAdd();
     }
 
     IEnumerator InitilizeGame()
@@ -171,6 +173,14 @@ public class GameController : MonoBehaviour
         gameData.poolOpenStatus = _open;
         //PoolManager.instance.OpenPool(_open);
     }
+    public bool IsMountedOnTrolley()
+    {
+        return isMountedOnTrolley;
+    }
+    public void SetTrolleyMounting(bool _isMounted)
+    {
+        isMountedOnTrolley = _isMounted;
+    }
 
     public void UpdatePlayerSensitivity(float _val)
     {
@@ -234,25 +244,36 @@ public class GameController : MonoBehaviour
     }
     void UpdateAdsTimer()
     {
+       /* print("Game is now started");
+        print("Game is now started 1"+ GameManager.instance.inGameAdsTimer);
+        print("Game is now started 2" + adsTimer);*/
+
+
         int _difference = Mathf.CeilToInt(GameManager.instance.inGameAdsTimer - adsTimer);
+       // print("ret 1" + _difference);
         if (_difference > 5)
         {
             adsTimer += Time.deltaTime;
+           // print("ret2 adsTimer Reset==" + adsTimer + " | And interstitial ad delay\\ " + AdsMediation.AdsMediationManager.instance.interAdDelayTimer1);
             UIController.instance.UpdateAdsTimer(-1);
         }
         else if (AdsMediation.AdsMediationManager.instance.CanShowInterstitial())
         {
-            adsTimer += Time.deltaTime;
+           // print("ret 3");
+
+           adsTimer += Time.deltaTime;
             UIController.instance.UpdateAdsTimer(_difference);
             if (_difference < 1)
             {
-                adsTimer = 0f;
+              //  print("ret 4");
                 AdsMediation.AdsMediationManager.instance.ShowInterstitial();
+                adsTimer = 0f;
                 EnvInteract.instance.OnInGameAd();
             }
         }
         else
         {
+           // print("ret 5");
             UIController.instance.UpdateAdsTimer(-1);
         }
     }

@@ -102,7 +102,7 @@ public class StoreManager : MonoBehaviour
         {
             //_adsProductInstance = new InAppProduct();
             _adsProductInstance = inAppProducts[_index];
-           // AdsMediation.AdsMediationManager.instance.ShowRewardedVideo(OnRVSuccess, OnRVFailed);
+            AdsMediation.AdsMediationManager.instance.ShowRewardedVideo(OnRVSuccess, OnRVFailed);
         }
         else
         {
@@ -116,15 +116,16 @@ public class StoreManager : MonoBehaviour
             }
             purchaserScript.OnPurchaseItem(inAppProducts[_index].productID);
         }
-       // GameManager.instance.CallFireBase("IAPBtn_" + _index.ToString());
+        GameManager.instance.CallFireBase("IAPBtn_" + _index.ToString());
     }
     public void OnRequestPurchase(InAppProduct _product)
     {
+        Debug.Log("88888");
         if (_product.purchaseMethod == PurchaseType.RewardedVideo)
         {
             //_adsProductInstance = new InAppProduct();
             _adsProductInstance = _product;
-            //AdsMediation.AdsMediationManager.instance.ShowRewardedVideo(OnRVSuccess, OnRVFailed);
+            AdsMediation.AdsMediationManager.instance.ShowRewardedVideo(OnRVSuccess, OnRVFailed);
         }
         else
         {
@@ -142,7 +143,7 @@ public class StoreManager : MonoBehaviour
         {
             if (_product.productID == inAppProducts[i].productID)
             {
-              //  GameManager.instance.CallFireBase("IAPBtn_" + i.ToString());
+                GameManager.instance.CallFireBase("IAPBtn_" + i.ToString());
                 break;
             }
         }

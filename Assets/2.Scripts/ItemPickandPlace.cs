@@ -33,6 +33,7 @@ public class ItemPickandPlace : MonoBehaviour
     public ObjectRelavance objectRelatedTo = ObjectRelavance.Room;
     public ObjectRotationAxis rotationAxis = ObjectRotationAxis.Y;
     public float initialplayerDistance = 4f;
+    
     public List<string> validTags;
     public List<string> placableTags;
     public List<string> ignoredTags;
@@ -44,10 +45,10 @@ public class ItemPickandPlace : MonoBehaviour
     Quaternion objectRotation;
     Material[] defaultMaterials;
     List<Material> invalidPlacerMaterials;
-    bool canPlaceObject;
+    protected bool canPlaceObject;
     public List<Collider> invalidTriggeredColliders;
     public List<Collider> placableTriggerColliders;
-    List<Collider> areaTriggers;
+    protected List<Collider> areaTriggers;
     Transform defaultParent;
 
     [System.Serializable]
@@ -162,6 +163,85 @@ public class ItemPickandPlace : MonoBehaviour
     {
         indexInRoomList = _indicaterIndex;
     }
+    public void UpdateItemSavingPosition()
+    {
+        if (itemsSavingProps != null)
+        {
+            itemsSavingProps.itemPosition = transform.position;
+        }
+    }
+    protected void HandleObjectPlacement()
+    {
+        Debug.Log("This can create issue 11");
+        Debug.Log("This is an item Condition" + itemCondition);
+        if (itemCondition == ItemState.picking)
+        {
+            gameObject.transform.localPosition = Vector3.Lerp(transform.localPosition, targetPosition, lerpTransition);
+            gameObject.transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, lerpTransition);
+            gameObject.transform.localScale = Vector3.Lerp(transform.localScale, targetScale, lerpTransition);
+            lerpTransition += Time.deltaTime * 2;
+            if (lerpTransition > 1)
+            {
+                //GameController.instance.CanPickItem(true);
+                itemCondition = ItemState.ready;
+                gameObject.transform.localPosition = targetPosition;
+                gameObject.transform.localRotation = targetRotation;
+                gameObject.transform.localScale = targetScale;
+                lerpTransition = 0;
+                if (onCompleteLerpAction != null)
+                {
+                    onCompleteLerpAction();
+                    onCompleteLerpAction = null;
+                }
+            }
+        }
+        else if (itemCondition == ItemState.placing)
+        {
+            gameObject.transform.position = Vector3.Lerp(transform.position, targetPosition, lerpTransition);
+            gameObject.transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, lerpTransition);
+            gameObject.transform.localScale = Vector3.Lerp(transform.localScale, targetScale, lerpTransition);
+            lerpTransition += Time.deltaTime * 2;
+            if (lerpTransition > 1)
+            {
+                //GameController.instance.CanPickItem(true);
+                itemCondition = ItemState.ready;
+                gameObject.transform.position = targetPosition;
+                gameObject.transform.rotation = targetRotation;
+                gameObject.transform.localScale = targetScale;
+                lerpTransition = 0;
+                if (onCompleteLerpAction != null)
+                {
+                    onCompleteLerpAction();
+                    onCompleteLerpAction = null;
+                }
+            }
+        }
+        else if (itemCondition == ItemState.throwing)
+        {
+            gameObject.transform.localScale = Vector3.Lerp(transform.localScale, targetScale, lerpTransition);
+            lerpTransition += Time.deltaTime * 50;
+            if (lerpTransition > 1)
+            {
+                //GameController.instance.CanPickItem(true);
+                itemCondition = ItemState.ready;
+                gameObject.transform.localScale = targetScale;
+                lerpTransition = 0;
+                gameObject.layer = defaultLayer;
+
+                if (itemsSavingProps != null)
+                {
+                    itemsSavingProps.itemPosition = transform.position;
+                    itemsSavingProps.itemRotation = transform.rotation;
+                }
+                if (onCompleteLerpAction != null)
+                {
+                    onCompleteLerpAction();
+                    onCompleteLerpAction = null;
+                }
+            }
+        }
+    }
+   
 
     public void SetSpawnedItemProp(ItemData _data, GameObject _spawnedItem)
     {
@@ -357,15 +437,16 @@ public class ItemPickandPlace : MonoBehaviour
 
     public void SetDefaultValues()
     {
+        Debug.Log("why 100");
         defaultLayer = gameObject.layer;
         defaultMaterials = GetComponent<Renderer>().materials;
         objectRotation = transform.rotation;
         invalidTriggeredColliders = new List<Collider>();
         placableTriggerColliders = new List<Collider>();
-        invalidPlacerMaterials = new List<Material>();
         areaTriggers = new List<Collider>();
+        invalidPlacerMaterials = new List<Material>();
 
-        for(int i = 0; i < defaultMaterials.Length; i++)
+        for (int i = 0; i < defaultMaterials.Length; i++)
         {
             invalidPlacerMaterials.Add(GameController.instance.invalidPlacerMaterial);
         }
@@ -377,6 +458,7 @@ public class ItemPickandPlace : MonoBehaviour
     }
     public void OnStartItemPlacement()
     {
+       // Debug.Log("3700");
         isObjectInteracting = true;
         //Call To Display UI Buttons from here
         gameObject.transform.parent = null;
@@ -384,37 +466,50 @@ public class ItemPickandPlace : MonoBehaviour
 
         for (int i = 0; i < _colliders.Length; i++)
         {
+           // Debug.Log("3800");
             _colliders[i].enabled = true;
             _colliders[i].isTrigger = true;
         }
         if (GetComponent<Rigidbody>())
         {
+           // Debug.Log("3900");
             GetComponent<Rigidbody>().isKinematic = false;
+           // Debug.Log("2500");
             GetComponent<Rigidbody>().useGravity = false;
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         }
+        //Debug.Log("999" + transform.childCount);
         for (int i = 0; i < transform.childCount; i++)
         {
+         //  Debug.Log("1001"+transform.GetChild(i).GetComponent<BoxCollider>());
             Collider[] _childColliders = transform.GetChild(i).GetComponents<Collider>();
+          //  Debug.Log("4000");
+           // Debug.Log("3000"+_childColliders.Length);
             for (int j = 0; j < _childColliders.Length; j++)
             {
+              //  Debug.Log("4100");
                 _childColliders[j].enabled = false;
             }
         }
+      //  Debug.Log("4200");
         invalidTriggeredColliders.Clear();
         placableTriggerColliders.Clear();
         UIController.instance.OnChangeInteraction(0, true);
         gameObject.layer = 2;
         UpdatePreviewObjectRotation();
         UIController.instance.EnableDynamicPlacingBtns(true);
-
+      //  Debug.Log("4300");
     }
     public void OnEndPlacement()
     {
+       // Debug.Log("why101Reporting");
         isObjectInteracting = false;
         //Call To Display UI Buttons from here
         UIController.instance.EnableDynamicPlacingBtns(false);
+        //int _xp = 30;
+        //PlayerDataManager.instance.UpdateXP(_xp);
+        //UIController.instance.UpdateXP(_xp);
     }
 
     public virtual void OnPlaceItemDynamically()
@@ -436,17 +531,17 @@ public class ItemPickandPlace : MonoBehaviour
         }
         if (areaTriggers.Count > 0)
         {
-            //if (objectRelatedTo == ObjectRelavance.Room)
-            //{
+            if (objectRelatedTo == ObjectRelavance.SuperStore)
+            {
             //    itemsSavingProps.placedAreaId = areaTriggers[areaTriggers.Count - 1].GetComponent<RoomTrigger>().roomId;
             //    RoomManager.instance.rooms[itemsSavingProps.placedAreaId].OnPlaceItemInRoom(mainCat, SubCatId, itemId);
             //    transform.parent = RoomManager.instance.rooms[itemsSavingProps.placedAreaId].roomProperties.placedItemParent.transform;
-            //    RewardXps();
+                RewardXps();
             //    if (itemsSavingProps.placedAreaId == RoomManager.instance.currentRoomNumber)
             //    {
             //        RoomManager.instance.rooms[itemsSavingProps.placedAreaId].CheckRoomProgress();
             //    }
-            //}
+            }
         }
         itemsSavingProps.isPlacedRight = true;
         GameManager.instance.CallFireBase("ItmPlcd_" + itemsSavingProps.mainCatId.ToString() + "_" + itemsSavingProps.subCatId.ToString()
@@ -494,8 +589,10 @@ public class ItemPickandPlace : MonoBehaviour
     }
     public virtual void UpdateItemVisibility(bool _canBePlaced)
     {
+        Debug.Log("8000"+_canBePlaced);
         if (_canBePlaced)
         {
+            Debug.Log("8001"+defaultMaterials);
             GetComponent<MeshRenderer>().materials = defaultMaterials;
         }
         else
@@ -503,7 +600,7 @@ public class ItemPickandPlace : MonoBehaviour
             GetComponent<MeshRenderer>().materials = invalidPlacerMaterials.ToArray();
         }
     }
-    private void UpdatePreviewObjectRotation()
+   protected void UpdatePreviewObjectRotation()
     {
         Vector3 _angle = Vector3.zero;//objectRotation.eulerAngles;
 
@@ -560,6 +657,7 @@ public class ItemPickandPlace : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("12345" + other);
         if(!canPlaceDynamically && !isObjectInteracting)
         {
             return;

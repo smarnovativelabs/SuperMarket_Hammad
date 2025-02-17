@@ -584,8 +584,9 @@ public class UIController : MonoBehaviour
             {
                 GameController.instance.ResetAdsTimer();
             }
+            AdsMediation.AdsMediationManager.instance.ShowInterstitial();
         }
-        AdsMediation.AdsMediationManager.instance.ShowInterstitial();
+       
 
         GameManager.instance.CallFireBase("OnResumePrs", "Setting", 1);
     }
@@ -704,6 +705,7 @@ public class UIController : MonoBehaviour
 
     public void EnableMonetizationRVPanel(string _vehicleName, Sprite icon, VechicleType vechicleType, float _time, int _rvCount, UnityAction _successAction, UnityAction _failure, int required)
     {
+       // print("EnableMonetizationRVPanel" + required);
         if (vechicleType == VechicleType.HoverBoard)
         {
             HoverBoardRewardNameText.text = "ACQUIRE A " + _vehicleName;
@@ -723,6 +725,7 @@ public class UIController : MonoBehaviour
         vehicleIcon.sprite = icon;
         int _totalMinutes = (int)((_time * GameController.instance.dayCycleMinutes));
         accuireTextHoverboard.text = (_totalMinutes.ToString("00")) + ":00" + "h";
+       // print("strstr ???????" + required);
         totalRVNeededTextHoverboard.text = required.ToString();
         ShowHoverbaordRVPanel(true);
         successRvMonetization = _successAction;
@@ -1094,6 +1097,7 @@ public class UIController : MonoBehaviour
             {
                 GameController.instance.ResetAdsTimer();
             }
+           
         }
         AdsMediation.AdsMediationManager.instance.ShowInterstitial();
         TutorialManager.instance.OnCompleteTutorialTask(11);
@@ -1189,6 +1193,7 @@ public class UIController : MonoBehaviour
             {
                 GameController.instance.ResetAdsTimer();
             }
+            
         }
         AdsMediation.AdsMediationManager.instance.ShowInterstitial();
         //TutorialManager.instance.OnCompleteTutorialTask(9);
@@ -1248,24 +1253,29 @@ public class UIController : MonoBehaviour
 
     public void StoreSubCategorySelected(int _subCatId)
     {
+        print("NSD" + _subCatId);
         if (currentSubCatId == _subCatId)
             return;
         SoundController.instance.OnPlayInteractionSound(uiButtonSound);
 
         if (categoryPanels[currentCategory].subPanelRefs.ContainsKey(currentSubCatId))
         {
+            print("NSD 1");
             categoryPanels[currentCategory].subPanelRefs[currentSubCatId].storeBtn.GetComponent<Button>().interactable = true;  // make previously selected subcategory button interactable 
             categoryPanels[currentCategory].subPanelRefs[currentSubCatId].storePanel.gameObject.SetActive(false);  // hide previously selected subcategory panel
         }
 
         if (categoryPanels[currentCategory].subPanelRefs.ContainsKey(_subCatId))
         {
+           
             categoryPanels[currentCategory].subPanelRefs[_subCatId].storeBtn.GetComponent<Button>().interactable = false;  // make currently selected subcategory button not interactable 
             categoryPanels[currentCategory].subPanelRefs[_subCatId].storePanel.SetActive(true);  // show currently selected subcategory panel
-
+            print("NSD 2");
             Transform _itemsScroller = categoryPanels[currentCategory].subPanelRefs[_subCatId].storePanel.transform.GetChild(0).GetChild(0);
             for (int i = 0; i < _itemsScroller.transform.childCount; i++)
             {
+                print("NSD 3"+ _itemsScroller);
+               
                 _itemsScroller.GetChild(i).GetComponent<StoreItemsValuse>().UpdateItemUI();
             }
             StartCoroutine(UpdateItemsScrollerPanel(_itemsScroller));
@@ -1289,37 +1299,49 @@ public class UIController : MonoBehaviour
     #region Level Upgrade Implementation
     public void OnUpdateLevel()
     {
-        if (!pcClickPanel.activeInHierarchy)
-        {
-            return;
-        }
-        int _activeTab = -1;
+        print("J 0" + pcTabs.Length);
+        print("J 1");
+        //if (!pcClickPanel.activeInHierarchy)
+        //{
+        //    print("J 2");
+        //    return;
+        //}
+        print("J 3");
+        //int _activeTab = -1;
+        int _activeTab = 1;
         for (int i = 0; i < pcTabs.Length; i++)
         {
+            print("J 4");
             if (pcTabs[i].tabPanel.activeInHierarchy)
             {
+                print("J 5");
                 _activeTab = i;
             }
         }
+        print("J 6" + _activeTab);
         if (_activeTab < 0)
             return;
         switch (_activeTab)
         {
+           
             case 1:     //Furniture Tab Is Opened
-                    //foreach (KeyValuePair<int, StorePanelReference> _subCat in categoryPanels[currentCategory].subPanelRefs)
-                   // {
-                        //bool _isUnlocked = GameManager.instance.categoriesUIData[(int)currentCategory].subCategoriesUIData[_subCat.Key].reqLevel <= PlayerDataManager.instance.playerData.playerLevel;
-                       // _subCat.Value.storeBtn.transform.GetChild(1).gameObject.SetActive(!_isUnlocked);
-                   // }
-                    //if (categoryPanels[currentCategory].subPanelRefs.ContainsKey(currentSubCatId))
-                   // {
-                        //Transform _itemsScroller = categoryPanels[currentCategory].subPanelRefs[currentSubCatId].storePanel.transform.GetChild(0).GetChild(0);
-                       // for (int i = 0; i < _itemsScroller.transform.childCount; i++)
-                        //{
-                           //_itemsScroller.GetChild(i).GetComponent<StoreItemsValuse>().UpdateItemUI();
-                        //}
-                   // }
-                    break;
+                foreach (KeyValuePair<int, StorePanelReference> _subCat in categoryPanels[currentCategory].subPanelRefs)
+                {
+                    bool _isUnlocked = GameManager.instance.categoriesUIData[(int)currentCategory].subCategoriesUIData[_subCat.Key].reqLevel <= PlayerDataManager.instance.playerData.playerLevel;
+                    print("hexaMexa" + _isUnlocked);
+                    print("Dexa" + _subCat.Value.storeBtn.transform.GetChild(1).gameObject.name);
+                    _subCat.Value.storeBtn.transform.GetChild(1).gameObject.SetActive(!_isUnlocked);
+                }
+                if (categoryPanels[currentCategory].subPanelRefs.ContainsKey(currentSubCatId))
+                {
+                    Transform _itemsScroller = categoryPanels[currentCategory].subPanelRefs[currentSubCatId].storePanel.transform.GetChild(0).GetChild(0);
+                    for (int i = 0; i < _itemsScroller.transform.childCount; i++)
+                    {
+                        print("gB" + _itemsScroller.name);
+                        _itemsScroller.GetChild(i).GetComponent<StoreItemsValuse>().UpdateItemUI();
+                    }
+                }
+                break;
             case 4:     //Staff Tab
                 ManagementTabUIManager.instance.OnLeveUpgrade();
                 break;
@@ -1332,8 +1354,11 @@ public class UIController : MonoBehaviour
     #region PC Panel Manipulation
     public void OnPressPC()
     {
-       
+
+        print("111b");
         pcClickPanel.SetActive(true);
+        
+        AdsMediation.AdsMediationManager.instance.RemoveBannerAd();
         //SetFuelPanelValues();//Fuel Panel Values Is Set Everytime PC Panel is opened
         //AdsMediation.AdsMediationManager.instance.RemoveBannerAd();
         //if (RoomManager.instance.currentRoomNumber >= 0)
@@ -1348,6 +1373,7 @@ public class UIController : MonoBehaviour
         //}
         if (SuperStoreManager.instance.IsAtSuperMarket())
         {
+            print("2b");
             OpenGameStorePanel(1, ((int)CategoryName.Products));
             return;
         }
@@ -1358,7 +1384,7 @@ public class UIController : MonoBehaviour
         
         pcClickPanel.SetActive(false);
         SoundController.instance.OnPlayInteractionSound(uiButtonSound);
-        //AdsMediation.AdsMediationManager.instance.DisplayBanner();
+        AdsMediation.AdsMediationManager.instance.DisplayBanner();
     }
     public void OpenGameStorePanel(int _tabPressed = 0, int _mainCat = -1, int _subCatId = -1)
     {
@@ -1377,7 +1403,7 @@ public class UIController : MonoBehaviour
     {
         pcClickPanel.SetActive(true);
         //SetFuelPanelValues();//Fuel Panel Values Is Set Everytime PC Panel is opened
-        //AdsMediation.AdsMediationManager.instance.RemoveBannerAd();
+        AdsMediation.AdsMediationManager.instance.RemoveBannerAd();
         
         OnPcTabPressed(2);
         IAPUiManager.Instance.OnSubPanelBtnPressed(2);
@@ -1413,6 +1439,7 @@ public class UIController : MonoBehaviour
     }
     public void OnPcTabPressed(int _tabId)
     {
+        print("2c");
         if (_tabId < 0 || _tabId >= pcTabs.Length)
         {
             Debug.LogError("Invalid TabId Pressed!");

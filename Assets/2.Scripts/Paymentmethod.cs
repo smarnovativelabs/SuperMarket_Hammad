@@ -13,6 +13,7 @@ public class Paymentmethod : MonoBehaviour
     /// </summary>
     public void OnInteract(int _id)
     {
+        print("20d");
         // Log the interaction with the payment method for debugging purposes
         print("Interacted with payment style");
 

@@ -58,6 +58,7 @@ public class SuperStoreManager : MonoBehaviour
     public AudioClip cardCollectSound;
     public AudioClip cashMachineSound;
     public AudioSource counterSoundPlayer;
+  
 
     //Expensions realted data
     public Supermarketexpension[] superStoreExpension;
@@ -751,6 +752,7 @@ public class SuperStoreManager : MonoBehaviour
 
     public void OnInteractionWithCashOrCard(int _id, PaymentMethod _paymentMethod)
     {
+        print("20e");
         posCounters[_id].CashCounterManager.OnInteractionWithCashOrCard(_paymentMethod);
     }
 

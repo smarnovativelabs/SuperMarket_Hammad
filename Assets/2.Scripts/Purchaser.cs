@@ -110,6 +110,7 @@ namespace IAPProject
 
         public void OnPurchaseItem(string productID)
         {
+            Debug.Log("99999");
             BuyProductID(productID);
         }
 
@@ -118,6 +119,7 @@ namespace IAPProject
             // If Purchasing has been initialized ...
             if (IsInitialized())
             {
+                Debug.Log("00000");
                 // ... look up the Product reference with the general product identifier and the Purchasing 
                 // system's products collection.
                 Product product = m_StoreController.products.WithID(productId);

@@ -1,5 +1,58 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &498136122416004821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7377758013568496684}
+  - component: {fileID: 5395918510645754522}
+  m_Layer: 21
+  m_Name: Placable Tag
+  m_TagString: BoxTop
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7377758013568496684
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498136122416004821}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3917793442353390546}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5395918510645754522
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498136122416004821}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.6681881, y: 0.022246659, z: 0.54477507}
+  m_Center: {x: 0.0057439804, y: 0.5628518, z: -0.0063225925}
 --- !u!1 &5181672226168472974
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,6 +468,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: eb5dbfc0d93124448978d3c023f8594d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5916012275095554468}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: eb5dbfc0d93124448978d3c023f8594d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7377758013568496684}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb5dbfc0d93124448978d3c023f8594d, type: 3}
       insertIndex: -1
@@ -521,7 +577,6 @@ MonoBehaviour:
   SubCatId: 0
   itemId: 0
   itemName: Box
-  isFurniture: 0
   placedRoomIndex: -1
   indexInRoomList: -1
   indicator:
@@ -537,8 +592,38 @@ MonoBehaviour:
   targetScale: {x: 0, y: 0, z: 0}
   itemPickSound: {fileID: 8300000, guid: d5c09fbc84adf1b498edf053ec21c6b0, type: 3}
   itemThrowSound: {fileID: 8300000, guid: cbbd628944aef4905bc09b29296774a2, type: 3}
+  itemsSavingProps:
+    positionSaved: 0
+    mainCatId: 0
+    subCatId: 0
+    itemId: 0
+    isInBox: 0
+    itemCount: 0
+    placedAreaId: -1
+    itemUniqueId: -1
+    isPlacedRight: 0
+    isXpGiven: 0
+    itemPosition: {x: 0, y: 0, z: 0}
+    itemRotation: {x: 0, y: 0, z: 0, w: 1}
+    itemScale: {x: 0, y: 0, z: 0, w: 0}
+  canPlaceDynamically: 1
+  objectRelatedTo: 1
+  rotationAxis: 1
+  initialplayerDistance: 1.5
+  validTags: []
+  placableTags:
+  - TrolleyTop
+  - BoxTop
+  ignoredTags:
+  - AreaTrigger
+  isObjectInteracting: 0
+  areaId: 0
+  invalidTriggeredColliders: []
+  placableTriggerColliders: []
   itemCondition: 3
   itemData: {fileID: 0}
   boxItemImages:
   - {fileID: 5223385042173096633}
   - {fileID: 3950455657004752580}
+  isPlayerInteractingBox: 0
+  isAtTrolley: 0

@@ -136,6 +136,7 @@ public class PurchasedItemsData
 [System.Serializable]
 public class ItemSavingProps
 {
+    public bool positionSaved; // new
     public int mainCatId;
     public int subCatId;
     public int itemId;

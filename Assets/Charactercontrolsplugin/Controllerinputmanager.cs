@@ -70,6 +70,11 @@ namespace KinematicCharacterController.Examples
                     PlayFootstepSound();
                     footstepTimer = 0f;  // Reset the timer
                 }
+                if (Controlsmanager.instance.playervehicleInteraction.ridingVehicle == null)
+                {
+                    vehicleSoundPlayed = false;
+                    Controlsmanager.instance.playervehicleInteraction.audioSource.Stop();
+                }
             }
             else
             {

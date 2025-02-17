@@ -14,6 +14,8 @@ public class PlayerVechicle : MonoBehaviour, InteractableObjects
     public int requiredRVToUnlocked;
     // [HideInInspector]
     public int totalRVWatched;
+    public Transform itemsContainer;
+    public Transform itemsThrowPoint;
     public TextMeshProUGUI totalAdsText;
     public Sprite icon;
     public enum VechicleType
@@ -38,10 +40,12 @@ public class PlayerVechicle : MonoBehaviour, InteractableObjects
     }
     void OnSuccessRV()
     {
+        print("4th");
         totalRVWatched++;
 
         if (totalRVWatched >= requiredRVToUnlocked)
         {
+            print("5th");
             //disable this vehicle and enable monetization reward
             if (vechicleType == VechicleType.HoverBoard)
             {
@@ -75,16 +79,21 @@ public class PlayerVechicle : MonoBehaviour, InteractableObjects
     }
     public void OnHoverItems()
     {
+        //print("i am hover is called");
         if (Controlsmanager.instance.playervehicleInteraction.IsRiding()) return;
         if (totalRVWatched >= requiredRVToUnlocked)
         {
+           // print("if of i am hover is called ");
             UIController.instance.DisplayHoverObjectName(vehicleName, true, HoverInstructionType.General);
             UIController.instance.OnChangeInteraction(0, true);
         }
         else
         {
-
+          /*  print("else of i am hover is called ");
+            print("tetra 1" + requiredRVToUnlocked);
+            print("Tetra 2 " + totalRVWatched);*/
             int required = (requiredRVToUnlocked - totalRVWatched);
+            print("Tetra 3 " + required);
             UIController.instance.EnableMonetizationRVPanel(vehicleName, icon, vechicleType, acquireTime, requiredRVToUnlocked, OnSuccessRV, OnFailureRV, required);
         }
     }
@@ -110,6 +119,27 @@ public class PlayerVechicle : MonoBehaviour, InteractableObjects
     public void TurnOffOutline()
     {
         UIController.instance.ShowHoverbaordRVPanel(false);
+    }
+    public void EnableContainerItemColliders(bool _enable)
+    {
+        for (int i = 0; i < itemsContainer.childCount; i++)
+        {
+            if (_enable)
+            {
+                if (itemsContainer.GetChild(i).GetComponent<ItemPickandPlace>())
+                {
+                    itemsContainer.GetChild(i).GetComponent<ItemPickandPlace>().UpdateItemSavingPosition();
+                }
+            }
+
+            if (itemsContainer.GetChild(i).GetComponent<Collider>() != null)
+            {
+                for (int j = 0; j < itemsContainer.GetChild(i).GetComponents<Collider>().Length; j++)
+                {
+                    itemsContainer.GetChild(i).GetComponents<Collider>()[j].enabled = _enable;
+                }
+            }
+        }
     }
 }
 

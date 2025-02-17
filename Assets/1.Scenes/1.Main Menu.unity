@@ -1338,100 +1338,6 @@ MonoBehaviour:
   showTashkeel: 1
   useHinduNumbers: 1
   ignoreSelectedLanguage: 0
---- !u!1 &120849964
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 120849967}
-  - component: {fileID: 120849966}
-  - component: {fileID: 120849965}
-  m_Layer: 0
-  m_Name: Reporter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &120849965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120849964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6767a180de870304caa2013b2772dd62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &120849966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120849964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 600c02144c4813244abd262cbcbe8825, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  show: 0
-  UserData: 
-  fps: 0
-  fpsText: 
-  images:
-    clearImage: {fileID: 2800000, guid: 112c6fcf56e349449ab2e6ad76b67816, type: 3}
-    collapseImage: {fileID: 2800000, guid: 4623f326a884a2546ab39078bf7822c3, type: 3}
-    clearOnNewSceneImage: {fileID: 2800000, guid: 3a6bc61a8319b1949ab9f1f2db1302b4, type: 3}
-    showTimeImage: {fileID: 2800000, guid: 782e03669fa4a614e89ef56252134250, type: 3}
-    showSceneImage: {fileID: 2800000, guid: ff4dfb29f203a174ab8e4c498afe908a, type: 3}
-    userImage: {fileID: 2800000, guid: 2bcdc012e7356f1449ce7d3a31dc458c, type: 3}
-    showMemoryImage: {fileID: 2800000, guid: f447d62f2dacf9843be7cbf168a3a9d0, type: 3}
-    softwareImage: {fileID: 2800000, guid: 6c91fc88ee6c791468318d85febfb48d, type: 3}
-    dateImage: {fileID: 2800000, guid: a7561cd0a9f62a84e99bff1abce2a222, type: 3}
-    showFpsImage: {fileID: 2800000, guid: 90b2f48155dc0e74f8e428561ac79da5, type: 3}
-    infoImage: {fileID: 2800000, guid: 2954bef266e6d794aba08ceacc887a0f, type: 3}
-    saveLogsImage: {fileID: 2800000, guid: 4a4821d80a1fc774fb76eac6213544e7, type: 3}
-    searchImage: {fileID: 2800000, guid: bfef37b5a26d2264798616d960451329, type: 3}
-    copyImage: {fileID: 2800000, guid: 7f36d71624c630046b855909c497be17, type: 3}
-    closeImage: {fileID: 2800000, guid: b65e9be99974bc94eab5d6698811d0b8, type: 3}
-    buildFromImage: {fileID: 2800000, guid: 8702be598dd9f504ca33be2afee2ca33, type: 3}
-    systemInfoImage: {fileID: 2800000, guid: e9011b1dc9256ad4d9c19a31c595f95f, type: 3}
-    graphicsInfoImage: {fileID: 2800000, guid: 999d31716332cc04eb4abc9c9270b0ca, type: 3}
-    backImage: {fileID: 2800000, guid: a0632a18e7c665641b94fea66506ab50, type: 3}
-    logImage: {fileID: 2800000, guid: e876b803a4dd5c5488078071d15aa9c0, type: 3}
-    warningImage: {fileID: 2800000, guid: 1066be8e7b994b94c8a182b8dbe30705, type: 3}
-    errorImage: {fileID: 2800000, guid: 7640ebf8b3a92124d821d3b4b8b3fd7e, type: 3}
-    barImage: {fileID: 2800000, guid: 8128d4f4c0193e34586f9631ef7d4787, type: 3}
-    button_activeImage: {fileID: 2800000, guid: 2580a2e903691e44282e56ed6e0ff37a, type: 3}
-    even_logImage: {fileID: 2800000, guid: d27aad55b568c6544b0b95a95da44bc7, type: 3}
-    odd_logImage: {fileID: 2800000, guid: 8ffbb44a2c3adae45913474e4fd487f5, type: 3}
-    selectedImage: {fileID: 2800000, guid: 17117a429b08e7e43b0b6c8421de69fe, type: 3}
-    reporterScrollerSkin: {fileID: 11400000, guid: 1cc68832d00d3284a9324a4dc05be753, type: 2}
-  size: {x: 32, y: 32}
-  maxSize: 20
-  numOfCircleToShow: 1
-  Initialized: 0
---- !u!4 &120849967
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120849964}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &124486658
 GameObject:
   m_ObjectHideFlags: 0
@@ -4771,7 +4677,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAdsRemoved: 0
-  interstitialAdDelay: 0
+  displayAdmobBanner: 1
+  interstitialAdDelay: 85
 --- !u!114 &623875936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4801,8 +4708,8 @@ MonoBehaviour:
   iosRewardedInterstitialAdUnitId: ENTER_IOS_REWARD_INTER_AD_UNIT_ID_HERE
   iosBannerAdUnitId: ENTER_IOS_BANNER_AD_UNIT_ID_HERE
   iosMRecAdUnitId: ENTER_IOS_MREC_AD_UNIT_ID_HERE
-  androidInterstitialAdUnitId: ENTER_ANDROID_INTERSTITIAL_AD_UNIT_ID_HERE
-  androidRewardedAdUnitId: ENTER_ANDROID_REWARD_AD_UNIT_ID_HERE
+  androidInterstitialAdUnitId: 6355c4f9d9ab52d4
+  androidRewardedAdUnitId: 7e9ef60bebf7d925
   androidRewardedInterstitialAdUnitId: ENTER_ANDROID_REWARD_INTER_AD_UNIT_ID_HERE
   androidBannerAdUnitId: ENTER_ANDROID_BANNER_AD_UNIT_ID_HERE
   androidMRecAdUnitId: ENTER_ANDROID_MREC_AD_UNIT_ID_HERE
@@ -4819,9 +4726,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c288a3f62e48a47399a2399441725946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  androidBannerId: 
-  androidInterstitialId: ca-app-pub-3940256099942544/1033173712
-  androidRewardedVideoId: ca-app-pub-3940256099942544/5224354917
+  androidBannerId: ca-app-pub-9058006185556068/4136688228
+  androidInterstitialId: ca-app-pub-9058006185556068/3102846148
+  androidRewardedVideoId: ca-app-pub-9058006185556068/4805975908
   iosBannerId: 
   iosInterstitialId: 
   iosRewardedVideoId: 
@@ -7865,6 +7772,100 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029931171}
   m_CullTransparentMesh: 1
+--- !u!1 &1030320850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1030320853}
+  - component: {fileID: 1030320852}
+  - component: {fileID: 1030320851}
+  m_Layer: 0
+  m_Name: Reporter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1030320851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030320850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6767a180de870304caa2013b2772dd62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1030320852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030320850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 600c02144c4813244abd262cbcbe8825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  show: 0
+  UserData: 
+  fps: 0
+  fpsText: 
+  images:
+    clearImage: {fileID: 2800000, guid: 112c6fcf56e349449ab2e6ad76b67816, type: 3}
+    collapseImage: {fileID: 2800000, guid: 4623f326a884a2546ab39078bf7822c3, type: 3}
+    clearOnNewSceneImage: {fileID: 2800000, guid: 3a6bc61a8319b1949ab9f1f2db1302b4, type: 3}
+    showTimeImage: {fileID: 2800000, guid: 782e03669fa4a614e89ef56252134250, type: 3}
+    showSceneImage: {fileID: 2800000, guid: ff4dfb29f203a174ab8e4c498afe908a, type: 3}
+    userImage: {fileID: 2800000, guid: 2bcdc012e7356f1449ce7d3a31dc458c, type: 3}
+    showMemoryImage: {fileID: 2800000, guid: f447d62f2dacf9843be7cbf168a3a9d0, type: 3}
+    softwareImage: {fileID: 2800000, guid: 6c91fc88ee6c791468318d85febfb48d, type: 3}
+    dateImage: {fileID: 2800000, guid: a7561cd0a9f62a84e99bff1abce2a222, type: 3}
+    showFpsImage: {fileID: 2800000, guid: 90b2f48155dc0e74f8e428561ac79da5, type: 3}
+    infoImage: {fileID: 2800000, guid: 2954bef266e6d794aba08ceacc887a0f, type: 3}
+    saveLogsImage: {fileID: 2800000, guid: 4a4821d80a1fc774fb76eac6213544e7, type: 3}
+    searchImage: {fileID: 2800000, guid: bfef37b5a26d2264798616d960451329, type: 3}
+    copyImage: {fileID: 2800000, guid: 7f36d71624c630046b855909c497be17, type: 3}
+    closeImage: {fileID: 2800000, guid: b65e9be99974bc94eab5d6698811d0b8, type: 3}
+    buildFromImage: {fileID: 2800000, guid: 8702be598dd9f504ca33be2afee2ca33, type: 3}
+    systemInfoImage: {fileID: 2800000, guid: e9011b1dc9256ad4d9c19a31c595f95f, type: 3}
+    graphicsInfoImage: {fileID: 2800000, guid: 999d31716332cc04eb4abc9c9270b0ca, type: 3}
+    backImage: {fileID: 2800000, guid: a0632a18e7c665641b94fea66506ab50, type: 3}
+    logImage: {fileID: 2800000, guid: e876b803a4dd5c5488078071d15aa9c0, type: 3}
+    warningImage: {fileID: 2800000, guid: 1066be8e7b994b94c8a182b8dbe30705, type: 3}
+    errorImage: {fileID: 2800000, guid: 7640ebf8b3a92124d821d3b4b8b3fd7e, type: 3}
+    barImage: {fileID: 2800000, guid: 8128d4f4c0193e34586f9631ef7d4787, type: 3}
+    button_activeImage: {fileID: 2800000, guid: 2580a2e903691e44282e56ed6e0ff37a, type: 3}
+    even_logImage: {fileID: 2800000, guid: d27aad55b568c6544b0b95a95da44bc7, type: 3}
+    odd_logImage: {fileID: 2800000, guid: 8ffbb44a2c3adae45913474e4fd487f5, type: 3}
+    selectedImage: {fileID: 2800000, guid: 17117a429b08e7e43b0b6c8421de69fe, type: 3}
+    reporterScrollerSkin: {fileID: 11400000, guid: 1cc68832d00d3284a9324a4dc05be753, type: 2}
+  size: {x: 32, y: 32}
+  maxSize: 20
+  numOfCircleToShow: 1
+  Initialized: 0
+--- !u!4 &1030320853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030320850}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1031480818
 GameObject:
   m_ObjectHideFlags: 0
@@ -10548,7 +10549,7 @@ MonoBehaviour:
       reqLevel: 10
       subSprite: {fileID: 0}
     - subName: Seasonal Products
-      reqLevel: 10
+      reqLevel: 70
       subSprite: {fileID: 0}
     - subName: Foods
       reqLevel: 11
@@ -10605,7 +10606,7 @@ MonoBehaviour:
   soundCounter: 0
   musicCounter: 0
   selectedDeliveryMode: 0
-  inGameAdsTimer: 180
+  inGameAdsTimer: 150
   welcomeBackRewardDisplayed: 0
 --- !u!114 &1286076307
 MonoBehaviour:
@@ -12195,7 +12196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inAppProducts:
-  - productID: com.peri.games.supermarket.motel.removeads
+  - productID: com.peri.games.supermarket.grocery.store.shop.removeads
     productName: Remove Ads
     price: 0.99
     localizedPriceString: $3.99
@@ -12211,7 +12212,7 @@ MonoBehaviour:
       rewardImg: {fileID: 0}
       rewardDesc: Remove Annoying Ads
       amount: -1
-  - productID: com.peri.games.supermarket.motel.20.Cash
+  - productID: com.peri.games.supermarket.grocery.store.shop.20.Cash
     productName: Get Cash
     price: 0
     localizedPriceString: Free
@@ -12227,7 +12228,7 @@ MonoBehaviour:
       rewardImg: {fileID: 0}
       rewardDesc: Cash
       amount: 40
-  - productID: com.peri.games.supermarket.motel.cashpkg1
+  - productID: com.peri.games.supermarket.grocery.store.shop.cashpkg1
     productName: Get Cash
     price: 1
     localizedPriceString: $0.99
@@ -12243,7 +12244,7 @@ MonoBehaviour:
       rewardImg: {fileID: 0}
       rewardDesc: Cash
       amount: 400
-  - productID: com.peri.games.supermarket.motel.cashpkg2
+  - productID: com.peri.games.supermarket.grocery.store.shop.cashpkg2
     productName: Get Cash
     price: 1
     localizedPriceString: $2.99
@@ -12259,7 +12260,7 @@ MonoBehaviour:
       rewardImg: {fileID: 0}
       rewardDesc: Cash
       amount: 1300
-  - productID: com.peri.games.supermarket.motel.cashpkg3
+  - productID: com.peri.games.supermarket.grocery.store.shop.cashpkg3
     productName: Get Cash
     price: 1
     localizedPriceString: $5.99
@@ -12275,7 +12276,7 @@ MonoBehaviour:
       rewardImg: {fileID: 0}
       rewardDesc: Cash
       amount: 2800
-  - productID: com.peri.games.supermarket.motel.cashpkg4
+  - productID: com.peri.games.supermarket.grocery.store.shop.cashpkg4
     productName: Get Cash
     price: 1
     localizedPriceString: $9.99
@@ -12291,7 +12292,7 @@ MonoBehaviour:
       rewardImg: {fileID: 0}
       rewardDesc: Cash
       amount: 5000
-  - productID: com.peri.games.supermarket.motel.cashpkg5
+  - productID: com.peri.games.supermarket.grocery.store.shop.cashpkg5
     productName: Get Cash
     price: 1
     localizedPriceString: $19.99
@@ -12307,7 +12308,7 @@ MonoBehaviour:
       rewardImg: {fileID: 0}
       rewardDesc: Cash
       amount: 11500
-  - productID: com.peri.games.supermarket.motel.cashpkg6
+  - productID: com.peri.games.supermarket.grocery.store.shop.cashpkg6
     productName: Get Cash
     price: 1
     localizedPriceString: $39.99
@@ -12323,7 +12324,7 @@ MonoBehaviour:
       rewardImg: {fileID: 0}
       rewardDesc: Cash
       amount: 28000
-  - productID: com.peri.games.supermarket.motel.employee1
+  - productID: com.peri.games.supermarket.grocery.store.shop.employee1
     productName: Get A Cashier
     price: 1
     localizedPriceString: $39.99
@@ -12339,7 +12340,7 @@ MonoBehaviour:
       rewardImg: {fileID: 0}
       rewardDesc: A Permanent Cashier
       amount: 0
-  - productID: com.peri.games.supermarket.motel.hotpkg1
+  - productID: com.peri.games.supermarket.grocery.store.shop.hotpkg1
     productName: Cashier Pack
     price: 1
     localizedPriceString: $39.99
@@ -16030,7 +16031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79eb790be6e9c4da28064c7b8ede1935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tenjinAndroidKey: 
+  tenjinAndroidKey: HVW1EK6KXQWF8KVGFJZ83N1PXFXHN2LG
   tenjinIosKey: 
 --- !u!4 &1976584707
 Transform:
@@ -17606,4 +17607,4 @@ SceneRoots:
   - {fileID: 1732881219}
   - {fileID: 453125851}
   - {fileID: 1509805212}
-  - {fileID: 120849967}
+  - {fileID: 1030320853}

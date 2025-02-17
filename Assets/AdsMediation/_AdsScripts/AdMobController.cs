@@ -20,6 +20,9 @@ namespace AdsMediation
         public string iosRewardedVideoId;
 
         public bool isInitialized = false;
+        bool initiallyAdsLoaded;
+        bool loadAdsOnInitialization;
+    
 
         private BannerView bannerView;
         private InterstitialAd interstitialAd;
@@ -28,6 +31,7 @@ namespace AdsMediation
         bool isPersonalizedads;
         bool rewardedInterReceived = false;
         bool rvRewardReceived = false;
+        bool loadBannerMust;
 
         int interRetryAttempt;
         int rvRetryAttempt;
@@ -38,7 +42,7 @@ namespace AdsMediation
         #region UNITY MONOBEHAVIOR METHODS
 
 
-        public void InitializeAds()
+        public void InitializeAds(/*bool _loadAds = true*/ bool _loadBanner = false)
         {
             if (isInitialized)
                 return;
@@ -47,32 +51,82 @@ namespace AdsMediation
             // AdColonyAppOptions.SetGDPRRequired(true);
             //   AdColonyAppOptions.SetGDPRConsentString(AdColonyAppOptions.GetGDPRConsentString());
             //AppLovin.Initialize();
+            if (_loadBanner)
+                RequestBannerAd();
+            loadBannerMust = _loadBanner;
 #if UNITY_IPHONE
-              MobileAds.SetiOSAppPauseOnBackground(true);
+                      MobileAds.SetiOSAppPauseOnBackground(true);
 
-            //if (AudiocallManager.PersonalizedAdStatus==0)
-            //{
-            //    //Show Personalized Ads
-            //    isPersonalizedads = true;
-            //}
-            //else
-            //{
-            //    //Show NonPersonalized Ads
-            //    isPersonalizedads = false;
-            //}
+                    //if (AudiocallManager.PersonalizedAdStatus==0)
+                    //{
+                    //    //Show Personalized Ads
+                    //    isPersonalizedads = true;
+                    //}
+                    //else
+                    //{
+                    //    //Show NonPersonalized Ads
+                    //    isPersonalizedads = false;
+                    //}
 #endif
             //  MobileAds.RaiseAdEventsOnUnityMainThread = true;   // copy from other script.. by write this. every events we receive from admob will run on unity main thread
             MobileAds.Initialize(HandleInitCompleteAction);
 
         }
+        //        public void InitializeAds(bool _loadAds = true, bool _loadBanner = false)
+        //        {
+        //            print("Initializing Admob Ads -" + isInitialized);
+
+        //            if (isInitialized)
+        //            {
+        //                if (_loadAds && !initiallyAdsLoaded)
+        //                {
+        //                    initiallyAdsLoaded = true;
+        //                    RequestAndLoadRewardedAd();
+        //                    RequestAndLoadInterstitialAd();
+
+        //                }
+        //                if (_loadBanner)
+        //                    RequestBannerAd();
+        //                return;
+        //            }
+        //            Debug.Log("Initializing Admob Ads");
+        //            loadAdsOnInitialization = _loadAds;
+        //            loadBannerMust = _loadBanner;
+        //            //RequestConfiguration _config = new RequestConfiguration.Builder.SetTagForChildDirectedTreatment(TagForChildDirectedTreatment.Unspecified).build();
+        //            //MobileAds.SetRequestConfiguration(_config);
+        //            // AdColonyAppOptions.SetGDPRRequired(true);
+        //            //   AdColonyAppOptions.SetGDPRConsentString(AdColonyAppOptions.GetGDPRConsentString());
+        //            //AppLovin.Initialize();
+        //#if UNITY_IPHONE
+        //              MobileAds.SetiOSAppPauseOnBackground(true);
+
+        //            //if (AudiocallManager.PersonalizedAdStatus==0)
+        //            //{
+        //            //    //Show Personalized Ads
+        //            //    isPersonalizedads = true;
+        //            //}
+        //            //else
+        //            //{
+        //            //    //Show NonPersonalized Ads
+        //            //    isPersonalizedads = false;
+        //            //}
+        //#endif
+        //            //  MobileAds.RaiseAdEventsOnUnityMainThread = true;   // copy from other script.. by write this. every events we receive from admob will run on unity main thread
+        //            MobileAds.Initialize(HandleInitCompleteAction);
+
+        //        }
         private void HandleInitCompleteAction(InitializationStatus initstatus)
         {
             MobileAdsEventExecutor.ExecuteInUpdate(() =>
             {
                 isInitialized = true;
+                if(loadBannerMust)
+                {
+                    RequestBannerAd();
+                }
                 print("Admob Initialization Complete");
 
-               // RequestBannerAd();
+                initiallyAdsLoaded = true;
                 RequestAndLoadRewardedAd();
                 RequestAndLoadInterstitialAd();
             });
@@ -88,6 +142,19 @@ namespace AdsMediation
 
         #region BANNER ADS
         // call this function to load the banner Ad
+        public void RemoveBanner()
+        {
+            print("333b");
+            if (!isInitialized)
+                return;
+            DestroyBannerAd();
+        }
+        public void DisplayBanner()
+        {
+            if (!isInitialized || !loadBannerMust)
+                return;
+            RequestBannerAd();
+        }
         public void RequestBannerAd()
         {
             print("Requesting Admob Banner ad.");
@@ -158,8 +225,10 @@ namespace AdsMediation
 
         public void DestroyBannerAd()
         {
+            print("444b");
             if (bannerView != null)
             {
+                print("555b");
                 bannerView.Destroy();   // delete previous one if present
                 bannerView = null;
             }
@@ -231,9 +300,13 @@ namespace AdsMediation
                     };
                     ad.OnAdFullScreenContentClosed += () => //OnAd Closed Callback
                     {
-                        print("Interstitial ad closed.");
+                        print("Interstitial ad closed.%%%");
+                       // AdsMediation.AdsMediationManager.instance.interAdDelayTimer = AdsMediation.AdsMediationManager.instance.interstitialAdDelay;
+                       // GameController.instance.ResetAdsTimer();
+                        //print("Bike" + AdsMediation.AdsMediationManager.instance.interAdDelayTimer);
+                       
                         RequestAndLoadInterstitialAd();
-
+                        AdsMediationManager.instance.OnInterClosedForNonRewardedAd();
                         // talha.. added
                         //     LoadAdBeforeLoadingTheScene();
                     };
@@ -347,6 +420,9 @@ namespace AdsMediation
                     rewardedAd.OnAdFullScreenContentClosed += () =>
                     {
                         print("Rewarded ad closed.");
+                       // AdsMediation.AdsMediationManager.instance.interAdDelayTimer = AdsMediation.AdsMediationManager.instance.interstitialAdDelay;
+                       // GameController.instance.ResetAdsTimer();
+                        //print("Bike1" + AdsMediation.AdsMediationManager.instance.interAdDelayTimer);
                         StartCoroutine(CheckForRewardEarned());
                     };
                     rewardedAd.OnAdImpressionRecorded += () =>
@@ -412,6 +488,12 @@ namespace AdsMediation
             {
                 if (rvSuccessEvent != null)
                     rvSuccessEvent?.Invoke("Reward Earned!");
+                if (GameController.instance != null)
+                {
+                    GameController.instance.ResetAdsTimer();
+                    AdsMediation.AdsMediationManager.instance.OnInterstitialClosed();
+
+                }
             }
             else
             {

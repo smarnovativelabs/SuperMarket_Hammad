@@ -160,7 +160,6 @@ MeshRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -205,8 +204,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.9072205, y: 1.8435115, z: 1.405161}
-  m_Center: {x: 0, y: 0.8671244, z: 0.3746689}
+  m_Size: {x: 1.9072205, y: 1.7767352, z: 1.405161}
+  m_Center: {x: 0, y: 0.9005125, z: 0.3746689}
 --- !u!54 &2732360316751280567
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -265,6 +264,7 @@ MonoBehaviour:
   itemPickSound: {fileID: 8300000, guid: d5c09fbc84adf1b498edf053ec21c6b0, type: 3}
   itemThrowSound: {fileID: 8300000, guid: cbbd628944aef4905bc09b29296774a2, type: 3}
   itemsSavingProps:
+    positionSaved: 0
     mainCatId: 0
     subCatId: 0
     itemId: 0

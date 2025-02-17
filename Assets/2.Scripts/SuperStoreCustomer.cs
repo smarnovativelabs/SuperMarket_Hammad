@@ -243,15 +243,18 @@ public class SuperStoreCustomer : MonoBehaviour
     }
     public void UpdateAnimation(bool _enable)
     {
+        print("i am enable " + _enable);
         if (_enable)
         {
             int _val = Random.Range(0, 2);
+            print("cash , card" + _val);
             paymentCard.SetActive(_val == 0);
             paymentCash.SetActive(_val == 1);
             StartCoroutine(EnableCashOutline(_val == 0));
         }
         else
         {
+            print("Else Else is calling");
             paymentCard.SetActive(false);
             paymentCash.SetActive(false);
         }

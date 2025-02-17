@@ -18,7 +18,7 @@ MonoBehaviour:
   itemName: Action Figure
   subCatName: Toys
   itemQuality: 0
-  unlockLevel: 15
+  unlockLevel: 10
   itemPrice: 37
   itemSellingPrice: 15
   unitItemPurPrice: 7.5

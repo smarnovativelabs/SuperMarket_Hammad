@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "747229272811",
-    "project_id": "gas-station-project-90e07",
-    "storage_bucket": "gas-station-project-90e07.firebasestorage.app"
+    "project_number": "655451755892",
+    "project_id": "supermarket-app-f0983",
+    "storage_bucket": "supermarket-app-f0983.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:747229272811:android:d22f5825f28ca2b8f4bcae",
+        "mobilesdk_app_id": "1:655451755892:android:245d09f1b392375cfc4821",
         "android_client_info": {
-          "package_name": "com.peri.games.grocery.and.gas.money.simulator"
+          "package_name": "com.peri.games.supermarket.grocery.store.shop"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyD1wgx5vGkXnbvncylencMcmfm_vehBUc4"
+          "current_key": "AIzaSyBnrvsPB-EOuItkPCEoTCW-Y22c3zwTvLM"
         }
       ],
       "services": {

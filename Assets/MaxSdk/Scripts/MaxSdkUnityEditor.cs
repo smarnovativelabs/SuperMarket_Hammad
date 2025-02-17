@@ -769,6 +769,7 @@ public class MaxSdkUnityEditor : MaxSdkBase
         interstitialText.text += ":\n" + adUnitIdentifier;
         closeButton.onClick.AddListener(() =>
         {
+            
             var adHiddenEventProps = Json.Serialize(CreateBaseEventPropsDictionary("OnInterstitialHiddenEvent", adUnitIdentifier, placement));
             MaxSdkCallbacks.ForwardEvent(adHiddenEventProps);
             Object.Destroy(stubInterstitial);

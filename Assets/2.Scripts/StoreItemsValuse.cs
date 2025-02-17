@@ -53,14 +53,20 @@ public class StoreItemsValuse : MonoBehaviour
         Debug.Log((int)_itemInfo.itemID);
         reqLevel = GameManager.instance.categoriesUIData[(int)_itemInfo.mainCatID].subCategoriesUIData[_itemInfo.subCatID].reqLevel;
         // Debug.Log("Pass categore");
-
+        print("umumum");
         lockImage.SetActive(reqLevel > PlayerDataManager.instance.playerData.playerLevel);
         reqLevelText.text = "Unlock At Level " + reqLevel.ToString();
     }
     public void UpdateItemUI()
     {
+        print("NSD 1@");
+        print("damdam");
+        
         addToCartButton.transform.GetChild(0).GetComponent<LocalizeText>().UpdateText(GameManager.instance.selectedDeliveryMode == 0 ? "Add To Cart" : "Buy");
         lockImage.SetActive(reqLevel > PlayerDataManager.instance.playerData.playerLevel);
+      //  EnableGameObjectAfterDelay(5);
+        Debug.Log("Lock Image is: " + lockImage.name + ", Is Active: " + lockImage.activeSelf);
+        print("damdam2" + lockImage);
     }
 
     public void OnAddToCartBtnPress()
@@ -122,5 +128,14 @@ public class StoreItemsValuse : MonoBehaviour
     {
         cartUnitCount = 0;
     }
+    //IEnumerator EnableGameObjectAfterDelay(float delay)
+    //{
+    //    print("ysb called");
+    //    // Wait for the specified delay
+    //    yield return new WaitForSeconds(delay);
+
+    //    // Enable the GameObject after the delay
+    //  lockImage.SetActive(true);
+    //}
 
 }
